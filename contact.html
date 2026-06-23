@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us — The Shelf</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/contact.css">
+</head>
+<body>
+
+    <header class="header cafe-header" id="site-header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo"><i class="fas fa-book-open logo-icon"></i> The Shelf</a>
+
+            <nav class="nav-links" id="nav-links">
+                <div class="nav-dropdown">
+                    <a href="#">Home <i class="fas fa-chevron-down nav-chevron"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="index.html">Home 1</a>
+                        <a href="home.html">Home 2</a>
+                    </div>
+                </div>
+                <a href="store.html">Store</a>
+                <a href="about.html">About</a>
+                 <a href="services.html">Services </a>
+                  <a href="blog.html">Blog</a>
+              <a href="contact.html" class="active">Contact</a> 
+                <a href="admin-dashboard.html">Dashboard</a>
+               
+                <div class="mobile-auth-buttons">
+                    <a href="login.html" class="btn btn-outline">Sign In</a>
+                    <a href="register.html" class="btn btn-primary">Join Now</a>
+                </div>
+            </nav>
+
+            <div class="nav-actions">
+                <button id="rtl-toggle" class="theme-toggle-btn" title="Toggle RTL" style="font-size: 0.9rem; font-weight: bold; margin-right: 0.5rem;">RTL</button>
+                <button id="theme-toggle" class="theme-toggle-btn" title="Toggle Theme">☀️</button>
+                <a href="login.html" class="btn btn-outline nav-login-btn">Sign In</a>
+                <button class="mobile-menu-btn"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+    </header>
+ 
+
+    <section class="page-hero">
+        <div class="container fade-in-up">
+            <h1 class="h1">Get In Touch</h1>
+            <p class="text-lead" style="margin-top:1rem;">We'd love to hear from you — whether it's a book recommendation request or an event enquiry.</p>
+        </div>
+    </section>
+
+    <section class="section-padding">
+        <div class="container">
+            <div style="display:grid;grid-template-columns:1fr 1.5fr;gap:4rem;align-items:start;">
+
+                <div class="fade-in-up delay-1">
+                    <h2 class="h2" style="margin-bottom:0.75rem;">Visit The Shelf</h2>
+                    <p style="color:var(--text-muted);margin-bottom:2.5rem;line-height:1.7;">Drop in any time — our booksellers are always happy to help you find your next favourite read.</p>
+
+                    <div style="display:flex;flex-direction:column;gap:1.5rem;">
+                        <div style="display:flex;gap:1rem;align-items:flex-start;">
+                            <div style="width:44px;height:44px;background:rgba(45,106,79,0.1);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="fas fa-map-marker-alt" style="color:var(--primary);"></i></div>
+                            <div>
+                                <div style="font-weight:700;margin-bottom:0.25rem;">Address</div>
+                                <div style="color:var(--text-muted);font-size:0.9rem;">42, Church Street, Bengaluru, Karnataka 560001</div>
+                            </div>
+                        </div>
+                        <div style="display:flex;gap:1rem;align-items:flex-start;">
+                            <div style="width:44px;height:44px;background:rgba(45,106,79,0.1);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="fas fa-clock" style="color:var(--primary);"></i></div>
+                            <div>
+                                <div style="font-weight:700;margin-bottom:0.25rem;">Hours</div>
+                                <div style="color:var(--text-muted);font-size:0.9rem;">Mon–Sat: 10:00 AM – 9:00 PM<br>Sunday: 11:00 AM – 7:00 PM</div>
+                            </div>
+                        </div>
+                        <div style="display:flex;gap:1rem;align-items:flex-start;">
+                            <div style="width:44px;height:44px;background:rgba(45,106,79,0.1);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="fas fa-phone" style="color:var(--primary);"></i></div>
+                            <div>
+                                <div style="font-weight:700;margin-bottom:0.25rem;">Phone</div>
+                                <div style="color:var(--text-muted);font-size:0.9rem;">+91 80 4567 8901</div>
+                            </div>
+                        </div>
+                        <div style="display:flex;gap:1rem;align-items:flex-start;">
+                            <div style="width:44px;height:44px;background:rgba(45,106,79,0.1);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="fas fa-envelope" style="color:var(--primary);"></i></div>
+                            <div>
+                                <div style="font-weight:700;margin-bottom:0.25rem;">Email</div>
+                                <div style="color:var(--text-muted);font-size:0.9rem;">hello@theshelfbooks.in</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="fade-in-up delay-2">
+                    <div style="background:var(--surface-color);border-radius:var(--radius-xl);padding:2.5rem;border:1px solid var(--border-color);">
+                        <h3 style="font-family:'Playfair Display',serif;margin-bottom:1.75rem;">Send Us a Message</h3>
+                        <form style="display:flex;flex-direction:column;gap:1.25rem;">
+                            <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+                                <div>
+                                    <label style="display:block;font-size:0.875rem;font-weight:600;margin-bottom:0.5rem;">First Name</label>
+                                    <input type="text" placeholder="Sree" style="width:100%;padding:0.85rem 1rem;border:1.5px solid var(--border-color);border-radius:var(--radius-lg);background:var(--bg-color);font-family:inherit;font-size:0.9rem;color:var(--text-main);transition:border-color 0.2s;" onfocus="this.style.borderColor='var(--primary)'" onblur="this.style.borderColor='var(--border-color)'">
+                                </div>
+                                <div>
+                                    <label style="display:block;font-size:0.875rem;font-weight:600;margin-bottom:0.5rem;">Last Name</label>
+                                    <input type="text" placeholder="Sharma" style="width:100%;padding:0.85rem 1rem;border:1.5px solid var(--border-color);border-radius:var(--radius-lg);background:var(--bg-color);font-family:inherit;font-size:0.9rem;color:var(--text-main);transition:border-color 0.2s;" onfocus="this.style.borderColor='var(--primary)'" onblur="this.style.borderColor='var(--border-color)'">
+                                </div>
+                            </div>
+                            <div>
+                                <label style="display:block;font-size:0.875rem;font-weight:600;margin-bottom:0.5rem;">Email Address</label>
+                                <input type="email" placeholder="Sree@example.com" style="width:100%;padding:0.85rem 1rem;border:1.5px solid var(--border-color);border-radius:var(--radius-lg);background:var(--bg-color);font-family:inherit;font-size:0.9rem;color:var(--text-main);" onfocus="this.style.borderColor='var(--primary)'" onblur="this.style.borderColor='var(--border-color)'">
+                            </div>
+                            <div>
+                                <label style="display:block;font-size:0.875rem;font-weight:600;margin-bottom:0.5rem;">Subject</label>
+                                <select style="width:100%;padding:0.85rem 1rem;border:1.5px solid var(--border-color);border-radius:var(--radius-lg);background:var(--bg-color);font-family:inherit;font-size:0.9rem;color:var(--text-main);cursor:pointer;">
+                                    <option>Book Recommendation Request</option>
+                                    <option>Author Event Enquiry</option>
+                                    <option>Book Club Information</option>
+                                    <option>Corporate Programs</option>
+                                    <option>General Query</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label style="display:block;font-size:0.875rem;font-weight:600;margin-bottom:0.5rem;">Message</label>
+                                <textarea rows="5" placeholder="Tell us what you're looking for..." style="width:100%;padding:0.85rem 1rem;border:1.5px solid var(--border-color);border-radius:var(--radius-lg);background:var(--bg-color);font-family:inherit;font-size:0.9rem;color:var(--text-main);resize:vertical;" onfocus="this.style.borderColor='var(--primary)'" onblur="this.style.borderColor='var(--border-color)'"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary" style="align-self:flex-start;">Send Message <i class="fas fa-paper-plane"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<section class="section-padding">
+    <div class="container">
+
+        <div class="fade-in-up" style="text-align:center;max-width:700px;margin:0 auto 3rem;">
+            <h2 class="h2">Find Us Easily</h2>
+            <p class="text-lead" style="margin-top:1rem;">
+                Located in the heart of Bengaluru, The Shelf is a peaceful escape for readers and thinkers alike.
+            </p>
+        </div>
+
+        <div style="display:grid;grid-template-columns:1.5fr 1fr;gap:2.5rem;align-items:stretch;">
+
+            <div class="fade-in-up delay-1" style="border-radius:var(--radius-xl);overflow:hidden;border:1px solid var(--border-color);">
+                <iframe 
+                    src="https://www.google.com/maps?q=Church+Street+Bengaluru&output=embed"
+                    width="100%" 
+                    height="100%" 
+                    style="min-height:350px;border:0;"
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+            </div>
+
+            <div class="fade-in-up delay-2" style="background:var(--surface-color);border-radius:var(--radius-xl);padding:2rem;border:1px solid var(--border-color);display:flex;flex-direction:column;justify-content:center;">
+                
+                <h3 style="font-family:'Playfair Display',serif;margin-bottom:1rem;">
+                    Why Visit Us?
+                </h3>
+
+                <ul style="display:flex;flex-direction:column;gap:0.75rem;color:var(--text-muted);font-size:0.95rem;line-height:1.6;">
+                    <li>📚 Curated collection of bestselling & indie books</li>
+                    <li>☕ Cozy reading lounge with café experience</li>
+                    <li>🎤 Weekly author events & book clubs</li>
+                    <li>💡 Quiet work-friendly environment</li>
+                </ul>
+
+                <a href="services.html" class="btn btn-outline" style="margin-top:1.5rem;width:max-content;">
+                    Explore Services
+                </a>
+            </div>
+
+        </div>
+
+        <div class="fade-in-up" style="margin-top:4rem;">
+            <h2 class="h2 text-center" style="margin-bottom:1.5rem;">Frequently Asked Questions</h2>
+
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;">
+
+                <div style="background:var(--surface-color);padding:1.5rem;border-radius:var(--radius-lg);border:1px solid var(--border-color);">
+                    <strong>Do I need a membership?</strong>
+                    <p style="margin-top:0.5rem;color:var(--text-muted);font-size:0.9rem;">
+                        No — you can walk in anytime. Membership gives extra perks like borrowing and event access.
+                    </p>
+                </div>
+
+                <div style="background:var(--surface-color);padding:1.5rem;border-radius:var(--radius-lg);border:1px solid var(--border-color);">
+                    <strong>Can I host events?</strong>
+                    <p style="margin-top:0.5rem;color:var(--text-muted);font-size:0.9rem;">
+                        Yes! We host private readings, book launches, and community events.
+                    </p>
+                </div>
+
+                <div style="background:var(--surface-color);padding:1.5rem;border-radius:var(--radius-lg);border:1px solid var(--border-color);">
+                    <strong>Is Wi-Fi available?</strong>
+                    <p style="margin-top:0.5rem;color:var(--text-muted);font-size:0.9rem;">
+                        Absolutely — free high-speed Wi-Fi for all visitors.
+                    </p>
+                </div>
+
+                <div style="background:var(--surface-color);padding:1.5rem;border-radius:var(--radius-lg);border:1px solid var(--border-color);">
+                    <strong>Do you offer recommendations?</strong>
+                    <p style="margin-top:0.5rem;color:var(--text-muted);font-size:0.9rem;">
+                        Our staff loves helping you discover your next favorite book.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="section-padding">
+    <div class="container">
+
+        <div class="fade-in-up" style="background:var(--surface-color);border:1px solid var(--border-color);border-radius:var(--radius-xl);padding:2.5rem;margin-bottom:3rem;text-align:center;">
+            <h3 style="font-family:'Playfair Display',serif;margin-bottom:0.75rem;">
+                Stay in the Loop 📖
+            </h3>
+            <p style="color:var(--text-muted);max-width:500px;margin:0 auto 1.5rem;">
+                Get updates on new arrivals, book clubs, and exclusive literary events.
+            </p>
+
+            <form style="display:flex;justify-content:center;gap:0.75rem;flex-wrap:wrap;">
+                <input 
+                    type="email" 
+                    placeholder="Enter your email"
+                    style="padding:0.85rem 1rem;border-radius:var(--radius-lg);border:1.5px solid var(--border-color);background:var(--bg-color);min-width:250px;color:var(--text-main);"
+                >
+                <button class="btn btn-primary">
+                    Subscribe
+                </button>
+            </form>
+        </div>
+
+        <div class="fade-in-up">
+            <h3 style="font-family:'Playfair Display',serif;text-align:center;margin-bottom:2rem;">
+                Meet Our Team
+            </h3>
+
+            <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;">
+
+                <div style="background:var(--surface-color);border:1px solid var(--border-color);border-radius:var(--radius-lg);padding:1.5rem;text-align:center;">
+                    <div style="width:70px;height:70px;border-radius:50%;background:rgba(45,106,79,0.1);margin:0 auto 1rem;display:flex;align-items:center;justify-content:center;font-size:1.5rem;">
+                        👩‍💼
+                    </div>
+                    <strong>Ananya Rao</strong>
+                    <p style="color:var(--text-muted);font-size:0.85rem;margin:0.3rem 0;">Store Manager</p>
+                    <p style="font-size:0.85rem;color:var(--text-muted);">manager@theshelfbooks.in</p>
+                </div>
+
+                <div style="background:var(--surface-color);border:1px solid var(--border-color);border-radius:var(--radius-lg);padding:1.5rem;text-align:center;">
+                    <div style="width:70px;height:70px;border-radius:50%;background:rgba(45,106,79,0.1);margin:0 auto 1rem;display:flex;align-items:center;justify-content:center;font-size:1.5rem;">
+                        📚
+                    </div>
+                    <strong>Rohan Mehta</strong>
+                    <p style="color:var(--text-muted);font-size:0.85rem;margin:0.3rem 0;">Head Librarian</p>
+                    <p style="font-size:0.85rem;color:var(--text-muted);">books@theshelfbooks.in</p>
+                </div>
+
+                <div style="background:var(--surface-color);border:1px solid var(--border-color);border-radius:var(--radius-lg);padding:1.5rem;text-align:center;">
+                    <div style="width:70px;height:70px;border-radius:50%;background:rgba(45,106,79,0.1);margin:0 auto 1rem;display:flex;align-items:center;justify-content:center;font-size:1.5rem;">
+                        🎤
+                    </div>
+                    <strong>Neha Kapoor</strong>
+                    <p style="color:var(--text-muted);font-size:0.85rem;margin:0.3rem 0;">Events Coordinator</p>
+                    <p style="font-size:0.85rem;color:var(--text-muted);">events@theshelfbooks.in</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="fade-in-up" style="margin-top:3.5rem;">
+            <div style="background:var(--surface-color);border:1px solid var(--border-color);border-radius:var(--radius-xl);padding:2.5rem;text-align:center;">
+                
+                <h3 style="font-family:'Playfair Display',serif;margin-bottom:0.75rem;">
+                    Ready to Start Your Reading Journey?
+                </h3>
+
+                <p style="color:var(--text-muted);max-width:600px;margin:0 auto 1.5rem;">
+                    Join our community of readers and discover books that inspire, educate, and entertain.
+                </p>
+
+                <div style="display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;">
+                    <a href="register.html" class="btn btn-primary">Join Now</a>
+                    <a href="store.html" class="btn btn-outline">Browse Books</a>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+    <footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div>
+                <a href="index.html" class="footer-logo"><i class="fas fa-book-open logo-icon"></i> The Shelf</a>
+                <p class="footer-desc">Your independent literary destination — curated books, cozy reading corners, and a community of passionate readers.</p>
+                <div class="footer-social">
+                    <a href="#" class="footer-social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="footer-social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="footer-social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="footer-social-link"><i class="fab fa-goodreads-g"></i></a>
+                </div>
+            </div>
+            <div>
+                <h4 class="footer-heading">Explore</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="store.html">Bookshop</a></li>
+                    <li><a href="pricing.html">Memberships</a></li>
+                    <li><a href="blog.html">The Bookmark Blog</a></li>
+                    <li><a href="services.html">Services</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="footer-heading">Support</h4>
+                <ul class="footer-links">
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="#">Shipping &amp; Returns</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 The Shelf Bookstore. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

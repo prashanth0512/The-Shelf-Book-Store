@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - The Shelf</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body class="auth-page">
+    <div class="auth-top-actions">
+        <button id="rtl-toggle" class="theme-toggle-btn" title="Toggle RTL">RTL</button>
+        <button id="theme-toggle" class="theme-toggle-btn" title="Toggle Theme">☀️</button>
+    </div>
+    <div class="auth-container">
+        <div class="auth-header">
+            <div style="display:flex;flex-direction:row;align-items:center;justify-content:center;gap:0.75rem;">
+                <i class="fas fa-book-open" style="font-size:2rem;color:var(--primary);"></i>
+                <a href="index.html" class="logo auth-logo" style="margin-bottom:0;">The Shelf</a>
+            </div>
+            <p class="text-muted auth-subtitle">Join the Guild. Log in to your account.</p>
+        </div>
+
+        <form action="index.html">
+            <div class="auth-form-group">
+                <label class="auth-label">Email Address</label>
+                <input type="email" class="form-control" placeholder="player@domain.com" required>
+            </div>
+            
+            <div class="auth-form-group">
+                <label class="auth-label">Password</label>
+                <input type="password" class="form-control" placeholder="••••••••" required>
+            </div>
+
+            <div class="auth-actions">
+                <label class="auth-remember">
+                    <input type="checkbox"> Remember me
+                </label>
+                <a href="#" class="auth-forgot">Forgot password?</a>
+            </div>
+
+            <button type="submit" class="btn btn-primary auth-submit">Login to Account</button>
+        </form>
+
+        </form>
+
+<div class="social-login">
+    <div class="divider">
+        <span>or continue with</span>
+    </div>
+
+    <button class="social-btn google-btn">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" alt="Google">
+        Continue with Google
+    </button>
+
+    <button class="social-btn apple-btn">
+        <i class="fab fa-apple"></i>
+        Continue with Apple
+    </button>
+</div>
+
+<p class="auth-footer">Not in the guild yet? <a href="register.html" class="auth-link">Sign up</a></p>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

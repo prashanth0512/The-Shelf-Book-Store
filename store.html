@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Collection — The Shelf</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/store.css">
+</head>
+<body>
+
+    <header class="header cafe-header" id="site-header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo"><i class="fas fa-book-open logo-icon"></i> The Shelf</a>
+
+            <nav class="nav-links" id="nav-links">
+                <div class="nav-dropdown">
+                    <a href="#">Home <i class="fas fa-chevron-down nav-chevron"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="index.html">Home 1</a>
+                        <a href="home.html">Home 2</a>
+                    </div>
+                </div>
+                <a href="store.html" class="active">Store</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                 <a href="blog.html">Blog </a>
+                  <a href="contact.html">Contact</a>
+                <a href="admin-dashboard.html">Dashboard</a>
+               
+                <div class="mobile-auth-buttons">
+                    <a href="login.html" class="btn btn-outline">Sign In</a>
+                    <a href="register.html" class="btn btn-primary">Join Now</a>
+                </div>
+            </nav>
+
+            <div class="nav-actions">
+                <button id="rtl-toggle" class="theme-toggle-btn" title="Toggle RTL" style="font-size: 0.9rem; font-weight: bold; margin-right: 0.5rem;">RTL</button>
+                <button id="theme-toggle" class="theme-toggle-btn" title="Toggle Theme">☀️</button>
+                <a href="login.html" class="btn btn-outline nav-login-btn">Sign In</a>
+                <button class="mobile-menu-btn"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+    </header>
+
+
+    <section class="page-hero">
+        <div class="container fade-in-up">
+            <h1 class="h1">The Shelf — Browse Our Collection</h1>
+            <p class="text-lead" style="margin-top:1rem;">10,000+ curated titles across every genre.</p>
+        </div>
+    </section>
+
+    <section class="section-padding">
+        <div class="container">
+            <div style="display:grid;grid-template-columns:260px 1fr;gap:3rem;">
+
+                <!-- Sidebar Filters -->
+                <aside class="fade-in-up delay-1">
+                    <div style="background:var(--surface-color);border-radius:var(--radius-xl);padding:1.75rem;border:1px solid var(--border-color);position:sticky;top:7rem;">
+                        <h4 style="margin-bottom:1.25rem;font-family:'Playfair Display',serif;font-size:1.1rem;">Genres</h4>
+                        <div style="display:flex;flex-direction:column;gap:0.6rem;margin-bottom:2rem;">
+                            <label style="display:flex;align-items:center;gap:0.6rem;cursor:pointer;font-size:0.9rem;color:var(--text-muted);"><input type="checkbox" checked style="accent-color:var(--primary);"> Literary Fiction</label>
+                            <label style="display:flex;align-items:center;gap:0.6rem;cursor:pointer;font-size:0.9rem;color:var(--text-muted);"><input type="checkbox" style="accent-color:var(--primary);"> Mystery &amp; Thriller</label>
+                            <label style="display:flex;align-items:center;gap:0.6rem;cursor:pointer;font-size:0.9rem;color:var(--text-muted);"><input type="checkbox" checked style="accent-color:var(--primary);"> Fantasy &amp; Sci-Fi</label>
+                            <label style="display:flex;align-items:center;gap:0.6rem;cursor:pointer;font-size:0.9rem;color:var(--text-muted);"><input type="checkbox" style="accent-color:var(--primary);"> Romance</label>
+                            <label style="display:flex;align-items:center;gap:0.6rem;cursor:pointer;font-size:0.9rem;color:var(--text-muted);"><input type="checkbox" style="accent-color:var(--primary);"> Non-Fiction</label>
+                            <label style="display:flex;align-items:center;gap:0.6rem;cursor:pointer;font-size:0.9rem;color:var(--text-muted);"><input type="checkbox" style="accent-color:var(--primary);"> Children's &amp; YA</label>
+                            <label style="display:flex;align-items:center;gap:0.6rem;cursor:pointer;font-size:0.9rem;color:var(--text-muted);"><input type="checkbox" style="accent-color:var(--primary);"> Comics &amp; Graphic</label>
+                        </div>
+                        <h4 style="margin-bottom:1.25rem;font-family:'Playfair Display',serif;font-size:1.1rem;">Format</h4>
+                        <div style="display:flex;flex-direction:column;gap:0.6rem;margin-bottom:2rem;">
+                            <label style="display:flex;align-items:center;gap:0.6rem;cursor:pointer;font-size:0.9rem;color:var(--text-muted);"><input type="checkbox" style="accent-color:var(--primary);"> Paperback</label>
+                            <label style="display:flex;align-items:center;gap:0.6rem;cursor:pointer;font-size:0.9rem;color:var(--text-muted);"><input type="checkbox" style="accent-color:var(--primary);"> Hardcover</label>
+                            <label style="display:flex;align-items:center;gap:0.6rem;cursor:pointer;font-size:0.9rem;color:var(--text-muted);"><input type="checkbox" style="accent-color:var(--primary);"> Pre-Order</label>
+                        </div>
+                        <h4 style="margin-bottom:1.25rem;font-family:'Playfair Display',serif;font-size:1.1rem;">Price Range</h4>
+                        <div style="display:flex;flex-direction:column;gap:0.6rem;">
+                            <label style="display:flex;align-items:center;gap:0.6rem;cursor:pointer;font-size:0.9rem;color:var(--text-muted);"><input type="radio" name="price" style="accent-color:var(--primary);"> Under ₹400</label>
+                            <label style="display:flex;align-items:center;gap:0.6rem;cursor:pointer;font-size:0.9rem;color:var(--text-muted);"><input type="radio" name="price" style="accent-color:var(--primary);"> ₹400 – ₹800</label>
+                            <label style="display:flex;align-items:center;gap:0.6rem;cursor:pointer;font-size:0.9rem;color:var(--text-muted);"><input type="radio" name="price" style="accent-color:var(--primary);"> Over ₹800</label>
+                        </div>
+                    </div>
+                </aside>
+
+                <div class="fade-in-up delay-2">
+                    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:2rem;padding-bottom:1rem;border-bottom:1px solid var(--border-color);">
+                        <span style="color:var(--text-muted);font-size:0.9rem;">Showing 1–9 of 10,000+ books</span>
+                        <select style="border:1px solid var(--border-color);border-radius:50px;padding:0.5rem 1rem;background:var(--surface-color);color:var(--text-main);font-family:inherit;cursor:pointer;">
+                            <option>Sort by: Popularity</option>
+                            <option>Sort by: Price Low–High</option>
+                            <option>Sort by: Price High–Low</option>
+                            <option>Sort by: Newest Arrivals</option>
+                        </select>
+                    </div>
+
+                    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1.75rem;">
+                        <div style="background:var(--surface-color);border-radius:var(--radius-lg);overflow:hidden;border:1px solid var(--border-color);transition:var(--transition);" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='var(--shadow-lg)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+                            <img src="images/book-fiction.webp" alt="Book" style="height:180px;object-fit:cover;width:100%;">
+                            <div style="padding:1.25rem;">
+                                <h4 style="font-size:0.95rem;margin-bottom:0.25rem;font-family:'Playfair Display',serif;">Intermezzo</h4>
+                                <p style="font-size:0.75rem;color:var(--text-muted);margin-bottom:0.75rem;">Sally Rooney</p>
+                                <div style="font-weight:800;color:var(--primary);margin-bottom:0.75rem;">₹699</div>
+                                <button class="btn btn-outline" style="width:100%;padding:0.5rem;font-size:0.8rem;"><i class="fas fa-shopping-bag"></i> Add to Cart</button>
+                            </div>
+                        </div>
+                        <div style="background:var(--surface-color);border-radius:var(--radius-lg);overflow:hidden;border:1px solid var(--border-color);transition:var(--transition);" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='var(--shadow-lg)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+                            <img src="images/book-mystery.jpg" alt="Book" style="height:180px;object-fit:cover;width:100%;">
+                            <div style="padding:1.25rem;">
+                                <h4 style="font-size:0.95rem;margin-bottom:0.25rem;font-family:'Playfair Display',serif;">The Women</h4>
+                                <p style="font-size:0.75rem;color:var(--text-muted);margin-bottom:0.75rem;">Kristin Hannah</p>
+                                <div style="font-weight:800;color:var(--primary);margin-bottom:0.75rem;">₹749</div>
+                                <button class="btn btn-outline" style="width:100%;padding:0.5rem;font-size:0.8rem;"><i class="fas fa-shopping-bag"></i> Add to Cart</button>
+                            </div>
+                        </div>
+                        <div style="background:var(--surface-color);border-radius:var(--radius-lg);overflow:hidden;border:1px solid var(--border-color);transition:var(--transition);" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='var(--shadow-lg)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+                            <img src="images/book-nonfiction.jpg" alt="Book" style="height:180px;object-fit:cover;width:100%;">
+                            <div style="padding:1.25rem;">
+                                <h4 style="font-size:0.95rem;margin-bottom:0.25rem;font-family:'Playfair Display',serif;">The Creative Act</h4>
+                                <p style="font-size:0.75rem;color:var(--text-muted);margin-bottom:0.75rem;">Rick Rubin</p>
+                                <div style="font-weight:800;color:var(--primary);margin-bottom:0.75rem;">₹599</div>
+                                <button class="btn btn-outline" style="width:100%;padding:0.5rem;font-size:0.8rem;"><i class="fas fa-shopping-bag"></i> Add to Cart</button>
+                            </div>
+                        </div>
+                        <div style="background:var(--surface-color);border-radius:var(--radius-lg);overflow:hidden;border:1px solid var(--border-color);transition:var(--transition);" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='var(--shadow-lg)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+                            <img src="images/book-fantasy.jpg" alt="Book" style="height:180px;object-fit:cover;width:100%;">
+                            <div style="padding:1.25rem;">
+                                <h4 style="font-size:0.95rem;margin-bottom:0.25rem;font-family:'Playfair Display',serif;">Fourth Wing</h4>
+                                <p style="font-size:0.75rem;color:var(--text-muted);margin-bottom:0.75rem;">Rebecca Yarros</p>
+                                <div style="font-weight:800;color:var(--primary);margin-bottom:0.75rem;">₹799</div>
+                                <button class="btn btn-outline" style="width:100%;padding:0.5rem;font-size:0.8rem;"><i class="fas fa-shopping-bag"></i> Add to Cart</button>
+                            </div>
+                        </div>
+                        <div style="background:var(--surface-color);border-radius:var(--radius-lg);overflow:hidden;border:1px solid var(--border-color);transition:var(--transition);" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='var(--shadow-lg)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+                            <img src="images/book-romance.jpg" alt="Book" style="height:180px;object-fit:cover;width:100%;">
+                            <div style="padding:1.25rem;">
+                                <h4 style="font-size:0.95rem;margin-bottom:0.25rem;font-family:'Playfair Display',serif;">Beach Read</h4>
+                                <p style="font-size:0.75rem;color:var(--text-muted);margin-bottom:0.75rem;">Emily Henry</p>
+                                <div style="font-weight:800;color:var(--primary);margin-bottom:0.75rem;">₹549</div>
+                                <button class="btn btn-outline" style="width:100%;padding:0.5rem;font-size:0.8rem;"><i class="fas fa-shopping-bag"></i> Add to Cart</button>
+                            </div>
+                        </div>
+                        <div style="background:var(--surface-color);border-radius:var(--radius-lg);overflow:hidden;border:1px solid var(--border-color);transition:var(--transition);" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='var(--shadow-lg)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+                            <img src="images/book-shelf-display.jpg" alt="Book" style="height:180px;object-fit:cover;width:100%;">
+                            <div style="padding:1.25rem;">
+                                <h4 style="font-size:0.95rem;margin-bottom:0.25rem;font-family:'Playfair Display',serif;">Tomorrow × Tomorrow</h4>
+                                <p style="font-size:0.75rem;color:var(--text-muted);margin-bottom:0.75rem;">Gabrielle Zevin</p>
+                                <div style="font-weight:800;color:var(--primary);margin-bottom:0.75rem;">₹649</div>
+                                <button class="btn btn-outline" style="width:100%;padding:0.5rem;font-size:0.8rem;"><i class="fas fa-shopping-bag"></i> Add to Cart</button>
+                            </div>
+                        </div>
+                        <div style="background:var(--surface-color);border-radius:var(--radius-lg);overflow:hidden;border:1px solid var(--border-color);transition:var(--transition);" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='var(--shadow-lg)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+                            <img src="images/store-display.jpg" alt="Gift Set" style="height:180px;object-fit:cover;width:100%;">
+                            <div style="padding:1.25rem;">
+                                <h4 style="font-size:0.95rem;margin-bottom:0.25rem;font-family:'Playfair Display',serif;">The Shelf Gift Set</h4>
+                                <p style="font-size:0.75rem;color:var(--text-muted);margin-bottom:0.75rem;">3 Curated Picks</p>
+                                <div style="font-weight:800;color:var(--primary);margin-bottom:0.75rem;">₹1,799</div>
+                                <button class="btn btn-outline" style="width:100%;padding:0.5rem;font-size:0.8rem;"><i class="fas fa-shopping-bag"></i> Add to Cart</button>
+                            </div>
+                        </div>
+                        <div style="background:var(--surface-color);border-radius:var(--radius-lg);overflow:hidden;border:1px solid var(--border-color);transition:var(--transition);position:relative;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='var(--shadow-lg)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+                            <div style="position:absolute;top:0.75rem;left:0.75rem;background:var(--secondary);color:white;padding:0.2rem 0.6rem;border-radius:20px;font-size:0.7rem;font-weight:700;z-index:1;">Pre-Order</div>
+                            <img src="images/cozy-bookstore.jpg" alt="Pre-order" style="height:180px;object-fit:cover;width:100%;">
+                            <div style="padding:1.25rem;">
+                                <h4 style="font-size:0.95rem;margin-bottom:0.25rem;font-family:'Playfair Display',serif;">Orbital</h4>
+                                <p style="font-size:0.75rem;color:var(--text-muted);margin-bottom:0.75rem;">Samantha Harvey</p>
+                                <div style="font-weight:800;color:var(--primary);margin-bottom:0.75rem;">₹699</div>
+                                <button class="btn btn-outline" style="width:100%;padding:0.5rem;font-size:0.8rem;"><i class="fas fa-clock"></i> Pre-Order</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="margin-top:3rem;text-align:center;">
+                        <button class="btn btn-primary">Load More Books <i class="fas fa-chevron-down" style="margin-left:0.5rem;"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div>
+                <a href="index.html" class="footer-logo"><i class="fas fa-book-open logo-icon"></i> The Shelf</a>
+                <p class="footer-desc">Your independent literary destination — curated books, cozy reading corners, and a community of passionate readers.</p>
+                <div class="footer-social">
+                    <a href="#" class="footer-social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="footer-social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="footer-social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="footer-social-link"><i class="fab fa-goodreads-g"></i></a>
+                </div>
+            </div>
+            <div>
+                <h4 class="footer-heading">Explore</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="store.html">Bookshop</a></li>
+                    <li><a href="pricing.html">Memberships</a></li>
+                    <li><a href="blog.html">The Bookmark Blog</a></li>
+                    <li><a href="services.html">Services</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="footer-heading">Support</h4>
+                <ul class="footer-links">
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="#">Shipping &amp; Returns</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 The Shelf Bookstore. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

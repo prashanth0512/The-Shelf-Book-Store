@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memberships — The Shelf</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/pricing.css">
+</head>
+<body>
+
+    <header class="header cafe-header" id="site-header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo"><i class="fas fa-book-open logo-icon"></i> The Shelf</a>
+
+            <nav class="nav-links" id="nav-links">
+                <div class="nav-dropdown">
+                    <a href="#">Home <i class="fas fa-chevron-down nav-chevron"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="index.html">Home 1</a>
+                        <a href="home.html">Home 2</a>
+                    </div>
+                </div>
+                <a href="store.html">Store</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
+                <a href="admin-dashboard.html">Dashboard</a>
+                
+                <div class="mobile-auth-buttons">
+                    <a href="login.html" class="btn btn-outline">Sign In</a>
+                    <a href="register.html" class="btn btn-primary">Join Now</a>
+                </div>
+            </nav>
+
+            <div class="nav-actions">
+                <button id="rtl-toggle" class="theme-toggle-btn" title="Toggle RTL" style="font-size: 0.9rem; font-weight: bold; margin-right: 0.5rem;">RTL</button>
+                <button id="theme-toggle" class="theme-toggle-btn" title="Toggle Theme">☀️</button>
+                <a href="login.html" class="btn btn-outline nav-login-btn">Sign In</a>
+                <button class="mobile-menu-btn"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+    </header>
+
+
+    <section class="page-hero">
+        <div class="container fade-in-up">
+            <h1 class="h1">Membership &amp; Benefits</h1>
+            <p class="text-lead" style="margin-top:1rem;">Choose the plan that fits your reading life.</p>
+        </div>
+    </section>
+
+    <section style="padding:6rem 0;">
+        <div class="container">
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem;align-items:start;">
+
+                <div style="background:var(--surface-color);border-radius:var(--radius-xl);padding:2.5rem;border:1px solid var(--border-color);" class="fade-in-up delay-1">
+                    <h3 style="font-family:'Playfair Display',serif;margin-bottom:0.5rem;">Reader Pass</h3>
+                    <p style="color:var(--text-muted);margin-bottom:1.5rem;font-size:0.9rem;">Drop in and browse any time.</p>
+                    <div style="font-size:2.75rem;font-weight:800;color:var(--primary);font-family:'Playfair Display',serif;margin-bottom:0.25rem;">Free<span style="font-size:1rem;font-weight:400;color:var(--text-muted);">&nbsp;entry</span></div>
+                    <p style="color:var(--text-muted);font-size:0.8rem;margin-bottom:2rem;">+₹150/day for lounge seating</p>
+                    <a href="contact.html" class="btn btn-outline" style="width:100%;justify-content:center;margin-bottom:2rem;">Visit Us</a>
+                    <ul style="list-style:none;display:flex;flex-direction:column;gap:0.75rem;">
+                        <li style="display:flex;align-items:center;gap:0.75rem;font-size:0.9rem;"><i class="fas fa-check-circle" style="color:var(--primary);flex-shrink:0;"></i> Browse all 10,000+ books</li>
+                        <li style="display:flex;align-items:center;gap:0.75rem;font-size:0.9rem;"><i class="fas fa-check-circle" style="color:var(--primary);flex-shrink:0;"></i> Attend free community events</li>
+                        <li style="display:flex;align-items:center;gap:0.75rem;font-size:0.9rem;"><i class="fas fa-check-circle" style="color:var(--primary);flex-shrink:0;"></i> Café access</li>
+                    </ul>
+                </div>
+
+                <div style="background:linear-gradient(145deg,#1b4332,#2d6a4f);border-radius:var(--radius-xl);padding:2.5rem;border:2px solid rgba(181,133,10,0.4);box-shadow:0 20px 60px rgba(45,106,79,0.3);position:relative;" class="fade-in-up delay-2">
+                    <div style="position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,#b5850a,#8a6308);color:white;padding:0.35rem 1.25rem;border-radius:50px;font-size:0.75rem;font-weight:700;white-space:nowrap;">Best Value</div>
+                    <h3 style="font-family:'Playfair Display',serif;margin-bottom:0.5rem;color:white;">Literary Member</h3>
+                    <p style="color:rgba(255,255,255,0.7);margin-bottom:1.5rem;font-size:0.9rem;">For the regular, committed reader.</p>
+                    <div style="font-size:2.75rem;font-weight:800;color:#f6d860;font-family:'Playfair Display',serif;margin-bottom:0.25rem;">₹499<span style="font-size:1rem;font-weight:400;color:rgba(255,255,255,0.6);">/mo</span></div>
+                    <p style="color:rgba(255,255,255,0.5);font-size:0.8rem;margin-bottom:2rem;">Billed monthly, cancel anytime</p>
+                    <a href="register.html" class="btn" style="background:linear-gradient(135deg,#b5850a,#8a6308);color:white;width:100%;justify-content:center;margin-bottom:2rem;">Join Now</a>
+                    <ul style="list-style:none;display:flex;flex-direction:column;gap:0.75rem;">
+                        <li style="display:flex;align-items:center;gap:0.75rem;font-size:0.9rem;color:rgba(255,255,255,0.85);"><i class="fas fa-check-circle" style="color:#f6d860;flex-shrink:0;"></i> Unlimited lounge seating</li>
+                        <li style="display:flex;align-items:center;gap:0.75rem;font-size:0.9rem;color:rgba(255,255,255,0.85);"><i class="fas fa-check-circle" style="color:#f6d860;flex-shrink:0;"></i> 1 book borrow per month</li>
+                        <li style="display:flex;align-items:center;gap:0.75rem;font-size:0.9rem;color:rgba(255,255,255,0.85);"><i class="fas fa-check-circle" style="color:#f6d860;flex-shrink:0;"></i> 10% off all purchases</li>
+                        <li style="display:flex;align-items:center;gap:0.75rem;font-size:0.9rem;color:rgba(255,255,255,0.85);"><i class="fas fa-check-circle" style="color:#f6d860;flex-shrink:0;"></i> Access to all book clubs</li>
+                        <li style="display:flex;align-items:center;gap:0.75rem;font-size:0.9rem;color:rgba(255,255,255,0.85);"><i class="fas fa-check-circle" style="color:#f6d860;flex-shrink:0;"></i> Early event ticket access</li>
+                    </ul>
+                </div>
+
+                <div style="background:var(--surface-color);border-radius:var(--radius-xl);padding:2.5rem;border:1px solid var(--border-color);" class="fade-in-up delay-3">
+                    <h3 style="font-family:'Playfair Display',serif;margin-bottom:0.5rem;">Bibliophile Club</h3>
+                    <p style="color:var(--text-muted);margin-bottom:1.5rem;font-size:0.9rem;">For serious readers who want it all.</p>
+                    <div style="font-size:2.75rem;font-weight:800;color:var(--primary);font-family:'Playfair Display',serif;margin-bottom:0.25rem;">₹999<span style="font-size:1rem;font-weight:400;color:var(--text-muted);">/mo</span></div>
+                    <p style="color:var(--text-muted);font-size:0.8rem;margin-bottom:2rem;">₹200 monthly store credit included</p>
+                    <a href="register.html" class="btn btn-outline" style="width:100%;justify-content:center;margin-bottom:2rem;">Get Started</a>
+                    <ul style="list-style:none;display:flex;flex-direction:column;gap:0.75rem;">
+                        <li style="display:flex;align-items:center;gap:0.75rem;font-size:0.9rem;"><i class="fas fa-check-circle" style="color:var(--primary);flex-shrink:0;"></i> All Literary Member perks</li>
+                        <li style="display:flex;align-items:center;gap:0.75rem;font-size:0.9rem;"><i class="fas fa-check-circle" style="color:var(--primary);flex-shrink:0;"></i> 3 book borrows per month</li>
+                        <li style="display:flex;align-items:center;gap:0.75rem;font-size:0.9rem;"><i class="fas fa-check-circle" style="color:var(--primary);flex-shrink:0;"></i> ₹200 monthly store credit</li>
+                        <li style="display:flex;align-items:center;gap:0.75rem;font-size:0.9rem;"><i class="fas fa-check-circle" style="color:var(--primary);flex-shrink:0;"></i> Priority pre-order access</li>
+                        <li style="display:flex;align-items:center;gap:0.75rem;font-size:0.9rem;"><i class="fas fa-check-circle" style="color:var(--primary);flex-shrink:0;"></i> VIP author event seating</li>
+                        <li style="display:flex;align-items:center;gap:0.75rem;font-size:0.9rem;"><i class="fas fa-check-circle" style="color:var(--primary);flex-shrink:0;"></i> 15% off all purchases</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div>
+                <a href="index.html" class="footer-logo"><i class="fas fa-book-open logo-icon"></i> The Shelf</a>
+                <p class="footer-desc">Your independent literary destination — curated books, cozy reading corners, and a community of passionate readers.</p>
+                <div class="footer-social">
+                    <a href="#" class="footer-social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="footer-social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="footer-social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="footer-social-link"><i class="fab fa-goodreads-g"></i></a>
+                </div>
+            </div>
+            <div>
+                <h4 class="footer-heading">Explore</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="store.html">Bookshop</a></li>
+                    <li><a href="pricing.html">Memberships</a></li>
+                    <li><a href="blog.html">The Bookmark Blog</a></li>
+                    <li><a href="services.html">Services</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="footer-heading">Support</h4>
+                <ul class="footer-links">
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="#">Shipping &amp; Returns</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 The Shelf Bookstore. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
