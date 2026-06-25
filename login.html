@@ -6,27 +6,27 @@
   <meta name="description" content="Sign in to your account at The Shelf – Curated Reads bookstore.">
   <title>Sign In | The Shelf — Curated Reads</title>
 
-  <!-- Google Fonts -->
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  
-  <!-- FontAwesome Icons -->
+
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  
-  <!-- Custom CSS -->
+
+
   <link rel="stylesheet" href="./login.css">
 </head>
 <body>
 
-  <!-- Ambient Glow Effects -->
+
   <div class="ambient-background">
     <div class="ambient-glow ambient-glow-1"></div>
     <div class="ambient-glow ambient-glow-2"></div>
     <div class="ambient-grid"></div>
   </div>
 
-  <!-- FLOATING LAYOUT CONTROLS -->
+
   <div class="auth-toggles">
     <button class="icon-btn" id="rtlBtn" aria-label="Toggle RTL Mode">
       <i class="fas fa-right-left"></i>
@@ -36,18 +36,18 @@
     </button>
   </div>
 
-  <!-- MAIN SPLIT SCREEN LAYOUT -->
+
   <main class="auth-container">
-    
-    <!-- LEFT SIDE: BOOKSTORE VISUAL HERO -->
+
+
     <section class="auth-visual">
       <div class="visual-img-wrapper">
         <img src="./cozy_bookstore_hero.png" alt="Luxurious Bookstore Interior" class="visual-img">
         <div class="visual-overlay"></div>
         <div class="visual-glow-overlay"></div>
       </div>
-      
-      <!-- Floating Glass Card (Quote) -->
+
+
       <div class="floating-quote-card">
         <i class="fas fa-quote-left quote-icon"></i>
         <blockquote class="quote-text">
@@ -56,7 +56,7 @@
         <cite class="quote-author">— Marcus Tullius Cicero</cite>
       </div>
 
-      <!-- Small Stats Badge -->
+
       <div class="floating-stats-badge">
         <div class="badge-icon-wrapper">
           <i class="fas fa-bookmark"></i>
@@ -68,11 +68,11 @@
       </div>
     </section>
 
-    <!-- RIGHT SIDE: FORM BLOCK -->
+
     <section class="auth-form-section">
       <div class="form-card-wrapper animate-fade-up">
-        
-        <!-- Brand Logo -->
+
+
         <a href="./index.html" class="logo form-logo">
           <div class="logo-icon">
             <svg width="36" height="36" viewBox="0 0 64 64" fill="none">
@@ -89,8 +89,8 @@
             <span class="logo-tagline">Curated Reads</span>
           </div>
         </a>
-        
-        <!-- Header text -->
+
+
         <div class="form-header">
           <span class="premium-badge">
             <i class="fas fa-key"></i> Welcome Back
@@ -101,10 +101,10 @@
           </p>
         </div>
 
-        <!-- Login Form -->
+
         <form class="auth-form" id="loginForm" novalidate>
-          
-          <!-- Email Input -->
+
+
           <div class="input-group">
             <label for="loginEmail" class="input-label">Email Address</label>
             <div class="input-field-wrapper">
@@ -114,7 +114,7 @@
             <span class="validation-message" id="emailError">Please enter a valid email address</span>
           </div>
 
-          <!-- Password Input -->
+
           <div class="input-group">
             <div class="label-row">
               <label for="loginPassword" class="input-label">Password</label>
@@ -130,7 +130,7 @@
             <span class="validation-message" id="passwordError">Password must be at least 8 characters long</span>
           </div>
 
-          <!-- Keep Signed In -->
+
           <div class="checkbox-group">
             <label class="checkbox-container">
               <input type="checkbox" id="rememberMe" checked>
@@ -139,12 +139,12 @@
             </label>
           </div>
 
-          <!-- Submit Button -->
+
           <button type="submit" class="btn btn-primary btn-submit" id="submitBtn">
             <span class="btn-text">Sign In</span>
           </button>
 
-          <!-- Social Authentications -->
+
           <div class="divider-container">
             <span class="divider-text">Or Continue With</span>
           </div>
@@ -164,7 +164,7 @@
             </button>
           </div>
 
-          <!-- Bottom Redirect -->
+
           <div class="auth-card-footer">
             <span class="footer-text">Don't have an account?</span>
             <a href="./signup.html" class="footer-link">Sign Up</a>
@@ -176,13 +176,14 @@
 
   </main>
 
-  <!-- Toast Message Element -->
+
   <div class="toast" id="toast-notification">
     <span class="toast-icon">✦</span>
     <span class="toast-message">Verification complete.</span>
   </div>
 
-  <!-- Scripts -->
+
+  <script src="./blogs.js"></script>
   <script src="./login.js"></script>
 </body>
 </html>

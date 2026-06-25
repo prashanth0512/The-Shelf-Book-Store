@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Administration analytics and inventory controls dashboard for The Shelf – Curated Reads bookstore.">
+  <title>Admin Dashboard | The Shelf — Curated Reads</title>
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+  <link rel="stylesheet" href="./dashboard.css">
+</head>
+<body>
+
+
+  <div class="ambient-background">
+    <div class="ambient-glow ambient-glow-1"></div>
+    <div class="ambient-glow ambient-glow-2"></div>
+    <div class="ambient-grid"></div>
+  </div>
+
+
+  <header class="dashboard-header" id="dashboardHeader">
+    <div class="header-left">
+      <button class="hamburger-btn" id="hamburgerBtn" aria-label="Open Sidebar Menu">
+        <i class="fas fa-bars"></i>
+      </button>
+      <span class="welcome-text" id="welcomeMsg">Welcome Back, Admin</span>
+    </div>
+
+    <div class="header-right">
+
+      <button class="icon-btn" id="rtlBtn" aria-label="Toggle RTL Mode">
+        <i class="fas fa-right-left"></i>
+      </button>
+      <button class="icon-btn" id="themeBtn" aria-label="Toggle Theme">
+        <i class="fas fa-moon" id="themeBtnIcon"></i>
+      </button>
+
+
+      <div class="profile-container" id="profileContainer">
+        <button class="profile-trigger" id="profileTrigger" aria-label="User Profile Options">
+          <div class="profile-avatar-wrapper">
+            <span class="avatar-letter">A</span>
+            <span class="status-indicator online"></span>
+          </div>
+        </button>
+        <div class="profile-dropdown" id="profileDropdown">
+          <div class="dropdown-header">
+            <span class="user-name">Administrator</span>
+            <span class="user-role">Super Admin</span>
+          </div>
+          <ul class="dropdown-menu-list">
+            <li><button class="dropdown-btn" data-target="settings"><i class="fas fa-user-gear"></i> Settings</button></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a href="./index.html" class="dropdown-link logout-link"><i class="fas fa-right-from-bracket"></i> Logout</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+  <aside class="sidebar-drawer" id="sidebarDrawer">
+    <div class="sidebar-header">
+      <a href="./index.html" class="logo">
+        <div class="logo-icon">
+          <svg width="36" height="36" viewBox="0 0 64 64" fill="none">
+            <rect x="10" y="8" width="8" height="48" rx="2" fill="#4A2C2A"/>
+            <path d="M18 10C18 8.9 18.9 8 20 8H52C53.1 8 54 8.9 54 10V52C54 53.1 53.1 54 52 54H20C18.9 54 18 53.1 18 52V10Z" fill="#C89B3C"/>
+            <path d="M26 20H46" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M26 28H46" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M26 36H38" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M44 8V22L40 18L36 22V8H44Z" fill="#4A2C2A"/>
+          </svg>
+        </div>
+        <div class="logo-text">
+          <span class="logo-name">The Shelf</span>
+          <span class="logo-tagline">Curated Reads</span>
+        </div>
+      </a>
+      <button class="sidebar-close-btn" id="sidebarClose" aria-label="Close Sidebar Menu">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+
+
+    <ul class="sidebar-menu">
+      <li>
+        <button class="menu-item active" data-section="overview">
+          <i class="fas fa-chart-pie"></i>
+          <span>Overview</span>
+        </button>
+      </li>
+      <li>
+        <button class="menu-item" data-section="inventory">
+          <i class="fas fa-book"></i>
+          <span>Books Inventory</span>
+        </button>
+      </li>
+      <li>
+        <button class="menu-item" data-section="orders">
+          <i class="fas fa-shopping-cart"></i>
+          <span>Orders</span>
+        </button>
+      </li>
+      <li>
+        <button class="menu-item" data-section="customers">
+          <i class="fas fa-users"></i>
+          <span>Customers</span>
+        </button>
+      </li>
+      <li>
+        <button class="menu-item" data-section="analytics">
+          <i class="fas fa-chart-line"></i>
+          <span>Analytics</span>
+        </button>
+      </li>
+      <li>
+        <button class="menu-item" data-section="settings">
+          <i class="fas fa-sliders"></i>
+          <span>Settings</span>
+        </button>
+      </li>
+    </ul>
+
+    <div class="sidebar-footer">
+      <p class="footer-copy">&copy; 2026 The Shelf System</p>
+    </div>
+  </aside>
+
+
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+
+  <main class="dashboard-main">
+    <div class="dashboard-container">
+
+
+      <section class="dashboard-section active" id="section-overview">
+
+        <div class="section-top-bar">
+          <div class="section-title-group">
+            <span class="gold-subtitle">DASHBOARD CENTRAL</span>
+            <h1 class="dashboard-title">Store Overview</h1>
+          </div>
+          <div class="section-actions">
+            <span class="date-badge"><i class="far fa-calendar"></i> Today: June 24, 2026</span>
+          </div>
+        </div>
+
+
+        <div class="stats-grid">
+          <div class="stats-card fade-up-card">
+            <div class="stats-header">
+              <span class="stats-title">Total Revenue</span>
+              <div class="stats-icon rev-icon"><i class="fas fa-dollar-sign"></i></div>
+            </div>
+            <div class="stats-value-row">
+              <span class="stats-prefix">$</span>
+              <span class="stats-value counter" data-value="128450">0</span>
+            </div>
+            <div class="stats-growth positive">
+              <i class="fas fa-arrow-trend-up"></i>
+              <span>+12.4% this month</span>
+            </div>
+          </div>
+
+          <div class="stats-card fade-up-card" style="animation-delay: 0.1s;">
+            <div class="stats-header">
+              <span class="stats-title">Books Sold</span>
+              <div class="stats-icon book-icon"><i class="fas fa-book-open"></i></div>
+            </div>
+            <div class="stats-value-row">
+              <span class="stats-value counter" data-value="8420">0</span>
+            </div>
+            <div class="stats-growth positive">
+              <i class="fas fa-arrow-trend-up"></i>
+              <span>+8.2% this month</span>
+            </div>
+          </div>
+
+          <div class="stats-card fade-up-card" style="animation-delay: 0.2s;">
+            <div class="stats-header">
+              <span class="stats-title">Active Customers</span>
+              <div class="stats-icon user-icon"><i class="fas fa-user-check"></i></div>
+            </div>
+            <div class="stats-value-row">
+              <span class="stats-value counter" data-value="3280">0</span>
+            </div>
+            <div class="stats-growth positive">
+              <i class="fas fa-arrow-trend-up"></i>
+              <span>+5.7% this month</span>
+            </div>
+          </div>
+
+          <div class="stats-card fade-up-card" style="animation-delay: 0.3s;">
+            <div class="stats-header">
+              <span class="stats-title">Monthly Orders</span>
+              <div class="stats-icon order-icon"><i class="fas fa-truck-ramp-box"></i></div>
+            </div>
+            <div class="stats-value-row">
+              <span class="stats-value counter" data-value="1120">0</span>
+            </div>
+            <div class="stats-growth positive">
+              <i class="fas fa-arrow-trend-up"></i>
+              <span>+14.1% this month</span>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="charts-row">
+          <div class="chart-card">
+            <h3 class="chart-title">Monthly Book Sales</h3>
+            <div class="chart-wrapper">
+              <canvas id="salesBarChart"></canvas>
+            </div>
+          </div>
+
+          <div class="chart-card">
+            <h3 class="chart-title">Revenue Growth</h3>
+            <div class="chart-wrapper">
+              <canvas id="revenueLineChart"></canvas>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="dashboard-double-row">
+
+          <div class="chart-card pie-chart-card">
+            <h3 class="chart-title">Books By Category</h3>
+            <div class="chart-wrapper pie-wrapper">
+              <canvas id="categoryPieChart"></canvas>
+            </div>
+          </div>
+
+
+          <div class="table-card">
+            <div class="card-header-row">
+              <h3 class="card-title">Recent Customer Orders</h3>
+              <button class="btn btn-secondary view-all-btn" data-target="orders">View All</button>
+            </div>
+            <div class="table-responsive">
+              <table class="dashboard-table">
+                <thead>
+                  <tr>
+                    <th>Order ID</th>
+                    <th>Customer</th>
+                    <th>Book Title</th>
+                    <th>Price</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody id="recent-orders-tbody">
+
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section class="dashboard-section" id="section-inventory">
+        <div class="section-top-bar">
+          <div class="section-title-group">
+            <span class="gold-subtitle">BOOK CATALOG CONTROL</span>
+            <h1 class="dashboard-title">Books Inventory</h1>
+          </div>
+          <div class="section-actions flex-actions">
+            <div class="search-bar-wrapper">
+              <i class="fas fa-search search-icon"></i>
+              <input type="text" id="inventory-search" placeholder="Search title or category...">
+            </div>
+            <button class="btn btn-primary" id="addBookBtn">
+              <i class="fas fa-plus"></i>
+              <span class="btn-text">Add New Book</span>
+            </button>
+          </div>
+        </div>
+
+
+        <div class="inventory-grid" id="inventory-grid">
+
+        </div>
+      </section>
+
+
+      <section class="dashboard-section" id="section-orders">
+        <div class="section-top-bar">
+          <div class="section-title-group">
+            <span class="gold-subtitle">TRANSACTIONS LOGS</span>
+            <h1 class="dashboard-title">Store Orders</h1>
+          </div>
+          <div class="section-actions">
+            <div class="search-bar-wrapper">
+              <i class="fas fa-search search-icon"></i>
+              <input type="text" id="orders-search" placeholder="Search order no. or customer...">
+            </div>
+          </div>
+        </div>
+
+        <div class="table-card full-table-card">
+          <div class="table-responsive">
+            <table class="dashboard-table">
+              <thead>
+                <tr>
+                  <th>Order Number</th>
+                  <th>Book Title</th>
+                  <th>Customer</th>
+                  <th>Date</th>
+                  <th>Status</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="orders-list-tbody">
+
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+
+      <section class="dashboard-section" id="section-customers">
+        <div class="section-top-bar">
+          <div class="section-title-group">
+            <span class="gold-subtitle">READING COMMUNITY</span>
+            <h1 class="dashboard-title">Active Customers</h1>
+          </div>
+          <div class="section-actions flex-actions">
+            <div class="search-bar-wrapper">
+              <i class="fas fa-search search-icon"></i>
+              <input type="text" id="customers-search" placeholder="Search name or email...">
+            </div>
+            <select class="select-filter" id="tier-filter">
+              <option value="all">All Tiers</option>
+              <option value="gold">Gold Member</option>
+              <option value="silver">Silver Member</option>
+              <option value="platinum">Platinum Member</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="table-card full-table-card">
+          <div class="table-responsive">
+            <table class="dashboard-table">
+              <thead>
+                <tr>
+                  <th>Profile</th>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Total Orders</th>
+                  <th>Membership Tier</th>
+                </tr>
+              </thead>
+              <tbody id="customers-list-tbody">
+
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+
+      <section class="dashboard-section" id="section-analytics">
+        <div class="section-top-bar">
+          <div class="section-title-group">
+            <span class="gold-subtitle">LITERARY METRICS</span>
+            <h1 class="dashboard-title">Advanced Analytics</h1>
+          </div>
+          <div class="section-actions">
+            <span class="date-badge"><i class="fas fa-chart-line"></i> Updated Real-time</span>
+          </div>
+        </div>
+
+
+        <div class="charts-row">
+          <div class="chart-card">
+            <h3 class="chart-title">Weekly Bookstore Traffic</h3>
+            <div class="chart-wrapper">
+              <canvas id="trafficLineChart"></canvas>
+            </div>
+          </div>
+          <div class="chart-card">
+            <h3 class="chart-title">Most Popular Categories</h3>
+            <div class="chart-wrapper pie-wrapper">
+              <canvas id="popularDoughnutChart"></canvas>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="charts-row">
+          <div class="chart-card">
+            <h3 class="chart-title">Customer Growth Ratio</h3>
+            <div class="chart-wrapper">
+              <canvas id="customerGrowthChart"></canvas>
+            </div>
+          </div>
+          <div class="chart-card">
+            <h3 class="chart-title">Top Selling Books (Units)</h3>
+            <div class="chart-wrapper">
+              <canvas id="topSellingBarChart"></canvas>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section class="dashboard-section" id="section-settings">
+        <div class="section-top-bar">
+          <div class="section-title-group">
+            <span class="gold-subtitle">SYSTEM SETTINGS</span>
+            <h1 class="dashboard-title">Control Preferences</h1>
+          </div>
+        </div>
+
+        <div class="settings-form-wrapper">
+          <form class="settings-form" id="storeSettingsForm">
+
+            <div class="settings-group">
+              <h2 class="settings-subtitle"><i class="fas fa-store"></i> Store Identity</h2>
+              <div class="form-row">
+                <div class="input-group">
+                  <label for="set-store-name">Store Name</label>
+                  <input type="text" id="set-store-name" value="The Shelf – Curated Reads" required>
+                </div>
+                <div class="input-group">
+                  <label for="set-store-email">Contact Email</label>
+                  <input type="email" id="set-store-email" value="concierge@theshelfreads.com" required>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="input-group">
+                  <label for="set-store-phone">Contact Phone</label>
+                  <input type="text" id="set-store-phone" value="+1 (555) 343-7435" required>
+                </div>
+                <div class="input-group">
+                  <label for="set-store-address">Physical Location</label>
+                  <input type="text" id="set-store-address" value="482 Literary Way, Boston, MA" required>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="settings-group">
+              <h2 class="settings-subtitle"><i class="fas fa-sliders-h"></i> System Configuration</h2>
+              <div class="form-row">
+                <div class="input-group">
+                  <label for="set-language">Default Language</label>
+                  <select id="set-language" class="select-field">
+                    <option value="en">English (LTR)</option>
+                    <option value="ar">العربية (RTL)</option>
+                  </select>
+                </div>
+                <div class="input-group">
+                  <label for="set-theme">Default Theme</label>
+                  <select id="set-theme" class="select-field">
+                    <option value="dark">Midnight Archive (Dark)</option>
+                    <option value="light">Light Library (Light)</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="settings-group">
+              <h2 class="settings-subtitle"><i class="fas fa-bell"></i> Alerts &amp; Notifications</h2>
+              <div class="checkbox-row">
+                <label class="checkbox-container">
+                  <input type="checkbox" id="notify-order" checked>
+                  <span class="checkbox-checkmark"></span>
+                  <span class="checkbox-label">Notify immediately on new customer order</span>
+                </label>
+              </div>
+              <div class="checkbox-row">
+                <label class="checkbox-container">
+                  <input type="checkbox" id="notify-stock" checked>
+                  <span class="checkbox-checkmark"></span>
+                  <span class="checkbox-label">Email notification on low book inventory stock (under 5 copies)</span>
+                </label>
+              </div>
+              <div class="checkbox-row">
+                <label class="checkbox-container">
+                  <input type="checkbox" id="notify-weekly">
+                  <span class="checkbox-checkmark"></span>
+                  <span class="checkbox-label">Generate and send weekly analytics reports PDF</span>
+                </label>
+              </div>
+            </div>
+
+
+            <div class="form-submit-row">
+              <button type="submit" class="btn btn-primary" id="saveSettingsBtn">
+                <span class="btn-text">Save Configuration</span>
+                <span class="btn-glow-effect"></span>
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+
+  <div class="modal-overlay" id="addBookModal">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h2 class="modal-title" id="modalHeaderTitle">Add New Book</h2>
+        <button class="modal-close" id="modalCloseBtn"><i class="fas fa-times"></i></button>
+      </div>
+      <form class="modal-form" id="bookInventoryForm">
+        <input type="hidden" id="edit-book-index" value="">
+        <div class="form-row">
+          <div class="input-group">
+            <label for="book-title">Book Title</label>
+            <input type="text" id="book-title" required placeholder="e.g. Echoes on the Wind">
+          </div>
+          <div class="input-group">
+            <label for="book-category">Category</label>
+            <select id="book-category" class="select-field" required>
+              <option value="Fiction">Fiction</option>
+              <option value="Non Fiction">Non Fiction</option>
+              <option value="History">History</option>
+              <option value="Biography">Biography</option>
+              <option value="Children">Children</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="input-group">
+            <label for="book-stock">Initial Stock</label>
+            <input type="number" id="book-stock" min="0" required placeholder="e.g. 15">
+          </div>
+          <div class="input-group">
+            <label for="book-price">Price ($)</label>
+            <input type="number" step="0.01" min="0.00" id="book-price" required placeholder="e.g. 24.50">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="input-group">
+            <label for="book-cover-select">Book Cover Visual</label>
+            <select id="book-cover-select" class="select-field" required>
+              <option value="./rare_books_showcase.png">Classic Rare Showcase</option>
+              <option value="./book_pile_hero.png">Stack on Reading Table</option>
+              <option value="./blog_featured.png">Vintage Leather Book</option>
+              <option value="./cozy_bookstore_hero.png">Store Shelf Wood</option>
+              <option value="./service_library.png">Library Bookshelf Archive</option>
+              <option value="./service_gift.png">Linen Wrapping Box</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-submit-row">
+          <button type="submit" class="btn btn-primary" id="modalSubmitBtn">
+            <span class="btn-text">Add Book</span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+  <div class="toast" id="toast-notification">
+    <span class="toast-icon">✦</span>
+    <span class="toast-message">Configuration saved successfully.</span>
+  </div>
+
+
+  <script src="./blogs.js"></script>
+  <script src="./dashboard.js"></script>
+</body>
+</html>

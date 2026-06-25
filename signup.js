@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-  // ─── DOM ELEMENTS ──────────────────────────────────────────────
+
   const signupForm = document.getElementById('signupForm');
   const nameInput = document.getElementById('signupName');
   const emailInput = document.getElementById('signupEmail');
@@ -21,85 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const submitBtn = document.getElementById('submitBtn');
 
-  const rtlBtn = document.getElementById('rtlBtn');
-  const themeBtn = document.getElementById('themeBtn');
-  const themeBtnIcon = document.getElementById('themeBtnIcon');
-  const themeBtnMobile = document.getElementById('themeBtnMobile');
-  const themeBtnMobileIcon = document.getElementById('themeBtnMobileIcon');
 
-  const toast = document.getElementById('toast-notification');
-  const toastMessage = toast ? toast.querySelector('.toast-message') : null;
-
-  // ─── TOAST NOTIFICATION SYSTEM ────────────────────────────────
-  function showToast(message) {
-    if (!toast || !toastMessage) return;
-    toastMessage.textContent = message;
-    toast.classList.add('show');
-    
-    setTimeout(() => {
-      toast.classList.remove('show');
-    }, 4000);
-  }
-
-  window.triggerToast = function(msg) {
-    showToast(msg);
-  };
-
-  // ─── THEME & RTL PREFERENCE SYNCING ───────────────────────────
-  const savedTheme = localStorage.getItem('bookstore-theme') || 'light';
-  const savedDir = localStorage.getItem('bookstore-dir') || 'ltr';
-
-  // Apply saved theme
-  if (savedTheme === 'light') {
-    document.body.classList.add('light-mode');
-    if (themeBtnIcon) themeBtnIcon.className = 'fas fa-sun';
-  } else {
-    document.body.classList.remove('light-mode');
-    if (themeBtnIcon) themeBtnIcon.className = 'fas fa-moon';
-  }
-
-  // Apply saved text direction
-  document.documentElement.setAttribute('dir', savedDir);
-  document.documentElement.setAttribute('lang', savedDir === 'rtl' ? 'ar' : 'en');
-
-  // Theme click toggling
-  if (themeBtnMobile) {
-    themeBtnMobile.addEventListener('click', () => {
-      themeBtn.click(); // reuse desktop click
-    });
-  }
-  if (themeBtn) {
-    themeBtn.addEventListener('click', () => {
-      document.body.classList.toggle('light-mode');
-      const isLight = document.body.classList.contains('light-mode');
-      
-      if (themeBtnIcon) {
-        themeBtnIcon.className = isLight ? 'fas fa-sun' : 'fas fa-moon';
-      }
-      
-      localStorage.setItem('bookstore-theme', isLight ? 'light' : 'dark');
-      if (themeBtnMobileIcon) {
-        themeBtnMobileIcon.className = isLight ? 'fas fa-sun' : 'fas fa-moon';
-      }
-      showToast(isLight ? 'Switched to Light Library mode.' : 'Switched to Midnight Archive mode.');
-    });
-  }
-
-  // RTL click toggling
-  if (rtlBtn) {
-    rtlBtn.addEventListener('click', () => {
-      const currentDir = document.documentElement.getAttribute('dir') || 'ltr';
-      const newDir = currentDir === 'rtl' ? 'ltr' : 'rtl';
-      
-      document.documentElement.setAttribute('dir', newDir);
-      document.documentElement.setAttribute('lang', newDir === 'rtl' ? 'ar' : 'en');
-      
-      localStorage.setItem('bookstore-dir', newDir);
-      showToast(newDir === 'rtl' ? 'تم تحويل الاتجاه إلى اليمين (RTL).' : 'Text layout set to LTR (English).');
-    });
-  }
-
-  // ─── PASSWORD VISIBILITY TOGGLES ─────────────────────────────
   if (passwordToggleBtn && passwordInput && passwordEyeIcon) {
     passwordToggleBtn.addEventListener('click', () => {
       const currentType = passwordInput.getAttribute('type');
@@ -126,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // ─── PASSWORD STRENGTH INDICATOR ─────────────────────────────
+
   const strengthBars = [
     document.getElementById('strength-bar-1'),
     document.getElementById('strength-bar-2'),
@@ -135,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const strengthLabel = document.getElementById('strength-label');
 
   const checkPasswordStrength = (password) => {
-    // Reset classes
+
     strengthBars.forEach(bar => {
       bar.className = 'strength-bar';
     });
@@ -147,27 +69,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let score = 0;
     if (password.length >= 8) score++;
-    if (/[A-Z]/.test(password)) score++;
-    if (/[0-9]/.test(password) || /[^A-Za-z0-9]/.test(password)) score++;
+    if ( .test(password)) score++;
+    if ( .test(password) ||  .test(password)) score++;
 
     if (password.length < 6) {
-      // Very Weak
+
       strengthBars[0].classList.add('weak');
       strengthLabel.textContent = 'Weak password (add numbers/letters)';
       strengthLabel.style.color = '#ff6b6b';
     } else if (score <= 1) {
-      // Weak / Medium
+
       strengthBars[0].classList.add('weak');
       strengthLabel.textContent = 'Weak password (add numbers/letters)';
       strengthLabel.style.color = '#ff6b6b';
     } else if (score === 2) {
-      // Medium
+
       strengthBars[0].classList.add('medium');
       strengthBars[1].classList.add('medium');
       strengthLabel.textContent = 'Medium password (add uppercase/special characters)';
       strengthLabel.style.color = '#ffd166';
     } else if (score === 3) {
-      // Strong
+
       strengthBars[0].classList.add('strong');
       strengthBars[1].classList.add('strong');
       strengthBars[2].classList.add('strong');
@@ -182,10 +104,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // ─── FORM VALIDATIONS ────────────────────────────────────────
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  // Basic validation allowing plus sign, brackets, numbers, and spaces
-  const phoneRegex = /^\+?[\d\s\-()]{7,18}$/;
+
+  const emailRegex =  ;
+
+  const phoneRegex =  ;
 
   const validateName = () => {
     if (!nameInput || !nameGroup) return false;
@@ -293,7 +215,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-  // Real-time checking setup
+
   if (nameInput) {
     nameInput.addEventListener('input', validateName);
     nameInput.addEventListener('blur', validateName);
@@ -318,12 +240,12 @@ document.addEventListener('DOMContentLoaded', () => {
     confirmPasswordInput.addEventListener('blur', validateConfirmPassword);
   }
 
-  // ─── FORM SUBMISSION HANDLING ────────────────────────────────
+
   if (signupForm) {
     signupForm.addEventListener('submit', (e) => {
       e.preventDefault();
 
-      // Trigger all validations
+
       const isNameValid = validateName();
       const isEmailValid = validateEmail();
       const isPhoneValid = validatePhone();
@@ -331,21 +253,25 @@ document.addEventListener('DOMContentLoaded', () => {
       const isConfirmValid = validateConfirmPassword();
 
       if (isNameValid && isEmailValid && isPhoneValid && isPasswordValid && isConfirmValid) {
-        // Form is valid - loading spinner state
+
         submitBtn.disabled = true;
         submitBtn.innerHTML = '<span class="btn-spinner"></span> Creating Account...';
 
         setTimeout(() => {
-          showToast('Account successfully created! Welcoming you to the Shelf community...');
+          if (window.triggerToast) {
+            window.triggerToast('Account successfully created! Welcoming you to the Shelf community...');
+          }
 
           setTimeout(() => {
-            // Redirect to dashboard
+
             window.location.href = './dashboard.html';
           }, 1200);
 
         }, 1500);
       } else {
-        showToast('Please correct the validation errors in the registration form.');
+        if (window.triggerToast) {
+          window.triggerToast('Please correct the validation errors in the registration form.');
+        }
       }
     });
   }

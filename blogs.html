@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore stories, book recommendations, classic literature reviews, and reading tips at The Shelf – Curated Reads bookstore blog.">
+  <title>The Shelf Journal | Curated Reads Bookstore</title>
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+  <link rel="stylesheet" href="./blogs.css">
+</head>
+<body>
+
+
+  <header class="navbar" id="main-header">
+    <a href="./index.html" class="logo">
+      <div class="logo-icon">
+        <svg width="44" height="44" viewBox="0 0 64 64" fill="none">
+          <rect x="10" y="8" width="8" height="48" rx="2" fill="#4A2C2A"/>
+          <path d="M18 10C18 8.9 18.9 8 20 8H52C53.1 8 54 8.9 54 10V52C54 53.1 53.1 54 52 54H20C18.9 54 18 53.1 18 52V10Z" fill="#C89B3C"/>
+          <path d="M26 20H46" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>
+          <path d="M26 28H46" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>
+          <path d="M26 36H38" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>
+          <path d="M44 8V22L40 18L36 22V8H44Z" fill="#4A2C2A"/>
+        </svg>
+      </div>
+      <div class="logo-text">
+        <span class="logo-name">The Shelf</span>
+        <span class="logo-tagline">Curated Reads</span>
+      </div>
+    </a>
+
+
+    <button class="hamburger-btn" id="hamburgerBtn" aria-label="Open Sidebar Menu" style="display: none; margin-left: 1rem; align-items: center; justify-content: center; background: transparent; border: none; cursor: pointer; color: var(--color-text-main); width: 40px; height: 40px; border-radius: 50%;">
+      <i class="fas fa-bars"></i>
+    </button>
+
+
+    <nav class="nav-links" id="navLinks">
+      <ul>
+        <li class="dropdown">
+          <a href="./index.html">
+            Home
+            <i class="fas fa-chevron-down"></i>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="./index.html">Home1</a></li>
+            <li><a href="./home2.html">Home2</a></li>
+          </ul>
+        </li>
+        <li><a href="./about.html">About</a></li>
+        <li><a href="./services.html">Services</a></li>
+        <li><a href="./blogs.html" class="active">Blog</a></li>
+        <li><a href="./contact.html">Contact</a></li>
+        <li><a href="./dashboard.html">Dashboard</a></li>
+      </ul>
+
+
+      <div class="mobile-controls">
+        <button class="mobile-ctrl-btn" id="rtlBtnMobile" aria-label="Toggle RTL Mode">
+          <i class="fas fa-right-left"></i>
+          <span>RTL Toggle</span>
+        </button>
+        <button class="mobile-ctrl-btn" id="themeBtnMobile" aria-label="Toggle Theme">
+          <i class="fas fa-moon" id="themeBtnMobileIcon"></i>
+          <span>Theme Toggle</span>
+        </button>
+        <a href="./login.html" class="mobile-login-btn">
+          <i class="fas fa-user"></i>
+          Login
+        </a>
+      </div>
+    </nav>
+
+
+    <div class="nav-right">
+      <button class="icon-btn" id="rtlBtn" aria-label="Toggle RTL Mode">
+        <i class="fas fa-right-left"></i>
+      </button>
+      <button class="icon-btn" id="themeBtn" aria-label="Toggle Theme">
+        <i class="fas fa-moon" id="themeBtnIcon"></i>
+      </button>
+      <a href="./login.html" class="login-btn">
+        <i class="fas fa-user"></i>
+        Login
+      </a>
+      <div class="menu-toggle" id="menuToggle" aria-label="Toggle Mobile Menu">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </header>
+
+
+  <div class="ambient-background">
+    <div class="ambient-glow ambient-glow-1"></div>
+    <div class="ambient-glow ambient-glow-2"></div>
+    <div class="ambient-grid"></div>
+  </div>
+
+
+  <main class="hero-container" id="hero-section">
+    <div class="hero-inner">
+
+      <section class="hero-visual">
+        <div class="book-hero-image-wrapper">
+          <img src="./blogs_hero.png" alt="Quiet study bookshelf corner and reading desk inside The Shelf bookstore" class="book-hero-image" id="hero-book-image">
+          <div class="image-glow-overlay"></div>
+
+
+          <div class="floating-premium-card animate-float">
+            <div class="card-icon"><i class="fas fa-bookmark"></i></div>
+            <div class="card-text">
+              <span class="card-tag">NEW ESSAY</span>
+              <span class="card-title">The Art of Slow Reading</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section class="hero-content">
+        <div class="badge-wrapper animate-fade-up" style="animation-delay: 0.2s;">
+          <span class="premium-badge">
+            <svg class="badge-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="currentColor"/>
+            </svg>
+            Stories &amp; Literary Insights
+          </span>
+        </div>
+
+        <h1 class="main-heading animate-fade-up" style="animation-delay: 0.4s;" id="hero-main-title">
+          Stories, Recommendations<br>&amp; <span class="highlight">Literary Discoveries</span>
+        </h1>
+
+        <p class="subheading animate-fade-up" style="animation-delay: 0.6s;">
+          Welcome to the journal of The Shelf. Here, we explore reading recommendations, timeless classics, independent publishing, and the cozy rituals of a bookish life. Dive in and find your next intellectual adventure.
+        </p>
+
+        <div class="cta-group animate-fade-up" style="animation-delay: 0.8s;">
+          <a href="#latest-articles" class="btn btn-primary" id="btn-explore">
+            <span class="btn-text">Explore Articles</span>
+            <span class="btn-glow-effect"></span>
+            <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          <a href="./index.html" class="btn btn-secondary" id="btn-visit">
+            <span class="btn-text">Visit Bookstore</span>
+          </a>
+        </div>
+
+        <div class="trust-container animate-fade-up" style="animation-delay: 1.0s;">
+          <div class="stats-glass-card">
+            <div class="stats-item">
+              <span class="stats-val">100+</span>
+              <span class="stats-lbl">Weekly Reads</span>
+            </div>
+            <div class="stats-divider"></div>
+            <div class="stats-item">
+              <span class="stats-val">2.5K</span>
+              <span class="stats-lbl">Readers</span>
+            </div>
+            <div class="stats-divider"></div>
+            <div class="stats-item">
+              <span class="stats-val">6</span>
+              <span class="stats-lbl">Curators</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+
+  <section class="featured-section" id="featured-article">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="gold-subtitle">FEATURED EDITORIAL</span>
+        <h2 class="section-title">Editor's Literary Selection</h2>
+        <p class="section-desc">Our featured analysis of reading practices, timeless literary topics, and curated library updates.</p>
+      </div>
+
+      <div class="featured-card-wrapper fade-in-on-scroll">
+        <article class="featured-horizontal-card">
+          <div class="featured-img-col">
+            <img src="./blog_featured.png" alt="Open vintage book on wooden table under warm lighting representing slow reading" class="featured-img">
+            <div class="featured-badge">Featured Essay</div>
+          </div>
+
+          <div class="featured-content-col">
+            <div class="featured-meta">
+              <span class="featured-category"><i class="fas fa-feather"></i> Classic Literature</span>
+              <span class="meta-dot"></span>
+              <span class="featured-read-time"><i class="far fa-clock"></i> 8 Min Read</span>
+            </div>
+
+            <h3 class="featured-card-title">The Art of Slow Reading in a Digital Age</h3>
+
+            <p class="featured-card-desc">
+              In a world of constant notifications and rapid scrolling, we examine how the practice of deep, slow reading can reshape our focus, expand our vocabulary, and restore a sense of calm to our daily routines. Rediscover the meditative power of classical texts.
+            </p>
+
+            <div class="featured-footer">
+              <a href="./blog-details.html?id=classic-literature" class="btn btn-primary">
+                <span class="btn-text">Read Article</span>
+                <span class="btn-glow-effect"></span>
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="latest-section" id="latest-articles">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="gold-subtitle">LATEST JOURNAL ENTRIES</span>
+        <h2 class="section-title">From the Book Concierge</h2>
+        <p class="section-desc">Browse our latest recommendations, historical essays, and bookstore journals crafted by our expert book curating team.</p>
+      </div>
+
+      <div class="blog-grid">
+
+        <article class="blog-card fade-in-on-scroll">
+          <div class="blog-card-img-wrapper">
+            <img src="./blog_card_rec.png" alt="Stack of modern books representing book recommendations" class="blog-card-img">
+            <span class="blog-card-category">Book Recommendations</span>
+          </div>
+          <div class="blog-card-info">
+            <div class="blog-card-meta">
+              <span class="blog-card-date"><i class="far fa-calendar"></i> June 24, 2026</span>
+            </div>
+            <h3 class="blog-card-title">Top Curated Books to Read This Season</h3>
+            <p class="blog-card-summary">From contemporary fiction to classic philosophy, discover the handpicked list our curators have gathered to enrich your personal shelf this season.</p>
+            <a href="./blog-details.html?id=book-recommendations" class="blog-card-cta">Read More ➔</a>
+          </div>
+        </article>
+
+
+        <article class="blog-card fade-in-on-scroll">
+          <div class="blog-card-img-wrapper">
+            <img src="./book_pile_hero.png" alt="A stack of books with spectacles on a reading desk representing reading habits" class="blog-card-img">
+            <span class="blog-card-category">Reading Habits</span>
+          </div>
+          <div class="blog-card-info">
+            <div class="blog-card-meta">
+              <span class="blog-card-date"><i class="far fa-calendar"></i> June 20, 2026</span>
+            </div>
+            <h3 class="blog-card-title">How to Build a Lifelong Reading Routine</h3>
+            <p class="blog-card-summary">Simple, practical steps to integrate deep reading into your busy day, create a dedicated reading sanctuary, and stick to your literary goals.</p>
+            <a href="./blog-details.html?id=reading-habits" class="blog-card-cta">Read More ➔</a>
+          </div>
+        </article>
+
+
+        <article class="blog-card fade-in-on-scroll">
+          <div class="blog-card-img-wrapper">
+            <img src="./service_gift.png" alt="Linen wrapped books representing indie authors and self-publishing" class="blog-card-img">
+            <span class="blog-card-category">Independent Authors</span>
+          </div>
+          <div class="blog-card-info">
+            <div class="blog-card-meta">
+              <span class="blog-card-date"><i class="far fa-calendar"></i> June 15, 2026</span>
+            </div>
+            <h3 class="blog-card-title">The Rise of Independent Press and Self-Publishing</h3>
+            <p class="blog-card-summary">An inside look at how small press publishers and self-published creators are redefining storytelling and introducing fresh perspectives.</p>
+            <a href="./blog-details.html?id=independent-authors" class="blog-card-cta">Read More ➔</a>
+          </div>
+        </article>
+
+
+        <article class="blog-card fade-in-on-scroll">
+          <div class="blog-card-img-wrapper">
+            <img src="./rare_books_showcase.png" alt="Vintage classic books on shelves representing classic literature" class="blog-card-img">
+            <span class="blog-card-category">Classic Literature</span>
+          </div>
+          <div class="blog-card-info">
+            <div class="blog-card-meta">
+              <span class="blog-card-date"><i class="far fa-calendar"></i> June 10, 2026</span>
+            </div>
+            <h3 class="blog-card-title">Why Classic Novels Still Matter Today</h3>
+            <p class="blog-card-summary">Revisiting timeless pieces from Jane Austen, Fyodor Dostoevsky, and Gabriel García Márquez, and exploring their relevance in modern society.</p>
+            <a href="./blog-details.html?id=classic-literature" class="blog-card-cta">Read More ➔</a>
+          </div>
+        </article>
+
+
+        <article class="blog-card fade-in-on-scroll">
+          <div class="blog-card-img-wrapper">
+            <img src="./cozy_bookstore_hero.png" alt="Cozy bookstore wood shelves interior representing bookstore stories" class="blog-card-img">
+            <span class="blog-card-category">Bookstore Stories</span>
+          </div>
+          <div class="blog-card-info">
+            <div class="blog-card-meta">
+              <span class="blog-card-date"><i class="far fa-calendar"></i> June 05, 2026</span>
+            </div>
+            <h3 class="blog-card-title">Behind the Shelves: The Life of a Bookstore Curator</h3>
+            <p class="blog-card-summary">Discover the daily rituals, the joy of sourcing rare prints, and what it takes to organize a physical library that inspires community connection.</p>
+            <a href="./blog-details.html?id=bookstore-stories" class="blog-card-cta">Read More ➔</a>
+          </div>
+        </article>
+
+
+        <article class="blog-card fade-in-on-scroll">
+          <div class="blog-card-img-wrapper">
+            <img src="./service_library.png" alt="Floor to ceiling wooden bookshelves representing literary discoveries" class="blog-card-img">
+            <span class="blog-card-category">Literary Discoveries</span>
+          </div>
+          <div class="blog-card-info">
+            <div class="blog-card-meta">
+              <span class="blog-card-date"><i class="far fa-calendar"></i> May 28, 2026</span>
+            </div>
+            <h3 class="blog-card-title">Uncovering Lost Manuscripts &amp; Antiquarian Secrets</h3>
+            <p class="blog-card-summary">Step into the world of antiquarian scouts and learn about the historic volumes, first prints, and hidden marginalia we've recently discovered.</p>
+            <a href="./blog-details.html?id=literary-discoveries" class="blog-card-cta">Read More ➔</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="insights-section" id="reading-insights">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="gold-subtitle">READING INSIGHTS</span>
+        <h2 class="section-title">Enhance Your Reading Journey</h2>
+        <p class="section-desc">Short, expert-crafted recommendations on formatting, routines, and building collections.</p>
+      </div>
+
+      <div class="insights-grid">
+
+        <div class="insight-card fade-in-on-scroll">
+          <div class="insight-icon"><i class="fas fa-book-bookmark"></i></div>
+          <h3 class="insight-title">Best Reading Practices</h3>
+          <p class="insight-desc">Engage deeply with text by practicing marginal note-taking, keeping book summary logs, and creating reflection intervals between chapters.</p>
+        </div>
+
+
+        <div class="insight-card fade-in-on-scroll">
+          <div class="insight-icon"><i class="fas fa-hourglass-half"></i></div>
+          <h3 class="insight-title">Building Reading Habits</h3>
+          <p class="insight-desc">Commit to reading 15 pages a day at a fixed time. Create a dedicated screen-free reading nook and stack books in highly visible areas.</p>
+        </div>
+
+
+        <div class="insight-card fade-in-on-scroll">
+          <div class="insight-icon"><i class="fas fa-map-location-dot"></i></div>
+          <h3 class="insight-title">Finding Your Next Favorite</h3>
+          <p class="insight-desc">Ditch online rating bubbles. Consult independent booksellers, explore translated literature, and select books from smaller publishing houses.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="newsletter-section" id="newsletter">
+    <div class="container">
+      <div class="newsletter-box fade-in-on-scroll">
+        <span class="gold-subtitle">SUBSCRIBE TO THE JOURNAL</span>
+        <h2 class="newsletter-heading">Receive Curated Essays &amp; Lists</h2>
+        <p class="newsletter-sub">We publish bi-weekly columns containing deep-dive literary analysis and notification of incoming antiquarian prints. No spam.</p>
+        <form class="newsletter-form-main" id="newsletter-form-main">
+          <div class="form-group-main">
+            <input type="email" required placeholder="Enter your email address" aria-label="Subscribe Email">
+            <button type="submit" class="btn btn-primary">
+              <span class="btn-text">Subscribe</span>
+              <span class="btn-glow-effect"></span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="./index.html" class="logo">
+            <div class="logo-icon">
+              <svg width="44" height="44" viewBox="0 0 64 64" fill="none">
+                <rect x="10" y="8" width="8" height="48" rx="2" fill="#4A2C2A"/>
+                <path d="M18 10C18 8.9 18.9 8 20 8H52C53.1 8 54 8.9 54 10V52C54 53.1 53.1 54 52 54H20C18.9 54 18 53.1 18 52V10Z" fill="#C89B3C"/>
+                <path d="M26 20H46" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>
+                <path d="M26 28H46" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>
+                <path d="M26 36H38" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>
+                <path d="M44 8V22L40 18L36 22V8H44Z" fill="#4A2C2A"/>
+              </svg>
+            </div>
+            <div class="logo-text">
+              <span class="logo-name">The Shelf</span>
+              <span class="logo-tagline">Curated Reads</span>
+            </div>
+          </a>
+          <p class="brand-pitch">A carefully curated bookstore for curious minds. We stock fiction, non-fiction, rare finds, and everything in between.</p>
+          <div class="footer-socials">
+            <a href="#" class="social-icon" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051C.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/>
+              </svg>
+            </a>
+            <a href="#" class="social-icon" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                <path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.323-1.325z"/>
+              </svg>
+            </a>
+            <a href="#" class="social-icon" aria-label="Pinterest">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                <path d="M12 0a12 12 0 0 0-4.37 23.17c-.07-.63-.13-1.6.03-2.3.14-.6.92-3.9 1.9-4.14.3-.2-.1-.7-.1-1 0-1.4.8-2.6 1.9-2.6 1 0 1.4.7 1.4 1.6 0 1-.6 2.4-.9 3.8-.3 1.1.5 2.1 1.6 2.1 2 0 3.5-2.1 3.5-5 0-2.6-1.9-4.4-4.5-4.4-3.1 0-5 2.3-5 5 0 .9.3 2 .8 2.5l-.3 1.1c-.2-.7-.5-1.9-.5-3.1 0-3.7 2.7-7.2 7.8-7.2 4.1 0 7.3 3 7.3 6.9 0 4.1-2.6 7.4-6.2 7.4-1.2 0-2.3-.6-2.7-1.4l-.7 2.9c-.3 1-1 2.3-1.5 3.1A12 12 0 1 0 12 0z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-links-col">
+          <h4>EXPLORE</h4>
+          <div class="footer-links">
+            <a href="./services.html">New Arrivals</a>
+            <a href="./services.html">Bestsellers</a>
+            <a href="./services.html">Award Winners</a>
+            <a href="./services.html">Staff Picks</a>
+            <a href="./services.html">Book Bundles</a>
+          </div>
+        </div>
+
+        <div class="footer-links-col">
+          <h4>GENRES</h4>
+          <div class="footer-links">
+            <a href="./services.html">Fantasy &amp; Sci-Fi</a>
+            <a href="./services.html">Romance</a>
+            <a href="./services.html">Mystery &amp; Thriller</a>
+            <a href="./services.html">Biography</a>
+            <a href="./services.html">Children's Books</a>
+          </div>
+        </div>
+
+        <div class="footer-links-col">
+          <h4>COMPANY</h4>
+          <div class="footer-links">
+            <a href="./about.html">About Us</a>
+            <a href="./blogs.html">Blog</a>
+            <a href="#careers">Careers</a>
+            <a href="#press">Press</a>
+            <a href="./contact.html">Contact</a>
+          </div>
+        </div>
+
+        <div class="footer-newsletter-col">
+          <h4>NEWSLETTER</h4>
+          <div class="footer-newsletter">
+            <p>Get weekly reading recommendations straight to your inbox.</p>
+            <form class="newsletter-form" id="newsletter-form">
+              <input type="email" required placeholder="Your email address" aria-label="Email for Newsletter">
+              <button type="submit" class="newsletter-btn" aria-label="Subscribe">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 The Shelf. All rights reserved.</p>
+        <div class="footer-socials">
+          <a href="#privacy">Privacy Policy</a>
+          <a href="#terms">Terms of Service</a>
+          <a href="#cookie-settings">Cookie Settings</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <div class="toast" id="toast-notification">
+    <span class="toast-icon">✦</span>
+    <span class="toast-message">Submission successful.</span>
+  </div>
+
+
+  <script src="./blogs.js"></script>
+</body>
+</html>

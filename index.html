@@ -15,8 +15,7 @@
 <body>
 
   <header class="navbar" id="main-header">
-
-    <a href="#hero-section" class="logo">
+    <a href="./index.html" class="logo">
       <div class="logo-icon">
         <svg width="44" height="44" viewBox="0 0 64 64" fill="none">
           <rect x="10" y="8" width="8" height="48" rx="2" fill="#4A2C2A"/>
@@ -33,6 +32,12 @@
       </div>
     </a>
 
+
+    <button class="hamburger-btn" id="hamburgerBtn" aria-label="Open Sidebar Menu" style="display: none; margin-left: 1rem; align-items: center; justify-content: center; background: transparent; border: none; cursor: pointer; color: var(--color-text-main); width: 40px; height: 40px; border-radius: 50%;">
+      <i class="fas fa-bars"></i>
+    </button>
+
+
     <nav class="nav-links" id="navLinks">
       <ul>
         <li class="dropdown">
@@ -41,7 +46,8 @@
             <i class="fas fa-chevron-down"></i>
           </a>
           <ul class="dropdown-menu">
-            <li><a href="./home2.html">Home 2</a></li>
+            <li><a href="./index.html">Home1</a></li>
+            <li><a href="./home2.html">Home2</a></li>
           </ul>
         </li>
         <li><a href="./about.html">About</a></li>
@@ -50,6 +56,8 @@
         <li><a href="./contact.html">Contact</a></li>
         <li><a href="./dashboard.html">Dashboard</a></li>
       </ul>
+
+
       <div class="mobile-controls">
         <button class="mobile-ctrl-btn" id="rtlBtnMobile" aria-label="Toggle RTL Mode">
           <i class="fas fa-right-left"></i>
@@ -66,6 +74,7 @@
       </div>
     </nav>
 
+
     <div class="nav-right">
       <button class="icon-btn" id="rtlBtn" aria-label="Toggle RTL Mode">
         <i class="fas fa-right-left"></i>
@@ -81,7 +90,6 @@
         <i class="fas fa-bars"></i>
       </div>
     </div>
-
   </header>
 
   <div class="ambient-background">
@@ -100,15 +108,15 @@
             An Ultra-Premium Digital Sanctuary
           </span>
         </div>
-        
+
         <h1 class="main-heading animate-fade-up" style="animation-delay: 0.4s;" id="hero-main-title">
           Where Every Page<br><span class="highlight">Is A Masterpiece</span>
         </h1>
-        
+
         <p class="subheading animate-fade-up" style="animation-delay: 0.6s;">
           Enter a meticulously curated digital library designed for the discerning collector. Discover rare manuscripts, certified first editions, and timeless classics, preserved in stunning high fidelity.
         </p>
-        
+
         <div class="cta-group animate-fade-up" style="animation-delay: 0.8s;">
           <a href="#explore" class="btn btn-primary" id="btn-explore">
             <span class="btn-text">Explore Collection</span>
@@ -121,7 +129,7 @@
             <span class="btn-text">Start Reading</span>
           </a>
         </div>
-        
+
         <div class="trust-container animate-fade-up" style="animation-delay: 1.0s;">
           <div class="stars" aria-label="5 star rating">★★★★★</div>
           <p class="trust-text">The definitive library for passionate bibliophiles</p>
@@ -186,7 +194,7 @@
       </div>
       <div class="timeline-container">
         <div class="timeline-line"></div>
-        
+
         <div class="timeline-item fade-in-on-scroll left-item">
           <div class="timeline-dot"></div>
           <div class="timeline-content">
@@ -195,7 +203,7 @@
             <p>Aurelia Books opened its doors as a quiet literary salon in a cobblestone lane, serving as a haven for the era's prominent writers, thinkers, and rare print collectors.</p>
           </div>
         </div>
-        
+
         <div class="timeline-item fade-in-on-scroll right-item">
           <div class="timeline-dot"></div>
           <div class="timeline-content">
@@ -204,7 +212,7 @@
             <p>Seeing a rise in damaged medieval prints, we established our first custom bindery and preservation workshop, hiring European master binders to conserve history.</p>
           </div>
         </div>
-        
+
         <div class="timeline-item fade-in-on-scroll left-item">
           <div class="timeline-dot"></div>
           <div class="timeline-content">
@@ -213,7 +221,7 @@
             <p>We expanded our reach, forming an international scout registry across six continents to trace and catalog lost manuscripts and certified first editions.</p>
           </div>
         </div>
-        
+
         <div class="timeline-item fade-in-on-scroll right-item">
           <div class="timeline-dot"></div>
           <div class="timeline-content">
@@ -270,7 +278,7 @@
         <h2 class="section-title">Insights from the Archive</h2>
         <p class="section-desc">Delve into the science of preservation, the history of master binders, and curatorial logs.</p>
       </div>
-      
+
       <div class="journal-grid">
         <article class="journal-card fade-in-on-scroll">
           <div class="journal-card-meta">
@@ -310,7 +318,7 @@
         <span class="gold-subtitle">Our Vault</span>
         <h2 class="section-title">Featured Acquisitions</h2>
         <p class="section-desc">Explore a handpicked selection of rare bindings, signed copies, and notable prints.</p>
-        
+
         <div class="gallery-filters">
           <button class="filter-btn active" data-filter="all">All Treasures</button>
           <button class="filter-btn" data-filter="rare">Rare Editions</button>
@@ -318,7 +326,7 @@
           <button class="filter-btn" data-filter="arrivals">New Arrivals</button>
         </div>
       </div>
-      
+
       <div class="gallery-grid">
         <div class="book-card fade-in-on-scroll" data-category="rare">
           <div class="book-card-visual bg-gold-leather">
@@ -337,7 +345,7 @@
             </div>
           </div>
         </div>
-        
+
         <div class="book-card fade-in-on-scroll" data-category="picks">
           <div class="book-card-visual bg-crimson-leather">
             <div class="book-card-ornament">✧</div>
@@ -355,7 +363,7 @@
             </div>
           </div>
         </div>
-        
+
         <div class="book-card fade-in-on-scroll" data-category="arrivals">
           <div class="book-card-visual bg-emerald-leather">
             <div class="book-card-ornament">★</div>
@@ -373,7 +381,7 @@
             </div>
           </div>
         </div>
-        
+
         <div class="book-card fade-in-on-scroll" data-category="rare">
           <div class="book-card-visual bg-obsidian-leather">
             <div class="book-card-ornament">∮</div>
@@ -391,7 +399,7 @@
             </div>
           </div>
         </div>
-        
+
         <div class="book-card fade-in-on-scroll" data-category="picks">
           <div class="book-card-visual bg-navy-leather">
             <div class="book-card-ornament">✦</div>
@@ -409,7 +417,7 @@
             </div>
           </div>
         </div>
-        
+
         <div class="book-card fade-in-on-scroll" data-category="arrivals">
           <div class="book-card-visual bg-plum-leather">
             <div class="book-card-ornament">✧</div>
@@ -474,7 +482,7 @@
           <span class="gold-subtitle">VIP Curation Services</span>
           <h2 class="section-title">The Collector's Circle</h2>
           <p class="paragraph">For those seeking to build generational libraries, Aurelia Books offers exclusive private consultation. Members of our Circle receive customized search parameters, direct auction bids representation, and priority restoration services.</p>
-          
+
           <div class="circle-benefits">
             <div class="benefit-item">
               <span class="benefit-marker">✦</span>
@@ -516,7 +524,7 @@
         <h2 class="section-title">Inquiries & Answers</h2>
         <p class="section-desc">Common questions regarding acquisition, authentication, shipping, and library curation.</p>
       </div>
-      
+
       <div class="faq-wrapper">
         <div class="faq-item fade-in-on-scroll">
           <button class="faq-trigger" aria-expanded="false">
@@ -529,7 +537,7 @@
             </div>
           </div>
         </div>
-        
+
         <div class="faq-item fade-in-on-scroll">
           <button class="faq-trigger" aria-expanded="false">
             <span class="faq-question">Do you offer secure worldwide shipping?</span>
@@ -541,7 +549,7 @@
             </div>
           </div>
         </div>
-        
+
         <div class="faq-item fade-in-on-scroll">
           <button class="faq-trigger" aria-expanded="false">
             <span class="faq-question">Can you help source a specific title?</span>
@@ -553,7 +561,7 @@
             </div>
           </div>
         </div>
-        
+
         <div class="faq-item fade-in-on-scroll">
           <button class="faq-trigger" aria-expanded="false">
             <span class="faq-question">How should I store and handle leather-bound volumes?</span>
@@ -577,7 +585,7 @@
           <h2 class="section-title">Acquire Your Masterpiece</h2>
           <p class="section-desc">Task our library curators with locating, appraising, or reserving your next historical treasure.</p>
         </div>
-        
+
         <form class="request-form" id="acquisition-form">
           <div class="form-row">
             <div class="form-group">
@@ -589,7 +597,7 @@
               <input type="email" id="client-email" name="email" required placeholder="e.g., byron@study.com">
             </div>
           </div>
-          
+
           <div class="form-row">
             <div class="form-group">
               <label for="book-details">Book Title / Author of Interest</label>
@@ -606,12 +614,12 @@
               </select>
             </div>
           </div>
-          
+
           <div class="form-group">
             <label for="client-message">Inquiry Details & Collection Requirements</label>
             <textarea id="client-message" name="message" rows="5" required placeholder="Describe any preferred binding details, condition requirements, or specific printing editions..."></textarea>
           </div>
-          
+
           <div class="text-center">
             <button type="submit" class="btn btn-primary" id="btn-submit-inquiry">
               <span class="btn-text">Send Private Inquiry</span>
@@ -630,15 +638,20 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a href="#" class="logo">
-            <div class="logo-icon-wrapper">
-              <svg class="logo-icon-svg" viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
-                <path d="M6 2h12a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm0 2v16h1v-16H6zm3 0v16h9V4H9zm2 0v7l2-1.5 2 1.5V4h-4z" />
+          <a href="./index.html" class="logo">
+            <div class="logo-icon">
+              <svg width="44" height="44" viewBox="0 0 64 64" fill="none">
+                <rect x="10" y="8" width="8" height="48" rx="2" fill="#4A2C2A"/>
+                <path d="M18 10C18 8.9 18.9 8 20 8H52C53.1 8 54 8.9 54 10V52C54 53.1 53.1 54 52 54H20C18.9 54 18 53.1 18 52V10Z" fill="#C89B3C"/>
+                <path d="M26 20H46" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>
+                <path d="M26 28H46" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>
+                <path d="M26 36H38" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>
+                <path d="M44 8V22L40 18L36 22V8H44Z" fill="#4A2C2A"/>
               </svg>
             </div>
-            <div class="logo-text-group">
-              <span class="logo-title">The Shelf</span>
-              <span class="logo-subtitle">CURATED READS</span>
+            <div class="logo-text">
+              <span class="logo-name">The Shelf</span>
+              <span class="logo-tagline">Curated Reads</span>
             </div>
           </a>
           <p class="brand-pitch">A carefully curated bookstore for curious minds. We stock fiction, non-fiction, rare finds, and everything in between.</p>
@@ -660,7 +673,7 @@
             </a>
           </div>
         </div>
-        
+
         <div class="footer-links-col">
           <h4>EXPLORE</h4>
           <div class="footer-links">
@@ -671,7 +684,7 @@
             <a href="#gallery-section">Book Bundles</a>
           </div>
         </div>
-        
+
         <div class="footer-links-col">
           <h4>GENRES</h4>
           <div class="footer-links">
@@ -682,7 +695,7 @@
             <a href="#gallery-section">Children's Books</a>
           </div>
         </div>
-        
+
         <div class="footer-links-col">
           <h4>COMPANY</h4>
           <div class="footer-links">
@@ -693,7 +706,7 @@
             <a href="#request-section">Contact</a>
           </div>
         </div>
-        
+
         <div class="footer-newsletter-col">
           <h4>NEWSLETTER</h4>
           <div class="footer-newsletter">
@@ -709,7 +722,7 @@
           </div>
         </div>
       </div>
-      
+
       <div class="footer-bottom">
         <p>&copy; 2025 The Shelf. All rights reserved.</p>
         <div class="footer-socials">
@@ -725,6 +738,7 @@
     <span class="toast-icon">✦</span>
     <span class="toast-message">Inquiry sent successfully.</span>
   </div>
+  <script src="./blogs.js"></script>
   <script src="./home1.js"></script>
 </body>
 </html>

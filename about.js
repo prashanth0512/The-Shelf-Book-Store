@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (target >= 1000) {
         counterEl.textContent = currentVal.toLocaleString() + '+';
       } else {
-        counterEl.textContent = currentVal;
+        counterEl.textContent = currentVal + '+';
       }
 
       if (progress < 1) {
@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (target >= 1000) {
           counterEl.textContent = target.toLocaleString() + '+';
         } else {
-          counterEl.textContent = target;
+          counterEl.textContent = target + '+';
         }
       }
     }

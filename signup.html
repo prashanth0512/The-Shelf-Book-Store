@@ -6,28 +6,28 @@
   <meta name="description" content="Create a member account at The Shelf – Curated Reads bookstore.">
   <title>Sign Up | The Shelf — Curated Reads</title>
 
-  <!-- Google Fonts -->
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  
-  <!-- FontAwesome Icons -->
+
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  
-  <!-- Custom CSS (Reusing login.css rules with signup modifications) -->
+
+
   <link rel="stylesheet" href="./login.css">
   <link rel="stylesheet" href="./signup.css">
 </head>
 <body>
 
-  <!-- Ambient Glow Effects -->
+
   <div class="ambient-background">
     <div class="ambient-glow ambient-glow-1"></div>
     <div class="ambient-glow ambient-glow-2"></div>
     <div class="ambient-grid"></div>
   </div>
 
-  <!-- FLOATING LAYOUT CONTROLS -->
+
   <div class="auth-toggles">
     <button class="icon-btn" id="rtlBtn" aria-label="Toggle RTL Mode">
       <i class="fas fa-right-left"></i>
@@ -37,18 +37,18 @@
     </button>
   </div>
 
-  <!-- MAIN SPLIT SCREEN LAYOUT -->
+
   <main class="auth-container">
-    
-    <!-- LEFT SIDE: BOOKSTORE VISUAL HERO -->
+
+
     <section class="auth-visual">
       <div class="visual-img-wrapper">
         <img src="./rare_books_showcase.png" alt="Luxurious Bookstore Interior" class="visual-img">
         <div class="visual-overlay"></div>
         <div class="visual-glow-overlay"></div>
       </div>
-      
-      <!-- Floating Glass Card (Quote) -->
+
+
       <div class="floating-quote-card">
         <i class="fas fa-quote-left quote-icon"></i>
         <blockquote class="quote-text">
@@ -57,7 +57,7 @@
         <cite class="quote-author">— Ralph Waldo Emerson</cite>
       </div>
 
-      <!-- Small Stats Badge -->
+
       <div class="floating-stats-badge">
         <div class="badge-icon-wrapper">
           <i class="fas fa-users"></i>
@@ -69,11 +69,11 @@
       </div>
     </section>
 
-    <!-- RIGHT SIDE: FORM BLOCK -->
+
     <section class="auth-form-section">
       <div class="form-card-wrapper animate-fade-up">
-        
-        <!-- Brand Logo -->
+
+
         <a href="./index.html" class="logo form-logo">
           <div class="logo-icon">
             <svg width="36" height="36" viewBox="0 0 64 64" fill="none">
@@ -90,8 +90,8 @@
             <span class="logo-tagline">Curated Reads</span>
           </div>
         </a>
-        
-        <!-- Header text -->
+
+
         <div class="form-header">
           <span class="premium-badge">
             <i class="fas fa-feather"></i> Join Our Community
@@ -102,10 +102,10 @@
           </p>
         </div>
 
-        <!-- Registration Form -->
+
         <form class="auth-form" id="signupForm" novalidate>
-          
-          <!-- Full Name Input -->
+
+
           <div class="input-group">
             <label for="signupName" class="input-label">Full Name</label>
             <div class="input-field-wrapper">
@@ -115,7 +115,7 @@
             <span class="validation-message" id="nameError">Full name is required (minimum 3 characters)</span>
           </div>
 
-          <!-- Email Input -->
+
           <div class="input-group">
             <label for="signupEmail" class="input-label">Email Address</label>
             <div class="input-field-wrapper">
@@ -125,7 +125,7 @@
             <span class="validation-message" id="emailError">Please enter a valid email address</span>
           </div>
 
-          <!-- Phone Number Input -->
+
           <div class="input-group">
             <label for="signupPhone" class="input-label">Phone Number</label>
             <div class="input-field-wrapper">
@@ -135,7 +135,7 @@
             <span class="validation-message" id="phoneError">Please enter a valid phone number</span>
           </div>
 
-          <!-- Password Input -->
+
           <div class="input-group">
             <label for="signupPassword" class="input-label">Password</label>
             <div class="input-field-wrapper">
@@ -145,7 +145,7 @@
                 <i class="fas fa-eye" id="passwordEyeIcon"></i>
               </button>
             </div>
-            <!-- Password Strength Indicator -->
+
             <div class="strength-indicator-wrapper">
               <div class="strength-bars">
                 <div class="strength-bar" id="strength-bar-1"></div>
@@ -157,7 +157,7 @@
             <span class="validation-message" id="passwordError">Password must be at least 8 characters</span>
           </div>
 
-          <!-- Confirm Password Input -->
+
           <div class="input-group">
             <label for="signupConfirmPassword" class="input-label">Confirm Password</label>
             <div class="input-field-wrapper">
@@ -170,12 +170,12 @@
             <span class="validation-message" id="confirmPasswordError">Passwords do not match</span>
           </div>
 
-          <!-- Submit Button -->
+
           <button type="submit" class="btn btn-primary btn-submit" id="submitBtn">
             <span class="btn-text">Create Account</span>
           </button>
 
-          <!-- Social Authentications -->
+
           <div class="divider-container">
             <span class="divider-text">Or Continue With</span>
           </div>
@@ -195,7 +195,7 @@
             </button>
           </div>
 
-          <!-- Bottom Redirect -->
+
           <div class="auth-card-footer">
             <span class="footer-text">Already have an account?</span>
             <a href="./login.html" class="footer-link">Log In</a>
@@ -207,13 +207,14 @@
 
   </main>
 
-  <!-- Toast Message Element -->
+
   <div class="toast" id="toast-notification">
     <span class="toast-icon">✦</span>
     <span class="toast-message">Verification complete.</span>
   </div>
 
-  <!-- Scripts -->
+
+  <script src="./blogs.js"></script>
   <script src="./signup.js"></script>
 </body>
 </html>

@@ -6,20 +6,20 @@
   <meta name="description" content="Discover professional literary services at The Shelf – Curated Reads. Personal reading consultations, rare book sourcing, book clubs, library curation, and gift bundles.">
   <title>Our Services | The Shelf — Curated Reads</title>
 
-  <!-- Google Fonts -->
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  
-  <!-- FontAwesome Icon Library -->
+
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  
-  <!-- Custom Stylesheet -->
+
+
   <link rel="stylesheet" href="./services.css">
 </head>
 <body>
 
-  <!-- Premium Header (Identical structure to index, home2 & about) -->
+
   <header class="navbar" id="main-header">
     <a href="./index.html" class="logo">
       <div class="logo-icon">
@@ -38,7 +38,12 @@
       </div>
     </a>
 
-    <!-- Navigation Links -->
+
+    <button class="hamburger-btn" id="hamburgerBtn" aria-label="Open Sidebar Menu" style="display: none; margin-left: 1rem; align-items: center; justify-content: center; background: transparent; border: none; cursor: pointer; color: var(--color-text-main); width: 40px; height: 40px; border-radius: 50%;">
+      <i class="fas fa-bars"></i>
+    </button>
+
+
     <nav class="nav-links" id="navLinks">
       <ul>
         <li class="dropdown">
@@ -47,7 +52,8 @@
             <i class="fas fa-chevron-down"></i>
           </a>
           <ul class="dropdown-menu">
-            <li><a href="./home2.html">Home 2</a></li>
+            <li><a href="./index.html">Home1</a></li>
+            <li><a href="./home2.html">Home2</a></li>
           </ul>
         </li>
         <li><a href="./about.html">About</a></li>
@@ -56,8 +62,8 @@
         <li><a href="./contact.html">Contact</a></li>
         <li><a href="./dashboard.html">Dashboard</a></li>
       </ul>
-      
-      <!-- Mobile Drawer Controls -->
+
+
       <div class="mobile-controls">
         <button class="mobile-ctrl-btn" id="rtlBtnMobile" aria-label="Toggle RTL Mode">
           <i class="fas fa-right-left"></i>
@@ -74,7 +80,7 @@
       </div>
     </nav>
 
-    <!-- Desktop Controls -->
+
     <div class="nav-right">
       <button class="icon-btn" id="rtlBtn" aria-label="Toggle RTL Mode">
         <i class="fas fa-right-left"></i>
@@ -92,14 +98,14 @@
     </div>
   </header>
 
-  <!-- Ambient Glow Backgrounds -->
+
   <div class="ambient-background">
     <div class="ambient-glow ambient-glow-1"></div>
     <div class="ambient-glow ambient-glow-2"></div>
     <div class="ambient-grid"></div>
   </div>
 
-  <!-- Hero Section -->
+
   <main class="hero-container" id="hero-section">
     <div class="hero-inner">
       <section class="hero-content">
@@ -111,15 +117,15 @@
             Tailored Bookstore Experiences
           </span>
         </div>
-        
+
         <h1 class="main-heading animate-fade-up" style="animation-delay: 0.4s;" id="hero-main-title">
           Professional Literary<br>Services For <span class="highlight">discerning Readers</span>
         </h1>
-        
+
         <p class="subheading animate-fade-up" style="animation-delay: 0.6s;">
           We extend the bookstore experience beyond shelves. Whether you're looking to consult with our experts, locate rare printings, curate private libraries, or build community, we offer tailored services.
         </p>
-        
+
         <div class="cta-group animate-fade-up" style="animation-delay: 0.8s;">
           <a href="#our-services" class="btn btn-primary" id="btn-explore">
             <span class="btn-text">Explore Services</span>
@@ -132,7 +138,7 @@
             <span class="btn-text">Contact Us</span>
           </a>
         </div>
-        
+
         <div class="trust-container animate-fade-up" style="animation-delay: 1.0s;">
           <div class="stars" aria-label="5 star rating">★★★★★</div>
           <p class="trust-text">Impeccable personal service for collectors &amp; book clubs</p>
@@ -143,8 +149,8 @@
         <div class="book-hero-image-wrapper">
           <img src="./services_hero.png" alt="Bookstore concierge counter desk representing The Shelf literary services" class="book-hero-image" id="hero-book-image">
           <div class="image-glow-overlay"></div>
-          
-          <!-- Premium Floating elements -->
+
+
           <div class="floating-premium-card">
             <div class="card-icon"><i class="fas fa-calendar-check"></i></div>
             <div class="card-text">
@@ -157,7 +163,7 @@
     </div>
   </main>
 
-  <!-- Section 2: Our Services -->
+
   <section class="services-grid-section" id="our-services">
     <div class="container">
       <div class="section-header text-center">
@@ -167,7 +173,7 @@
       </div>
 
       <div class="services-card-grid">
-        <!-- Service Card 1 -->
+
         <article class="service-card fade-in-on-scroll">
           <div class="service-img-wrapper">
             <img src="./service_consultation.png" alt="Book curator and client conversing during a Personal Reading Consultation" class="service-img">
@@ -180,7 +186,7 @@
           </div>
         </article>
 
-        <!-- Service Card 2 -->
+
         <article class="service-card fade-in-on-scroll">
           <div class="service-img-wrapper">
             <img src="./service_rare.png" alt="Close-up of gloved hands handling antique book pages during Rare Book Sourcing" class="service-img">
@@ -193,7 +199,7 @@
           </div>
         </article>
 
-        <!-- Service Card 3 -->
+
         <article class="service-card fade-in-on-scroll">
           <div class="service-img-wrapper">
             <img src="./service_club.png" alt="Book club circle discussing books in a cozy bookstore lounge" class="service-img">
@@ -206,7 +212,7 @@
           </div>
         </article>
 
-        <!-- Service Card 4 -->
+
         <article class="service-card fade-in-on-scroll">
           <div class="service-img-wrapper">
             <img src="./service_author.png" alt="Author speaking on stage at a bookstore event launch" class="service-img">
@@ -219,7 +225,7 @@
           </div>
         </article>
 
-        <!-- Service Card 5 -->
+
         <article class="service-card fade-in-on-scroll">
           <div class="service-img-wrapper">
             <img src="./service_library.png" alt="Elegant custom private library with floor-to-ceiling wooden shelving" class="service-img">
@@ -232,7 +238,7 @@
           </div>
         </article>
 
-        <!-- Service Card 6 -->
+
         <article class="service-card fade-in-on-scroll">
           <div class="service-img-wrapper">
             <img src="./service_gift.png" alt="Gift box filled with curated novels and brass bookmark tied with string" class="service-img">
@@ -248,7 +254,7 @@
     </div>
   </section>
 
-  <!-- Section 3: Why Choose Our Services -->
+
   <section class="why-choose-us-section" id="why-choose">
     <div class="container">
       <div class="section-header text-center">
@@ -258,25 +264,25 @@
       </div>
 
       <div class="why-grid">
-        <!-- Card 1 -->
+
         <div class="why-card fade-in-on-scroll">
           <div class="why-icon"><i class="fas fa-user-tie"></i></div>
           <h3 class="why-title">Expert Guidance</h3>
           <p class="why-desc">Our advisors possess extensive library science, book catalog trade, and literary curation experience.</p>
         </div>
-        <!-- Card 2 -->
+
         <div class="why-card fade-in-on-scroll">
           <div class="why-icon"><i class="fas fa-sliders"></i></div>
           <h3 class="why-title">Personalized Experience</h3>
           <p class="why-desc">No automated scripts or general selections. Every recommendation matches your conversation and taste map.</p>
         </div>
-        <!-- Card 3 -->
+
         <div class="why-card fade-in-on-scroll">
           <div class="why-icon"><i class="fas fa-globe"></i></div>
           <h3 class="why-title">Trusted Network</h3>
           <p class="why-desc">We work with small printing presses, global book scouts, and certified antiquarian dealers globally.</p>
         </div>
-        <!-- Card 4 -->
+
         <div class="why-card fade-in-on-scroll">
           <div class="why-icon"><i class="fas fa-people-group"></i></div>
           <h3 class="why-title">Community Driven</h3>
@@ -286,7 +292,7 @@
     </div>
   </section>
 
-  <!-- Section 4: Featured Gallery (Masonry Layout) -->
+
   <section class="gallery-section" id="gallery">
     <div class="container">
       <div class="section-header text-center">
@@ -296,42 +302,42 @@
       </div>
 
       <div class="masonry-gallery">
-        <!-- Gallery Item 1 (Tall) -->
+
         <div class="gallery-item tall fade-in-on-scroll">
           <img src="./services_hero.png" alt="Modern independent bookstore concierge area">
           <div class="gallery-overlay">
             <span>Concierge Desk</span>
           </div>
         </div>
-        <!-- Gallery Item 2 (Short) -->
+
         <div class="gallery-item short fade-in-on-scroll">
           <img src="./cozy_bookstore_hero.png" alt="Cozy reading corners under soft lighting">
           <div class="gallery-overlay">
             <span>Reading Lounges</span>
           </div>
         </div>
-        <!-- Gallery Item 3 (Medium) -->
+
         <div class="gallery-item medium fade-in-on-scroll">
           <img src="./book_club_community.png" alt="Readers conversing and laughing in a circle">
           <div class="gallery-overlay">
             <span>Book Clubs</span>
           </div>
         </div>
-        <!-- Gallery Item 4 (Tall) -->
+
         <div class="gallery-item tall fade-in-on-scroll">
           <img src="./rare_books_showcase.png" alt="Rows of beautifully curated leather bound books">
           <div class="gallery-overlay">
             <span>Curated Casing</span>
           </div>
         </div>
-        <!-- Gallery Item 5 (Medium) -->
+
         <div class="gallery-item medium fade-in-on-scroll">
           <img src="./service_library.png" alt="Private home library room design layout">
           <div class="gallery-overlay">
             <span>Library Sourcing</span>
           </div>
         </div>
-        <!-- Gallery Item 6 (Short) -->
+
         <div class="gallery-item short fade-in-on-scroll">
           <img src="./service_gift.png" alt="Styled book gift boxes">
           <div class="gallery-overlay">
@@ -342,7 +348,7 @@
     </div>
   </section>
 
-  <!-- Section 5: Client Testimonials -->
+
   <section class="testimonials-section" id="testimonials">
     <div class="container">
       <div class="section-header text-center">
@@ -352,7 +358,7 @@
       </div>
 
       <div class="testimonials-grid">
-        <!-- Testimonial 1 -->
+
         <div class="testimonial-card fade-in-on-scroll">
           <div class="testimonial-header">
             <div class="client-avatar"><i class="fas fa-user"></i></div>
@@ -365,7 +371,7 @@
           <p class="testimonial-text">"The rare book sourcing service found a gorgeous 1920s edition of my favorite collection in under three weeks. Absolute white-glove quality and authenticated reports."</p>
         </div>
 
-        <!-- Testimonial 2 -->
+
         <div class="testimonial-card fade-in-on-scroll">
           <div class="testimonial-header">
             <div class="client-avatar"><i class="fas fa-user"></i></div>
@@ -378,7 +384,7 @@
           <p class="testimonial-text">"Their library curation service transformed our home study completely. They sourced over a thousand volumes matching our style, handling layout, shelving, and cataloging."</p>
         </div>
 
-        <!-- Testimonial 3 -->
+
         <div class="testimonial-card fade-in-on-scroll">
           <div class="testimonial-header">
             <div class="client-avatar"><i class="fas fa-user"></i></div>
@@ -394,7 +400,7 @@
     </div>
   </section>
 
-  <!-- Section 6: Frequently Asked Questions (Accordion) -->
+
   <section class="faq-section" id="faq">
     <div class="container">
       <div class="section-header text-center">
@@ -404,7 +410,7 @@
       </div>
 
       <div class="faq-wrapper">
-        <!-- FAQ 1 -->
+
         <div class="faq-item fade-in-on-scroll">
           <button class="faq-trigger" aria-expanded="false">
             <span class="faq-question">How do personal reading consultations work?</span>
@@ -417,7 +423,7 @@
           </div>
         </div>
 
-        <!-- FAQ 2 -->
+
         <div class="faq-item fade-in-on-scroll">
           <button class="faq-trigger" aria-expanded="false">
             <span class="faq-question">Can you source rare editions internationally?</span>
@@ -430,7 +436,7 @@
           </div>
         </div>
 
-        <!-- FAQ 3 -->
+
         <div class="faq-item fade-in-on-scroll">
           <button class="faq-trigger" aria-expanded="false">
             <span class="faq-question">Do you organize corporate book clubs?</span>
@@ -443,7 +449,7 @@
           </div>
         </div>
 
-        <!-- FAQ 4 -->
+
         <div class="faq-item fade-in-on-scroll">
           <button class="faq-trigger" aria-expanded="false">
             <span class="faq-question">Can you curate private libraries from scratch?</span>
@@ -456,7 +462,7 @@
           </div>
         </div>
 
-        <!-- FAQ 5 -->
+
         <div class="faq-item fade-in-on-scroll">
           <button class="faq-trigger" aria-expanded="false">
             <span class="faq-question">How long does rare book sourcing typically take?</span>
@@ -469,7 +475,7 @@
           </div>
         </div>
 
-        <!-- FAQ 6 -->
+
         <div class="faq-item fade-in-on-scroll">
           <button class="faq-trigger" aria-expanded="false">
             <span class="faq-question">Can services be customized to my specific budget?</span>
@@ -485,7 +491,7 @@
     </div>
   </section>
 
-  <!-- Section 7: Final CTA -->
+
   <section class="final-cta-section" id="final-cta">
     <div class="container">
       <div class="cta-box fade-in-on-scroll">
@@ -502,20 +508,25 @@
     </div>
   </section>
 
-  <!-- Premium Footer (Identical structure to index, home2 & about) -->
+
   <footer class="main-footer">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a href="#" class="logo">
-            <div class="logo-icon-wrapper">
-              <svg class="logo-icon-svg" viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
-                <path d="M6 2h12a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm0 2v16h1v-16H6zm3 0v16h9V4H9zm2 0v7l2-1.5 2 1.5V4h-4z" />
+          <a href="./index.html" class="logo">
+            <div class="logo-icon">
+              <svg width="44" height="44" viewBox="0 0 64 64" fill="none">
+                <rect x="10" y="8" width="8" height="48" rx="2" fill="#4A2C2A"/>
+                <path d="M18 10C18 8.9 18.9 8 20 8H52C53.1 8 54 8.9 54 10V52C54 53.1 53.1 54 52 54H20C18.9 54 18 53.1 18 52V10Z" fill="#C89B3C"/>
+                <path d="M26 20H46" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>
+                <path d="M26 28H46" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>
+                <path d="M26 36H38" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>
+                <path d="M44 8V22L40 18L36 22V8H44Z" fill="#4A2C2A"/>
               </svg>
             </div>
-            <div class="logo-text-group">
-              <span class="logo-title">The Shelf</span>
-              <span class="logo-subtitle">CURATED READS</span>
+            <div class="logo-text">
+              <span class="logo-name">The Shelf</span>
+              <span class="logo-tagline">Curated Reads</span>
             </div>
           </a>
           <p class="brand-pitch">A carefully curated bookstore for curious minds. We stock fiction, non-fiction, rare finds, and everything in between.</p>
@@ -537,7 +548,7 @@
             </a>
           </div>
         </div>
-        
+
         <div class="footer-links-col">
           <h4>EXPLORE</h4>
           <div class="footer-links">
@@ -548,7 +559,7 @@
             <a href="./services.html">Book Bundles</a>
           </div>
         </div>
-        
+
         <div class="footer-links-col">
           <h4>GENRES</h4>
           <div class="footer-links">
@@ -559,7 +570,7 @@
             <a href="./services.html">Children's Books</a>
           </div>
         </div>
-        
+
         <div class="footer-links-col">
           <h4>COMPANY</h4>
           <div class="footer-links">
@@ -570,7 +581,7 @@
             <a href="./contact.html">Contact</a>
           </div>
         </div>
-        
+
         <div class="footer-newsletter-col">
           <h4>NEWSLETTER</h4>
           <div class="footer-newsletter">
@@ -586,7 +597,7 @@
           </div>
         </div>
       </div>
-      
+
       <div class="footer-bottom">
         <p>&copy; 2026 The Shelf. All rights reserved.</p>
         <div class="footer-socials">
@@ -598,13 +609,14 @@
     </div>
   </footer>
 
-  <!-- Toast Notifications -->
+
   <div class="toast" id="toast-notification">
     <span class="toast-icon">✦</span>
     <span class="toast-message">Submission successful.</span>
   </div>
 
-  <!-- Interactive JavaScript -->
+
+  <script src="./blogs.js"></script>
   <script src="./services.js"></script>
 </body>
 </html>

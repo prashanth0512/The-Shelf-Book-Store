@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="View curated literary service details at The Shelf bookstore. Personalized reading programs, rare editions, library designs, and custom gifts.">
-  <title>Service Details | The Shelf — Curated Reads</title>
+  <meta name="description" content="Read our deep-dive literary analysis, curated book recommendations, and bookstore columns.">
+  <title>Article Details | The Shelf Bookstore</title>
 
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 
-  <link rel="stylesheet" href="./service-details.css">
+  <link rel="stylesheet" href="./blog-details.css">
 </head>
 <body>
 
@@ -57,8 +57,8 @@
           </ul>
         </li>
         <li><a href="./about.html">About</a></li>
-        <li><a href="./services.html" class="active">Services</a></li>
-        <li><a href="./blogs.html">Blog</a></li>
+        <li><a href="./services.html">Services</a></li>
+        <li><a href="./blogs.html" class="active">Blog</a></li>
         <li><a href="./contact.html">Contact</a></li>
         <li><a href="./dashboard.html">Dashboard</a></li>
       </ul>
@@ -108,6 +108,15 @@
 
   <main class="hero-container" id="hero-section">
     <div class="hero-inner">
+
+      <section class="hero-visual">
+        <div class="book-hero-image-wrapper">
+          <img src="" alt="" class="book-hero-image" id="details-hero-img">
+          <div class="image-glow-overlay"></div>
+        </div>
+      </section>
+
+
       <section class="hero-content">
         <div class="badge-wrapper animate-fade-up" style="animation-delay: 0.2s;">
           <span class="premium-badge" id="details-badge">
@@ -119,93 +128,52 @@
 
         </h1>
 
-        <p class="subheading animate-fade-up" style="animation-delay: 0.6s;" id="details-subtitle">
+        <div class="article-meta-row animate-fade-up" style="animation-delay: 0.5s;">
+          <span class="meta-item" id="details-author">
+            <i class="fas fa-user-pen"></i>
+          </span>
+          <span class="meta-separator">|</span>
+          <span class="meta-item" id="details-date">
+            <i class="far fa-calendar"></i>
+          </span>
+          <span class="meta-separator">|</span>
+          <span class="meta-item" id="details-read-time">
+            <i class="far fa-clock"></i>
+          </span>
+        </div>
 
-        </p>
-
-        <div class="cta-group animate-fade-up" style="animation-delay: 0.8s;">
-          <a href="./contact.html" class="btn btn-primary" id="details-cta-link">
-            <span class="btn-text" id="details-cta-text">Book Service</span>
+        <div class="cta-group animate-fade-up" style="animation-delay: 0.7s;">
+          <a href="#article-body" class="btn btn-primary" id="btn-read-now">
+            <span class="btn-text">Read Article</span>
             <span class="btn-glow-effect"></span>
           </a>
-          <a href="./services.html" class="btn btn-secondary">
-            <span class="btn-text">Back to Services</span>
+          <a href="./blogs.html" class="btn btn-secondary">
+            <span class="btn-text">Back to Journal</span>
           </a>
-        </div>
-      </section>
-
-      <section class="hero-visual">
-        <div class="book-hero-image-wrapper">
-          <img src="" alt="" class="book-hero-image" id="details-hero-img">
-          <div class="image-glow-overlay"></div>
         </div>
       </section>
     </div>
   </main>
 
 
-  <section class="overview-section" id="overview">
+  <section class="article-body-section" id="article-body">
     <div class="container">
-      <div class="split-wrapper">
-        <div class="split-visual fade-in-on-scroll">
-          <div class="image-frame-container">
-            <div class="image-frame-border"></div>
-            <img src="" alt="" class="split-image" id="details-overview-img">
-            <div class="gold-frame-filigree">✦</div>
-          </div>
-        </div>
-        <div class="split-content-col fade-in-on-scroll">
-          <span class="gold-subtitle" id="details-overview-tag">Service Overview</span>
-          <h2 class="section-title" id="details-overview-title">How We Help You</h2>
-          <p class="paragraph" id="details-overview-desc-1"></p>
-          <p class="paragraph" id="details-overview-desc-2"></p>
+      <div class="article-layout">
 
-          <div class="split-features" id="details-overview-bullets">
+        <article class="article-main-content fade-in-on-scroll" id="details-content">
 
-          </div>
-        </div>
+        </article>
       </div>
     </div>
   </section>
 
 
-  <section class="timeline-section" id="process">
+  <section class="gallery-section" id="article-gallery">
     <div class="container">
       <div class="section-header text-center">
-        <span class="gold-subtitle">OUR PROCESS</span>
-        <h2 class="section-title">Step-by-Step Pathway</h2>
-        <p class="section-desc">We follow a structured, collaborative methodology to ensure an outstanding literary delivery.</p>
-      </div>
-
-      <div class="timeline-container" id="details-timeline">
-        <div class="timeline-line"></div>
-
-      </div>
-    </div>
-  </section>
-
-
-  <section class="benefits-section" id="benefits">
-    <div class="container">
-      <div class="section-header text-center">
-        <span class="gold-subtitle">THE VALUE</span>
-        <h2 class="section-title">Service Benefits &amp; Features</h2>
-        <p class="section-desc">What makes this package an essential addition to your literary collection or lifestyle.</p>
-      </div>
-
-      <div class="why-grid" id="details-benefits-cards">
-
-      </div>
-    </div>
-  </section>
-
-
-  <section class="gallery-section" id="gallery">
-    <div class="container">
-      <div class="section-header text-center">
-        <span class="gold-subtitle">VISUAL GALLERY</span>
-        <h2 class="section-title">Service Highlights</h2>
-        <p class="section-desc">Glimpses of active curations, sourcing documents, or community programs related to this service.</p>
+        <span class="gold-subtitle">VISUAL HIGHLIGHTS</span>
+        <h2 class="section-title">Gallery Curations</h2>
+        <p class="section-desc">Hand-picked visual representations and bookstore environments related to this topic.</p>
       </div>
 
       <div class="details-gallery-grid" id="details-gallery">
@@ -215,33 +183,51 @@
   </section>
 
 
-  <section class="faq-section" id="faq">
+  <section class="takeaways-section" id="article-takeaways">
     <div class="container">
       <div class="section-header text-center">
-        <span class="gold-subtitle">QUESTIONS &amp; ANSWERS</span>
-        <h2 class="section-title">Frequently Asked Questions</h2>
-        <p class="section-desc">Specific technical and logistical answers regarding the execution of this service.</p>
+        <span class="gold-subtitle">KEY INSIGHTS</span>
+        <h2 class="section-title">Core Takeaways</h2>
+        <p class="section-desc">A summary of the main points, recommendations, and methodologies discussed in this analysis.</p>
       </div>
 
-      <div class="faq-wrapper" id="details-faq">
+      <div class="takeaways-grid" id="details-takeaways">
 
       </div>
     </div>
   </section>
 
 
-  <section class="contact-cta-section" id="booking">
+  <section class="related-section" id="article-related">
     <div class="container">
-      <div class="cta-box fade-in-on-scroll">
-        <h2 class="cta-heading" id="details-footer-cta-title">Let's Get Started</h2>
-        <p class="cta-sub" id="details-footer-cta-desc">Reach out to our specialists to design your custom pathway or submit a service inquiry.</p>
-        <div class="cta-buttons">
-          <a href="./contact.html" class="btn btn-primary" id="details-footer-cta-btn">
-            <span class="btn-text">Book Consultation</span>
-            <span class="btn-glow-effect"></span>
-          </a>
-          <a href="./services.html" class="btn btn-secondary">Back to Services</a>
-        </div>
+      <div class="section-header text-center">
+        <span class="gold-subtitle">RELATED LITERATURE</span>
+        <h2 class="section-title">Further Reading</h2>
+        <p class="section-desc">Continue your intellectual exploration with these hand-selected columns from our journal.</p>
+      </div>
+
+      <div class="blog-grid" id="details-related">
+
+      </div>
+    </div>
+  </section>
+
+
+  <section class="newsletter-section" id="newsletter">
+    <div class="container">
+      <div class="newsletter-box fade-in-on-scroll">
+        <span class="gold-subtitle">SUBSCRIBE TO THE JOURNAL</span>
+        <h2 class="newsletter-heading">Never Miss an Insight</h2>
+        <p class="newsletter-sub">Our subscribers receive early notifications of rare antiquarian arrivals and exclusive essays from visiting authors.</p>
+        <form class="newsletter-form-main" id="newsletter-form-main">
+          <div class="form-group-main">
+            <input type="email" required placeholder="Enter your email address" aria-label="Subscribe Email">
+            <button type="submit" class="btn btn-primary">
+              <span class="btn-text">Subscribe</span>
+              <span class="btn-glow-effect"></span>
+            </button>
+          </div>
+        </form>
       </div>
     </div>
   </section>
@@ -355,6 +341,6 @@
 
 
   <script src="./blogs.js"></script>
-  <script src="./service-details.js"></script>
+  <script src="./blog-details.js"></script>
 </body>
 </html>

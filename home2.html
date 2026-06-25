@@ -6,22 +6,21 @@
   <meta name="description" content="Welcome to The Shelf – Curated Reads. An independent premium bookstore designed for contemporary readers. Explore staff recommendations, cozy reading spaces, and vibrant literary events.">
   <title>The Shelf — Curated Reads | Independent Bookstore Experience</title>
 
-  <!-- Google Fonts -->
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  
-  <!-- FontAwesome Icon Library -->
+
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  
-  <!-- Custom Stylesheet -->
+
+
   <link rel="stylesheet" href="./home2.css">
 </head>
 <body>
 
-  <!-- Premium Header (Identical structure to Home1) -->
   <header class="navbar" id="main-header">
-    <a href="#hero-section" class="logo">
+    <a href="./index.html" class="logo">
       <div class="logo-icon">
         <svg width="44" height="44" viewBox="0 0 64 64" fill="none">
           <rect x="10" y="8" width="8" height="48" rx="2" fill="#4A2C2A"/>
@@ -38,7 +37,12 @@
       </div>
     </a>
 
-    <!-- Navigation Links -->
+
+    <button class="hamburger-btn" id="hamburgerBtn" aria-label="Open Sidebar Menu" style="display: none; margin-left: 1rem; align-items: center; justify-content: center; background: transparent; border: none; cursor: pointer; color: var(--color-text-main); width: 40px; height: 40px; border-radius: 50%;">
+      <i class="fas fa-bars"></i>
+    </button>
+
+
     <nav class="nav-links" id="navLinks">
       <ul>
         <li class="dropdown">
@@ -47,7 +51,8 @@
             <i class="fas fa-chevron-down"></i>
           </a>
           <ul class="dropdown-menu">
-            <li><a href="./home2.html">Home 2</a></li>
+            <li><a href="./index.html">Home1</a></li>
+            <li><a href="./home2.html">Home2</a></li>
           </ul>
         </li>
         <li><a href="./about.html">About</a></li>
@@ -56,8 +61,8 @@
         <li><a href="./contact.html">Contact</a></li>
         <li><a href="./dashboard.html">Dashboard</a></li>
       </ul>
-      
-      <!-- Mobile Drawer Controls -->
+
+
       <div class="mobile-controls">
         <button class="mobile-ctrl-btn" id="rtlBtnMobile" aria-label="Toggle RTL Mode">
           <i class="fas fa-right-left"></i>
@@ -74,7 +79,7 @@
       </div>
     </nav>
 
-    <!-- Desktop Controls -->
+
     <div class="nav-right">
       <button class="icon-btn" id="rtlBtn" aria-label="Toggle RTL Mode">
         <i class="fas fa-right-left"></i>
@@ -92,14 +97,14 @@
     </div>
   </header>
 
-  <!-- Ambient Glow Backgrounds -->
+
   <div class="ambient-background">
     <div class="ambient-glow ambient-glow-1"></div>
     <div class="ambient-glow ambient-glow-2"></div>
     <div class="ambient-grid"></div>
   </div>
 
-  <!-- Hero Section -->
+
   <main class="hero-container" id="hero-section">
     <div class="hero-inner">
       <section class="hero-content">
@@ -111,15 +116,15 @@
             An Independent Book Sanctuary
           </span>
         </div>
-        
+
         <h1 class="main-heading animate-fade-up" style="animation-delay: 0.4s;" id="hero-main-title">
           Stories That Stay<br>With You <span class="highlight">Long After</span>
         </h1>
-        
+
         <p class="subheading animate-fade-up" style="animation-delay: 0.6s;">
           Step into a curated sanctuary where reading culture thrives. Connect with passionate editors, local book clubs, and handpicked literary recommendations designed to ignite your intellectual curiosity.
         </p>
-        
+
         <div class="cta-group animate-fade-up" style="animation-delay: 0.8s;">
           <a href="#staff-picks" class="btn btn-primary" id="btn-explore">
             <span class="btn-text">Staff Picks</span>
@@ -132,7 +137,7 @@
             <span class="btn-text">Our Experience</span>
           </a>
         </div>
-        
+
         <div class="trust-container animate-fade-up" style="animation-delay: 1.0s;">
           <div class="stars" aria-label="5 star rating">★★★★★</div>
           <p class="trust-text">The heart of modern literary community</p>
@@ -143,8 +148,8 @@
         <div class="book-hero-image-wrapper">
           <img src="./home2_hero.png" alt="Discerning readers browsing bookshelf alcoves in a premium independent bookstore" class="book-hero-image" id="hero-book-image">
           <div class="image-glow-overlay"></div>
-          
-          <!-- Premium Floating Card -->
+
+
           <div class="floating-premium-card">
             <div class="card-icon"><i class="fas fa-bookmark"></i></div>
             <div class="card-text">
@@ -157,7 +162,7 @@
     </div>
   </main>
 
-  <!-- Section 1: Staff Picks -->
+
   <section class="staff-picks-section" id="staff-picks">
     <div class="container">
       <div class="section-header text-center">
@@ -167,7 +172,7 @@
       </div>
 
       <div class="picks-grid">
-        <!-- Pick Card 1 -->
+
         <article class="pick-card fade-in-on-scroll">
           <div class="book-image-container">
             <div class="book-cover bg-rust-linen">
@@ -188,7 +193,7 @@
           </div>
         </article>
 
-        <!-- Pick Card 2 -->
+
         <article class="pick-card fade-in-on-scroll">
           <div class="book-image-container">
             <div class="book-cover bg-indigo-cloth">
@@ -209,7 +214,7 @@
           </div>
         </article>
 
-        <!-- Pick Card 3 -->
+
         <article class="pick-card fade-in-on-scroll">
           <div class="book-image-container">
             <div class="book-cover bg-olive-bound">
@@ -233,7 +238,7 @@
     </div>
   </section>
 
-  <!-- Section 2: Bookstore Experience -->
+
   <section class="experience-section" id="experience">
     <div class="container">
       <div class="split-wrapper">
@@ -248,9 +253,9 @@
           <span class="gold-subtitle">Discover The Atmosphere</span>
           <h2 class="section-title">A Space Designed for Slow Discovery</h2>
           <p class="paragraph">We believe a bookstore is more than just shelves; it is a community anchor and a haven of slow discovery. Every corner of our physical shop in London has been intentionally crafted to celebrate reading culture and encourage lingering.</p>
-          
+
           <div class="split-features">
-            <!-- Feature 1 -->
+
             <div class="feature-item">
               <span class="feature-bullet"><i class="fas fa-couch"></i></span>
               <div>
@@ -258,7 +263,7 @@
                 <p>Sink into soft velvet armchairs beneath warm overhead lamps in our quiet window alcoves.</p>
               </div>
             </div>
-            <!-- Feature 2 -->
+
             <div class="feature-item">
               <span class="feature-bullet"><i class="fas fa-handshake-angle"></i></span>
               <div>
@@ -266,7 +271,7 @@
                 <p>Discuss your favorite reads with our booksellers and receive custom literary pathways.</p>
               </div>
             </div>
-            <!-- Feature 3 -->
+
             <div class="feature-item">
               <span class="feature-bullet"><i class="fas fa-users-viewfinder"></i></span>
               <div>
@@ -274,7 +279,7 @@
                 <p>A welcoming, inclusive place hosting weekly book clubs, panels, and local literary events.</p>
               </div>
             </div>
-            <!-- Feature 4 -->
+
             <div class="feature-item">
               <span class="feature-bullet"><i class="fas fa-feather-pointed"></i></span>
               <div>
@@ -289,11 +294,11 @@
     </div>
   </section>
 
-  <!-- Section 3: Reader Community (Statistics) -->
+
   <section class="community-stats-section" id="community-stats">
     <div class="container">
       <div class="stats-grid">
-        <!-- Stat Card 1 -->
+
         <div class="stat-card fade-in-on-scroll">
           <div class="stat-icon">
             <i class="fas fa-heart-pulse"></i>
@@ -302,7 +307,7 @@
           <div class="stat-label">Readers Served</div>
           <div class="stat-desc">Passionate minds guided to their next stories</div>
         </div>
-        <!-- Stat Card 2 -->
+
         <div class="stat-card fade-in-on-scroll">
           <div class="stat-icon">
             <i class="fas fa-mug-hot"></i>
@@ -311,7 +316,7 @@
           <div class="stat-label">Monthly Book Clubs</div>
           <div class="stat-desc">Vibrant circles analyzing different genres</div>
         </div>
-        <!-- Stat Card 3 -->
+
         <div class="stat-card fade-in-on-scroll">
           <div class="stat-icon">
             <i class="fas fa-microphone-lines"></i>
@@ -320,7 +325,7 @@
           <div class="stat-label">Author Events</div>
           <div class="stat-desc">Annual meetups, launches, and panels hosted</div>
         </div>
-        <!-- Stat Card 4 -->
+
         <div class="stat-card fade-in-on-scroll">
           <div class="stat-icon">
             <i class="fas fa-people-group"></i>
@@ -333,7 +338,7 @@
     </div>
   </section>
 
-  <!-- Section 4: Upcoming Events -->
+
   <section class="events-section" id="events">
     <div class="container">
       <div class="section-header text-center">
@@ -343,7 +348,7 @@
       </div>
 
       <div class="events-grid">
-        <!-- Event Card 1 -->
+
         <article class="event-card fade-in-on-scroll">
           <div class="event-image-wrapper">
             <img src="./book_club_community.png" alt="A lively community book club gathering with readers drinking coffee and laughing together" class="event-image">
@@ -364,7 +369,7 @@
           </div>
         </article>
 
-        <!-- Event Card 2 -->
+
         <article class="event-card fade-in-on-scroll">
           <div class="event-image-wrapper">
             <img src="./cozy_bookstore_hero.png" alt="Bookstore lights shining softly over bookshelves at night" class="event-image">
@@ -385,7 +390,7 @@
           </div>
         </article>
 
-        <!-- Event Card 3 -->
+
         <article class="event-card fade-in-on-scroll">
           <div class="event-image-wrapper">
             <img src="./home2_hero.png" alt="New books stacked neatly on a mahogany display table" class="event-image">
@@ -409,7 +414,7 @@
     </div>
   </section>
 
-  <!-- Section 5: Newsletter CTA -->
+
   <section class="newsletter-cta-section" id="newsletter-cta">
     <div class="container">
       <div class="newsletter-box fade-in-on-scroll">
@@ -418,7 +423,7 @@
           <h2 class="section-title">Join Our Reading Circle</h2>
           <p class="section-desc">Subscribe to receive monthly curated reading paths, bookstore event announcements, and direct diaries from our editors.</p>
         </div>
-        
+
         <form class="newsletter-form-main" id="newsletter-form-main">
           <div class="form-group-inline">
             <input type="email" id="subscriber-email" required placeholder="Enter your email address" aria-label="Subscriber Email">
@@ -432,20 +437,25 @@
     </div>
   </section>
 
-  <!-- Premium Footer (Identical structure and styling to Home1) -->
+
   <footer class="main-footer">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a href="#" class="logo">
-            <div class="logo-icon-wrapper">
-              <svg class="logo-icon-svg" viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
-                <path d="M6 2h12a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm0 2v16h1v-16H6zm3 0v16h9V4H9zm2 0v7l2-1.5 2 1.5V4h-4z" />
+          <a href="./index.html" class="logo">
+            <div class="logo-icon">
+              <svg width="44" height="44" viewBox="0 0 64 64" fill="none">
+                <rect x="10" y="8" width="8" height="48" rx="2" fill="#4A2C2A"/>
+                <path d="M18 10C18 8.9 18.9 8 20 8H52C53.1 8 54 8.9 54 10V52C54 53.1 53.1 54 52 54H20C18.9 54 18 53.1 18 52V10Z" fill="#C89B3C"/>
+                <path d="M26 20H46" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>
+                <path d="M26 28H46" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>
+                <path d="M26 36H38" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>
+                <path d="M44 8V22L40 18L36 22V8H44Z" fill="#4A2C2A"/>
               </svg>
             </div>
-            <div class="logo-text-group">
-              <span class="logo-title">The Shelf</span>
-              <span class="logo-subtitle">CURATED READS</span>
+            <div class="logo-text">
+              <span class="logo-name">The Shelf</span>
+              <span class="logo-tagline">Curated Reads</span>
             </div>
           </a>
           <p class="brand-pitch">A carefully curated bookstore for curious minds. We stock fiction, non-fiction, rare finds, and everything in between.</p>
@@ -467,7 +477,7 @@
             </a>
           </div>
         </div>
-        
+
         <div class="footer-links-col">
           <h4>EXPLORE</h4>
           <div class="footer-links">
@@ -478,7 +488,7 @@
             <a href="#staff-picks">Book Bundles</a>
           </div>
         </div>
-        
+
         <div class="footer-links-col">
           <h4>GENRES</h4>
           <div class="footer-links">
@@ -489,7 +499,7 @@
             <a href="#staff-picks">Children's Books</a>
           </div>
         </div>
-        
+
         <div class="footer-links-col">
           <h4>COMPANY</h4>
           <div class="footer-links">
@@ -500,7 +510,7 @@
             <a href="./contact.html">Contact</a>
           </div>
         </div>
-        
+
         <div class="footer-newsletter-col">
           <h4>NEWSLETTER</h4>
           <div class="footer-newsletter">
@@ -516,7 +526,7 @@
           </div>
         </div>
       </div>
-      
+
       <div class="footer-bottom">
         <p>&copy; 2026 The Shelf. All rights reserved.</p>
         <div class="footer-socials">
@@ -528,13 +538,14 @@
     </div>
   </footer>
 
-  <!-- Toast Notifications -->
+
   <div class="toast" id="toast-notification">
     <span class="toast-icon">✦</span>
     <span class="toast-message">Submission successful.</span>
   </div>
 
-  <!-- Interactive JavaScript -->
+
+  <script src="./blogs.js"></script>
   <script src="./home2.js"></script>
 </body>
 </html>
