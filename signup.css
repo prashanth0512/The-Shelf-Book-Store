@@ -1,0 +1,14 @@
+/* Specific Stylesheet for Signup Page */
+@import url("./login.css");
+
+/* Overrides and Extensions for Signup Page */
+
+.auth-form {
+  gap: 0.72rem; /* Tight gap to fit 5 fields on screen height */
+}
+
+@media (max-height: 850px) and (min-width: 1025px) {
+  .auth-form {
+    gap: 0.52rem;
+  }
+}

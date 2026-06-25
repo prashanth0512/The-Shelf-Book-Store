@@ -1,296 +1,730 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Shelf — Read. Discover. Belong.</title>
-    <link rel="icon" type="image/png" href="images/favicon.png">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/index.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover rare collections, modern bestsellers, and timeless classics in a beautifully curated reading experience designed for passionate readers.">
+  <title>Curated Stories & Timeless Knowledge — Digital Library</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="./home1.css">
 </head>
 <body>
 
-    <header class="header cafe-header" id="site-header">
-        <div class="container nav-container">
-            <a href="index.html" class="logo"><i class="fas fa-book-open logo-icon"></i> The Shelf</a>
+  <header class="navbar" id="main-header">
 
-            <nav class="nav-links" id="nav-links">
-                <div class="nav-dropdown">
-                    <a href="#">Home <i class="fas fa-chevron-down nav-chevron"></i></a>
-                    <div class="dropdown-menu">
-                        <a href="index.html" class="active">Home 1</a>
-                        <a href="home.html">Home 2</a>
-                    </div>
-                </div>
-                <a href="store.html">Store</a>
-                <a href="about.html">About</a>
-                 <a href="services.html">Services</a>
-                 <a href="blog.html">Blog</a>
-                 <a href="contact.html">Contact</a>
-                <a href="admin-dashboard.html">Dashboard</a>
-                
-                <div class="mobile-auth-buttons">
-                    <a href="login.html" class="btn btn-outline">Sign In</a>
-                    <a href="register.html" class="btn btn-primary">Join Now</a>
-                </div>
-            </nav>
+    <a href="#hero-section" class="logo">
+      <div class="logo-icon">
+        <svg width="44" height="44" viewBox="0 0 64 64" fill="none">
+          <rect x="10" y="8" width="8" height="48" rx="2" fill="#4A2C2A"/>
+          <path d="M18 10C18 8.9 18.9 8 20 8H52C53.1 8 54 8.9 54 10V52C54 53.1 53.1 54 52 54H20C18.9 54 18 53.1 18 52V10Z" fill="#C89B3C"/>
+          <path d="M26 20H46" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>
+          <path d="M26 28H46" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>
+          <path d="M26 36H38" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>
+          <path d="M44 8V22L40 18L36 22V8H44Z" fill="#4A2C2A"/>
+        </svg>
+      </div>
+      <div class="logo-text">
+        <span class="logo-name">The Shelf</span>
+        <span class="logo-tagline">Curated Reads</span>
+      </div>
+    </a>
 
-            <div class="nav-actions">
-                <button id="rtl-toggle" class="theme-toggle-btn" title="Toggle RTL" style="font-size: 0.9rem; font-weight: bold; margin-right: 0.5rem;">RTL</button>
-                <button id="theme-toggle" class="theme-toggle-btn" title="Toggle Theme">☀️</button>
-                <a href="login.html" class="btn btn-outline nav-login-btn">Sign In</a>
-                <button class="mobile-menu-btn"><i class="fas fa-bars"></i></button>
-            </div>
-        </div>
-    </header>
+    <nav class="nav-links" id="navLinks">
+      <ul>
+        <li class="dropdown">
+          <a href="./index.html" class="active">
+            Home
+            <i class="fas fa-chevron-down"></i>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="./home2.html">Home 2</a></li>
+          </ul>
+        </li>
+        <li><a href="./about.html">About</a></li>
+        <li><a href="./services.html">Services</a></li>
+        <li><a href="./blogs.html">Blog</a></li>
+        <li><a href="./contact.html">Contact</a></li>
+        <li><a href="./dashboard.html">Dashboard</a></li>
+      </ul>
+      <div class="mobile-controls">
+        <button class="mobile-ctrl-btn" id="rtlBtnMobile" aria-label="Toggle RTL Mode">
+          <i class="fas fa-right-left"></i>
+          <span>RTL Toggle</span>
+        </button>
+        <button class="mobile-ctrl-btn" id="themeBtnMobile" aria-label="Toggle Theme">
+          <i class="fas fa-moon" id="themeBtnMobileIcon"></i>
+          <span>Theme Toggle</span>
+        </button>
+        <a href="./login.html" class="mobile-login-btn">
+          <i class="fas fa-user"></i>
+          Login
+        </a>
+      </div>
+    </nav>
 
-    <section class="cafe-hero" style="min-height: 100vh; display:flex; align-items:center; position:relative; overflow:hidden;">
-        <div class="hero-shapes" style="position:absolute;inset:0;background:url('images/hero-bg.jpeg') center/cover no-repeat;opacity:0.25;transform:scale(1.04);"></div>
-        <!-- Decorative circles -->
-        <div style="position:absolute;top:-100px;right:-100px;width:500px;height:500px;border-radius:50%;background:rgba(181,133,10,0.08);pointer-events:none;"></div>
-        <div style="position:absolute;bottom:-80px;left:-80px;width:360px;height:360px;border-radius:50%;background:rgba(255,255,255,0.04);pointer-events:none;"></div>
-
-        <div class="container" style="position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;padding-top:7rem;padding-bottom:5rem;">
-            <div class="hero-text fade-in-up">
-                <span style="display:inline-block;background:rgba(181,133,10,0.2);color:#f6d860;border:1px solid rgba(181,133,10,0.4);padding:0.35rem 1rem;border-radius:50px;font-size:0.8rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:1.5rem;">Independent Bookstore</span>
-                <h1 class="h1" style="color:white;margin-bottom:1.5rem;">Read. Discover.<br><span style="color:#f6d860;">Belong.</span></h1>
-                <p class="text-lead" style="color:rgba(255,255,255,0.85);max-width:520px;margin-bottom:2.5rem;font-size:1.15rem;">Bengaluru's beloved independent bookstore — over 10,000 curated titles, a warm reading lounge, author events, and a community that loves stories as much as you do.</p>
-                <div class="hero-buttons" style="display:flex;gap:1rem;flex-wrap:wrap;">
-                    <a href="store.html" class="btn btn-primary" style="background:linear-gradient(135deg,#b5850a,#8a6308);box-shadow:0 4px 20px rgba(181,133,10,0.4);">Browse Books</a>
-                    <a href="pricing.html" class="btn glass hero-glass-btn" style="color:white;border:1px solid rgba(255,255,255,0.35);padding:0.85rem 1.75rem;border-radius:50px;font-weight:700;">Join the Club</a>
-                </div>
-                <div style="display:flex;gap:2.5rem;margin-top:3rem;padding-top:2rem;border-top:1px solid rgba(255,255,255,0.15);">
-                    <div><div style="font-size:1.75rem;font-weight:800;color:white;font-family:'Playfair Display',serif;">10K+</div><div style="font-size:0.8rem;color:rgba(255,255,255,0.6);text-transform:uppercase;letter-spacing:0.05em;">Curated Titles</div></div>
-                    <div><div style="font-size:1.75rem;font-weight:800;color:white;font-family:'Playfair Display',serif;">500+</div><div style="font-size:0.8rem;color:rgba(255,255,255,0.6);text-transform:uppercase;letter-spacing:0.05em;">Club Members</div></div>
-                    <div><div style="font-size:1.75rem;font-weight:800;color:white;font-family:'Playfair Display',serif;">200+</div><div style="font-size:0.8rem;color:rgba(255,255,255,0.6);text-transform:uppercase;letter-spacing:0.05em;">Author Events</div></div>
-                </div>
-            </div>
-
-            <div class="hero-card float fade-in-up delay-2">
-                <div class="glass-dark hero-special-card" style="border-radius:1.5rem;padding:2rem;">
-                    <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:1rem;">
-                        <span style="background:rgba(181,133,10,0.25);color:#f6d860;padding:0.3rem 0.8rem;border-radius:50px;font-size:0.75rem;font-weight:700;">Editor's Pick</span>
-                        <span style="font-size:1.4rem;font-weight:800;color:#f6d860;">₹499</span>
-                    </div>
-                    <h4 style="color:white;font-family:'Playfair Display',serif;font-size:1.3rem;margin-bottom:0.5rem;">The Ministry of Time</h4>
-                    <p style="color:rgba(255,255,255,0.65);font-size:0.85rem;margin-bottom:0.5rem;">by Kaliane Bradley</p>
-                    <p style="color:rgba(255,255,255,0.75);font-size:0.875rem;line-height:1.6;margin-bottom:1.5rem;">A gripping debut that blends time travel, romance, and a devastating reckoning with empire. This month's unanimous staff recommendation.</p>
-                    <div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:1.5rem;">
-                        <span style="background:rgba(255,255,255,0.12);color:rgba(255,255,255,0.8);padding:0.2rem 0.6rem;border-radius:4px;font-size:0.72rem;font-weight:600;">Literary Fiction</span>
-                        <span style="background:rgba(255,255,255,0.12);color:rgba(255,255,255,0.8);padding:0.2rem 0.6rem;border-radius:4px;font-size:0.72rem;font-weight:600;">Debut Novel</span>
-                    </div>
-                    <a href="store.html" style="color:#f6d860;font-weight:700;font-size:0.9rem;display:flex;align-items:center;gap:0.4rem;">View in Store <i class="fas fa-arrow-right" style="font-size:0.8rem;"></i></a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="books" class="section-padding-lg">
-        <div class="container">
-            <div class="section-title text-center fade-in-up mb-4">
-                <span class="section-badge">Shop &amp; Read</span>
-                <h2 class="h2">Most Loved Books</h2>
-                <p class="text-lead section-subtitle">Loved by our community. Hand-selected by our booksellers. Available to purchase or borrow from our lending library.</p>
-            </div>
-
-            <div class="game-grid">
-                
-                <div class="game-card glow-on-hover fade-in-up delay-1">
-                    <div class="game-img-wrapper">
-                        <img src="images/book-fiction.webp" alt="Fiction Bestseller" class="game-img">
-                        <div class="game-badge">Best Seller</div>
-                    </div>
-                    <div class="game-content">
-                        <h3>Intermezzo</h3>
-                        <p style="font-size:0.8rem;color:var(--text-muted);margin-bottom:0.75rem;">by Sally Rooney</p>
-                        <div class="game-tags">
-                            <span class="tag"><i class="fas fa-bookmark"></i> Literary Fiction</span>
-                            <span class="tag">Contemporary</span>
-                        </div>
-                        <p class="game-desc">Two brothers navigate grief, love, and the complexity of family in Rooney's most ambitious novel yet.</p>
-                        <div class="price">₹699</div>
-                        <button class="btn btn-outline btn-full"><i class="fas fa-shopping-bag"></i> Add to Cart</button>
-                    </div>
-                </div>
-                
-                <div class="game-card glow-on-hover fade-in-up delay-2">
-                    <div class="game-img-wrapper">
-                        <img src="images/book-mystery.jpg" alt="Mystery Novel" class="game-img">
-                    </div>
-                    <div class="game-content">
-                        <h3>The Women</h3>
-                        <p style="font-size:0.8rem;color:var(--text-muted);margin-bottom:0.75rem;">by Kristin Hannah</p>
-                        <div class="game-tags">
-                            <span class="tag"><i class="fas fa-bookmark"></i> Historical</span>
-                            <span class="tag">Drama</span>
-                        </div>
-                        <p class="game-desc">A powerful story of a female Vietnam War nurse who comes home to find herself erased from history.</p>
-                        <div class="price">₹749</div>
-                        <button class="btn btn-outline btn-full"><i class="fas fa-shopping-bag"></i> Add to Cart</button>
-                    </div>
-                </div>
-               
-                <div class="game-card glow-on-hover fade-in-up delay-3">
-                    <div class="game-img-wrapper">
-                        <img src="images/book-nonfiction.jpg" alt="Non-Fiction" class="game-img">
-                        <div class="game-badge game-badge-premium">Staff Pick</div>
-                    </div>
-                    <div class="game-content">
-                        <h3>The Creative Act</h3>
-                        <p style="font-size:0.8rem;color:var(--text-muted);margin-bottom:0.75rem;">by Rick Rubin</p>
-                        <div class="game-tags">
-                            <span class="tag"><i class="fas fa-bookmark"></i> Non-Fiction</span>
-                            <span class="tag">Philosophy</span>
-                        </div>
-                        <p class="game-desc">A legendary music producer's profound meditation on the nature of creativity and the artistic process.</p>
-                        <div class="price">₹599</div>
-                        <button class="btn btn-outline btn-full"><i class="fas fa-shopping-bag"></i> Add to Cart</button>
-                    </div>
-                </div>
-            </div>
-            <div class="section-cta">
-                <a href="store.html" class="btn btn-primary btn-cta">Browse All 10,000+ Books</a>
-            </div>
-        </div>
-    </section>
-
-    <section class="events-section">
-        <div class="container events-container">
-            <div class="section-title fade-in-up text-center mb-4">
-                <span class="section-badge section-badge-green">Community</span>
-                <h2 class="h2">Upcoming Author Events</h2>
-            </div>
-
-            <div class="event-card fade-in-up delay-1">
-                <div class="event-date">
-                    <div class="month">Nov</div>
-                    <div class="day">08</div>
-                </div>
-                <div class="event-body">
-                    <h3 class="event-title">An Evening with Perumal Murugan</h3>
-                    <p class="text-muted event-time"><i class="far fa-clock"></i> 6:30 PM – 9:00 PM</p>
-                    <p class="event-desc">Join us for an intimate reading and Q&amp;A with one of India's most celebrated authors. Books available for signing.</p>
-                </div>
-                <div>
-                    <a href="contact.html" class="btn btn-primary event-action-btn" style="background:linear-gradient(135deg,#b5850a,#8a6308);">Reserve Seat</a>
-                </div>
-            </div>
-
-            <div class="event-card fade-in-up delay-2">
-                <div class="event-date">
-                    <div class="month">Nov</div>
-                    <div class="day">15</div>
-                </div>
-                <div class="event-body">
-                    <h3 class="event-title">Mystery &amp; Thriller Book Club Night</h3>
-                    <p class="text-muted event-time"><i class="far fa-clock"></i> 7:00 PM – 10:00 PM</p>
-                    <p class="event-desc">This month we discuss "The Thursday Murder Club" by Richard Osman. New members welcome — coffee included!</p>
-                </div>
-                <div>
-                    <a href="contact.html" class="btn btn-primary event-action-btn" style="background:linear-gradient(135deg,#b5850a,#8a6308);">Join Club</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- Why Choose Us Section -->
-    <section class="why-us-section section-padding-lg">
-        <div class="container">
-            <div class="section-title text-center fade-in-up mb-4">
-                <span class="section-badge">Our Promise</span>
-                <h2 class="h2">Why Readers Love The Shelf</h2>
-                <p class="text-lead section-subtitle">More than books — a whole reading experience crafted with care.</p>
-            </div>
-            <div class="why-us-grid">
-                <div class="why-card fade-in-up delay-1">
-                    <div class="why-icon"><i class="fas fa-hand-holding-heart"></i></div>
-                    <h3>Hand-Curated Selection</h3>
-                    <p>Every book on our shelves is personally read and vetted by our booksellers — no algorithm, just genuine passion.</p>
-                </div>
-                <div class="why-card fade-in-up delay-2">
-                    <div class="why-icon"><i class="fas fa-mug-hot"></i></div>
-                    <h3>Cosy Reading Lounge</h3>
-                    <p>Settle into our warm lounge with a chai in hand. Stay an hour or an entire afternoon — you're always welcome.</p>
-                </div>
-                <div class="why-card fade-in-up delay-3">
-                    <div class="why-icon"><i class="fas fa-users"></i></div>
-                    <h3>Vibrant Community</h3>
-                    <p>From author talks to monthly book clubs, we host 200+ events a year to bring Bengaluru's readers together.</p>
-                </div>
-                <div class="why-card fade-in-up delay-1">
-                    <div class="why-icon"><i class="fas fa-truck-fast"></i></div>
-                    <h3>Same-Day City Delivery</h3>
-                    <p>Order before noon and receive your books the same evening — free delivery for Guild members.</p>
-                </div>
-                <div class="why-card fade-in-up delay-2">
-                    <div class="why-icon"><i class="fas fa-book-open-reader"></i></div>
-                    <h3>Lending Library</h3>
-                    <p>Can't decide? Borrow first. Our members' lending library lets you try before you buy.</p>
-                </div>
-                <div class="why-card fade-in-up delay-3">
-                    <div class="why-icon"><i class="fas fa-gift"></i></div>
-                    <h3>Gift Wrapping & Cards</h3>
-                    <p>Make every book a gift. Complimentary wrapping and handwritten cards for all purchases — in-store and online.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Newsletter Section -->
-    <section class="newsletter-section">
-        <div class="newsletter-inner">
-            <span class="section-badge" style="background:rgba(255,255,255,0.15);color:#f6d860;border:1px solid rgba(246,216,96,0.3);">Stay in the Loop</span>
-            <h2>Get New Arrivals & Events First</h2>
-            <p>Join 3,000+ readers who receive our weekly newsletter — new books, staff picks, exclusive discounts, and upcoming events.</p>
-            <form class="newsletter-form" onsubmit="return false;">
-                <input type="email" placeholder="your@email.com" required>
-                <button class="btn">Subscribe</button>
-            </form>
-        </div>
-    </section>
-
-    <footer class="footer">
-    <div class="container">
-        <div class="footer-grid">
-            <div>
-                <a href="index.html" class="footer-logo"><i class="fas fa-book-open logo-icon"></i> The Shelf</a>
-                <p class="footer-desc">Your independent literary destination — curated books, cozy reading corners, and a community of passionate readers.</p>
-                <div class="footer-social">
-                    <a href="#" class="footer-social-link"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="footer-social-link"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="footer-social-link"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="footer-social-link"><i class="fab fa-goodreads-g"></i></a>
-                </div>
-            </div>
-            <div>
-                <h4 class="footer-heading">Explore</h4>
-                <ul class="footer-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="store.html">Bookshop</a></li>
-                    <li><a href="pricing.html">Memberships</a></li>
-                    <li><a href="blog.html">The Bookmark Blog</a></li>
-                    <li><a href="services.html">Services</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="footer-heading">Support</h4>
-                <ul class="footer-links">
-                    <li><a href="contact.html">Contact Us</a></li>
-                    <li><a href="#">Shipping &amp; Returns</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Terms of Service</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 The Shelf Bookstore. All rights reserved.</p>
-        </div>
+    <div class="nav-right">
+      <button class="icon-btn" id="rtlBtn" aria-label="Toggle RTL Mode">
+        <i class="fas fa-right-left"></i>
+      </button>
+      <button class="icon-btn" id="themeBtn" aria-label="Toggle Theme">
+        <i class="fas fa-moon" id="themeBtnIcon"></i>
+      </button>
+      <a href="./login.html" class="login-btn">
+        <i class="fas fa-user"></i>
+        Login
+      </a>
+      <div class="menu-toggle" id="menuToggle" aria-label="Toggle Mobile Menu">
+        <i class="fas fa-bars"></i>
+      </div>
     </div>
-</footer>
 
-    <script src="js/main.js"></script>
+  </header>
+
+  <div class="ambient-background">
+    <div class="ambient-glow ambient-glow-1"></div>
+    <div class="ambient-glow ambient-glow-2"></div>
+    <div class="ambient-grid"></div>
+  </div>
+  <main class="hero-container" id="hero-section">
+    <div class="hero-inner">
+      <section class="hero-content" id="hero-content-col">
+        <div class="badge-wrapper animate-fade-up" style="animation-delay: 0.2s;">
+          <span class="premium-badge">
+            <svg class="badge-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="currentColor"/>
+            </svg>
+            An Ultra-Premium Digital Sanctuary
+          </span>
+        </div>
+        
+        <h1 class="main-heading animate-fade-up" style="animation-delay: 0.4s;" id="hero-main-title">
+          Where Every Page<br><span class="highlight">Is A Masterpiece</span>
+        </h1>
+        
+        <p class="subheading animate-fade-up" style="animation-delay: 0.6s;">
+          Enter a meticulously curated digital library designed for the discerning collector. Discover rare manuscripts, certified first editions, and timeless classics, preserved in stunning high fidelity.
+        </p>
+        
+        <div class="cta-group animate-fade-up" style="animation-delay: 0.8s;">
+          <a href="#explore" class="btn btn-primary" id="btn-explore">
+            <span class="btn-text">Explore Collection</span>
+            <span class="btn-glow-effect"></span>
+            <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          <a href="#read" class="btn btn-secondary" id="btn-read">
+            <span class="btn-text">Start Reading</span>
+          </a>
+        </div>
+        
+        <div class="trust-container animate-fade-up" style="animation-delay: 1.0s;">
+          <div class="stars" aria-label="5 star rating">★★★★★</div>
+          <p class="trust-text">The definitive library for passionate bibliophiles</p>
+        </div>
+      </section>
+
+      <section class="hero-visual" id="hero-visual-col">
+        <div class="book-hero-image-wrapper">
+          <img src="book_pile_hero.png" alt="A curated stack of premium leather-bound books" class="book-hero-image" id="hero-book-image">
+          <div class="image-glow-overlay"></div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <section class="stats-section" id="stats-section">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-card fade-in-on-scroll">
+          <div class="stat-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20M4 19.5A2.5 2.5 0 0 0 6.5 22H20M4 19.5V3.5A2.5 2.5 0 0 1 6.5 1M20 4v18m-8-12h4m-4 4h4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="stat-value" data-target="12500">0</div>
+          <div class="stat-label">Curated Volumes</div>
+          <div class="stat-desc">Rare first editions & fine manuscripts</div>
+        </div>
+        <div class="stat-card fade-in-on-scroll">
+          <div class="stat-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="stat-value" data-target="1920">0</div>
+          <div class="stat-label">Established</div>
+          <div class="stat-desc">A century of literary preservation</div>
+        </div>
+        <div class="stat-card fade-in-on-scroll">
+          <div class="stat-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 12H3M21 12c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9 9-4.03 9-9zM12 3a17.93 17.93 0 0 1 4 9 17.93 17.93 0 0 1-4 9 17.93 17.93 0 0 1-4-9 17.93 17.93 0 0 1 4-9z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="stat-value" data-target="45">0</div>
+          <div class="stat-label">Countries Served</div>
+          <div class="stat-desc">Secure worldwide collector shipping</div>
+        </div>
+        <div class="stat-card fade-in-on-scroll">
+          <div class="stat-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="stat-value" data-target="99">0</div>
+          <div class="stat-label">Collector Score</div>
+          <div class="stat-desc">Highest trust library advisors</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="timeline-section" id="timeline-section">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="gold-subtitle">Our Heritage</span>
+        <h2 class="section-title">A Century of Stories</h2>
+        <p class="section-desc">Over a hundred years of gathering, restoring, and sharing human knowledge.</p>
+      </div>
+      <div class="timeline-container">
+        <div class="timeline-line"></div>
+        
+        <div class="timeline-item fade-in-on-scroll left-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-date">1920</div>
+            <h3 class="timeline-title">The Genesis</h3>
+            <p>Aurelia Books opened its doors as a quiet literary salon in a cobblestone lane, serving as a haven for the era's prominent writers, thinkers, and rare print collectors.</p>
+          </div>
+        </div>
+        
+        <div class="timeline-item fade-in-on-scroll right-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-date">1954</div>
+            <h3 class="timeline-title">Archival Restoration</h3>
+            <p>Seeing a rise in damaged medieval prints, we established our first custom bindery and preservation workshop, hiring European master binders to conserve history.</p>
+          </div>
+        </div>
+        
+        <div class="timeline-item fade-in-on-scroll left-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-date">1988</div>
+            <h3 class="timeline-title">Global Scout Network</h3>
+            <p>We expanded our reach, forming an international scout registry across six continents to trace and catalog lost manuscripts and certified first editions.</p>
+          </div>
+        </div>
+        
+        <div class="timeline-item fade-in-on-scroll right-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-date">2026</div>
+            <h3 class="timeline-title">The Digital Vault</h3>
+            <p>Aurelia enters the modern age, introducing a bespoke digital portal that allows collectors globally to explore and request rare acquisitions from their private studies.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="split-section" id="about-section">
+    <div class="container">
+      <div class="split-wrapper">
+        <div class="split-visual fade-in-on-scroll">
+          <div class="image-frame-container">
+            <div class="image-frame-border"></div>
+            <img src="rare_books_showcase.png" alt="Curated rare books on mahogany shelves" class="split-image">
+            <div class="gold-frame-filigree">✦</div>
+          </div>
+        </div>
+        <div class="split-content-col fade-in-on-scroll">
+          <span class="gold-subtitle">Archival Integrity</span>
+          <h2 class="section-title">The Master Art of Curation</h2>
+          <p class="paragraph">Every volume in our vault tells a dual story: the narrative written by the author, and the journey of the physical book itself. Our master curators authenticate, restore, and preserve each leaf using museum-grade archival practices.</p>
+          <p class="paragraph">Whether you seek a signed twentieth-century first edition or a leather-bound seventeenth-century folio, we ensure its history remains pristine for generations to come.</p>
+          <div class="split-features">
+            <div class="feature-item">
+              <span class="feature-bullet">✦</span>
+              <div>
+                <h4>Certified Provenance</h4>
+                <p>Every acquisition is accompanied by authenticated legal documentation and academic history reports.</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <span class="feature-bullet">✦</span>
+              <div>
+                <h4>Archival Preservation</h4>
+                <p>Custom protective boxes, acid-free mounts, and humidity-stable casing designed for individual books.</p>
+              </div>
+            </div>
+          </div>
+          <a href="#request-section" class="btn btn-secondary">Learn Our Process</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="journal-section" id="journal-section">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="gold-subtitle">Archival Journal</span>
+        <h2 class="section-title">Insights from the Archive</h2>
+        <p class="section-desc">Delve into the science of preservation, the history of master binders, and curatorial logs.</p>
+      </div>
+      
+      <div class="journal-grid">
+        <article class="journal-card fade-in-on-scroll">
+          <div class="journal-card-meta">
+            <span class="journal-date">Autumn 2026</span>
+            <span class="journal-author">By Curator Edward</span>
+          </div>
+          <h3 class="journal-title">The Chemistry of Antique Pigments</h3>
+          <p class="journal-summary">An exploration of vegetable inks and metal bindings used in 16th-century monastic scriptoriums, and our micro-chemical restoration methods.</p>
+          <a href="#request-section" class="journal-link">Read Entry ➔</a>
+        </article>
+
+        <article class="journal-card fade-in-on-scroll">
+          <div class="journal-card-meta">
+            <span class="journal-date">Summer 2026</span>
+            <span class="journal-author">By Curator Saritha</span>
+          </div>
+          <h3 class="journal-title">Chasing Gutenberg: Sourcing Incunabula</h3>
+          <p class="journal-summary">A log of our two-year search across European estates to locate and verify a private collector’s fragment of the 1480s printed sheets.</p>
+          <a href="#request-section" class="journal-link">Read Entry ➔</a>
+        </article>
+
+        <article class="journal-card fade-in-on-scroll">
+          <div class="journal-card-meta">
+            <span class="journal-date">Spring 2026</span>
+            <span class="journal-author">By Curator Marcus</span>
+          </div>
+          <h3 class="journal-title">Bespoke Morocco Leather Crafting</h3>
+          <p class="journal-summary">How our bindery matches vintage goat skin grain and hand-tools 24k gold leaf filigree onto deteriorated spine ribs.</p>
+          <a href="#request-section" class="journal-link">Read Entry ➔</a>
+        </article>
+      </div>
+    </div>
+  </section>
+  <section class="gallery-section" id="gallery-section">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="gold-subtitle">Our Vault</span>
+        <h2 class="section-title">Featured Acquisitions</h2>
+        <p class="section-desc">Explore a handpicked selection of rare bindings, signed copies, and notable prints.</p>
+        
+        <div class="gallery-filters">
+          <button class="filter-btn active" data-filter="all">All Treasures</button>
+          <button class="filter-btn" data-filter="rare">Rare Editions</button>
+          <button class="filter-btn" data-filter="picks">Curator's Picks</button>
+          <button class="filter-btn" data-filter="arrivals">New Arrivals</button>
+        </div>
+      </div>
+      
+      <div class="gallery-grid">
+        <div class="book-card fade-in-on-scroll" data-category="rare">
+          <div class="book-card-visual bg-gold-leather">
+            <div class="book-card-ornament">✦</div>
+            <div class="book-card-title">The Odyssey</div>
+            <div class="book-card-author">Homer</div>
+            <div class="book-card-year">Circa 1890</div>
+          </div>
+          <div class="book-card-details">
+            <div class="book-card-category">Rare Editions</div>
+            <h3 class="book-card-name">The Odyssey (Fine Press Edition)</h3>
+            <p class="book-card-desc">Limited Doves Press printing in gold-tooled vellum binding.</p>
+            <div class="book-card-footer">
+              <span class="book-card-price">$4,250</span>
+              <a href="#request-section" class="book-card-link">Reserve ➔</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="book-card fade-in-on-scroll" data-category="picks">
+          <div class="book-card-visual bg-crimson-leather">
+            <div class="book-card-ornament">✧</div>
+            <div class="book-card-title">A Tale of Two Cities</div>
+            <div class="book-card-author">Charles Dickens</div>
+            <div class="book-card-year">1859 Edition</div>
+          </div>
+          <div class="book-card-details">
+            <div class="book-card-category">Curator's Picks</div>
+            <h3 class="book-card-name">A Tale of Two Cities (First Issue)</h3>
+            <p class="book-card-desc">First edition in original red cloth, signed by the illustrator.</p>
+            <div class="book-card-footer">
+              <span class="book-card-price">$8,500</span>
+              <a href="#request-section" class="book-card-link">Reserve ➔</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="book-card fade-in-on-scroll" data-category="arrivals">
+          <div class="book-card-visual bg-emerald-leather">
+            <div class="book-card-ornament">★</div>
+            <div class="book-card-title">The Great Gatsby</div>
+            <div class="book-card-author">F. Scott Fitzgerald</div>
+            <div class="book-card-year">1925 Edition</div>
+          </div>
+          <div class="book-card-details">
+            <div class="book-card-category">New Arrivals</div>
+            <h3 class="book-card-name">The Great Gatsby (First State)</h3>
+            <p class="book-card-desc">Very scarce first state text in custom bespoke green morocco box.</p>
+            <div class="book-card-footer">
+              <span class="book-card-price">$12,000</span>
+              <a href="#request-section" class="book-card-link">Reserve ➔</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="book-card fade-in-on-scroll" data-category="rare">
+          <div class="book-card-visual bg-obsidian-leather">
+            <div class="book-card-ornament">∮</div>
+            <div class="book-card-title">Hamlet, Prince of Denmark</div>
+            <div class="book-card-author">Shakespeare</div>
+            <div class="book-card-year">1632 Folio</div>
+          </div>
+          <div class="book-card-details">
+            <div class="book-card-category">Rare Editions</div>
+            <h3 class="book-card-name">Second Folio (Extract)</h3>
+            <p class="book-card-desc">Authentic preserved leaf set of Hamlet, bound in black gold-leaf leather.</p>
+            <div class="book-card-footer">
+              <span class="book-card-price">$18,500</span>
+              <a href="#request-section" class="book-card-link">Reserve ➔</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="book-card fade-in-on-scroll" data-category="picks">
+          <div class="book-card-visual bg-navy-leather">
+            <div class="book-card-ornament">✦</div>
+            <div class="book-card-title">Principia Mathematica</div>
+            <div class="book-card-author">Isaac Newton</div>
+            <div class="book-card-year">1713 Printing</div>
+          </div>
+          <div class="book-card-details">
+            <div class="book-card-category">Curator's Picks</div>
+            <h3 class="book-card-name">Principia (Second Edition)</h3>
+            <p class="book-card-desc">Rare revised edition, featuring the famous General Scholium.</p>
+            <div class="book-card-footer">
+              <span class="book-card-price">$24,000</span>
+              <a href="#request-section" class="book-card-link">Reserve ➔</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="book-card fade-in-on-scroll" data-category="arrivals">
+          <div class="book-card-visual bg-plum-leather">
+            <div class="book-card-ornament">✧</div>
+            <div class="book-card-title">Jane Eyre</div>
+            <div class="book-card-author">Charlotte Brontë</div>
+            <div class="book-card-year">1848 Second Ed.</div>
+          </div>
+          <div class="book-card-details">
+            <div class="book-card-category">New Arrivals</div>
+            <h3 class="book-card-name">Jane Eyre (Dedicated to Thackeray)</h3>
+            <p class="book-card-desc">Three-volume set in beautiful gold-tooled half calf binding.</p>
+            <div class="book-card-footer">
+              <span class="book-card-price">$6,750</span>
+              <a href="#request-section" class="book-card-link">Reserve ➔</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials-section" id="testimonials-section">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="gold-subtitle">Collector Reviews</span>
+        <h2 class="section-title">Voices of the Collection</h2>
+        <p class="section-desc">Hear from the bibliophiles, collectors, and library designers who trust our work.</p>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card fade-in-on-scroll">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"Finding a pristine 1890 edition of Wilde's plays was a lifelong dream. Aurelia Books made it a reality with impeccable white-glove service and unmatched provenance documentation."</p>
+          <div class="testimonial-author">
+             <span class="author-name">Julian V.</span>
+             <span class="author-title">Private Collector, London</span>
+          </div>
+        </div>
+        <div class="testimonial-card fade-in-on-scroll">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"The curation here is unmatched. It is not simply a bookstore; it is a sanctuary for those who view books as physical art pieces. Their restoration work is museum quality."</p>
+          <div class="testimonial-author">
+             <span class="author-name">Elena R.</span>
+             <span class="author-title">Interior Architect, New York</span>
+          </div>
+        </div>
+        <div class="testimonial-card fade-in-on-scroll">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"Their dedication to book preservation and custom search service is exemplary. For serious collectors seeking rare historical prints, Aurelia Books is a gold standard."</p>
+          <div class="testimonial-author">
+             <span class="author-name">Dr. Marcus H.</span>
+             <span class="author-title">University Archivist, Zurich</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="circle-section" id="circle-section">
+    <div class="container">
+      <div class="circle-wrapper">
+        <div class="circle-content fade-in-on-scroll">
+          <span class="gold-subtitle">VIP Curation Services</span>
+          <h2 class="section-title">The Collector's Circle</h2>
+          <p class="paragraph">For those seeking to build generational libraries, Aurelia Books offers exclusive private consultation. Members of our Circle receive customized search parameters, direct auction bids representation, and priority restoration services.</p>
+          
+          <div class="circle-benefits">
+            <div class="benefit-item">
+              <span class="benefit-marker">✦</span>
+              <span class="benefit-text">Bespoke Home Library Design & Cataloging</span>
+            </div>
+            <div class="benefit-item">
+              <span class="benefit-marker">✦</span>
+              <span class="benefit-text">Worldwide Private Vault Courier Representation</span>
+            </div>
+            <div class="benefit-item">
+              <span class="benefit-marker">✦</span>
+              <span class="benefit-text">Annual Certified Historical Portfolio Appraisals</span>
+            </div>
+          </div>
+          <a href="#request-section" class="btn btn-primary">Join the Circle</a>
+        </div>
+        <div class="circle-visual fade-in-on-scroll">
+          <div class="circle-card">
+            <div class="circle-card-border"></div>
+            <div class="circle-card-content">
+              <div class="circle-logo">✦</div>
+              <h3>AURELIA CIRCLE</h3>
+              <p class="membership-no">MEMBER NO. 1920-554</p>
+              <div class="circle-card-footer">
+                <span class="circle-tier">PATRON SELECT</span>
+                <span class="circle-since">EST. 1920</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq-section" id="faq-section">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="gold-subtitle">Reader FAQ</span>
+        <h2 class="section-title">Inquiries & Answers</h2>
+        <p class="section-desc">Common questions regarding acquisition, authentication, shipping, and library curation.</p>
+      </div>
+      
+      <div class="faq-wrapper">
+        <div class="faq-item fade-in-on-scroll">
+          <button class="faq-trigger" aria-expanded="false">
+            <span class="faq-question">How do you authenticate rare books?</span>
+            <span class="faq-icon"></span>
+          </button>
+          <div class="faq-content">
+            <div class="faq-answer">
+              <p>We work exclusively with certified members of the Antiquarian Booksellers' Association. Every volume in our vault is thoroughly examined by our in-house bibliographers. Acquisitions include a detailed provenance report and a lifetime guarantee of authenticity.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="faq-item fade-in-on-scroll">
+          <button class="faq-trigger" aria-expanded="false">
+            <span class="faq-question">Do you offer secure worldwide shipping?</span>
+            <span class="faq-icon"></span>
+          </button>
+          <div class="faq-content">
+            <div class="faq-answer">
+              <p>Yes. All rare acquisitions are shipped globally in custom, climate-regulated protective packaging. We use fully insured, signature-required priority couriers (DHL Express or FedEx) to ensure they arrive safely at your study.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="faq-item fade-in-on-scroll">
+          <button class="faq-trigger" aria-expanded="false">
+            <span class="faq-question">Can you help source a specific title?</span>
+            <span class="faq-icon"></span>
+          </button>
+          <div class="faq-content">
+            <div class="faq-answer">
+              <p>Absolutely. Our global scout network regularly visits private estates, international auction houses, and catalog dealers. By submitting a request via our inquiry form, you can task our team with finding rare prints, signed copies, or specific bindings.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="faq-item fade-in-on-scroll">
+          <button class="faq-trigger" aria-expanded="false">
+            <span class="faq-question">How should I store and handle leather-bound volumes?</span>
+            <span class="faq-icon"></span>
+          </button>
+          <div class="faq-content">
+            <div class="faq-answer">
+              <p>We recommend maintaining a temperature of 65–72°F (18–22°C) and relative humidity of 35–50%. Keep books away from direct sunlight, dust, and direct heaters. When handling rare volumes, ensure your hands are clean and dry, and avoid wearing cotton gloves which can snag vintage bindings.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="request-section" id="request-section">
+    <div class="container">
+      <div class="request-box fade-in-on-scroll">
+        <div class="request-header text-center">
+          <span class="gold-subtitle">Acquisition Inquiry</span>
+          <h2 class="section-title">Acquire Your Masterpiece</h2>
+          <p class="section-desc">Task our library curators with locating, appraising, or reserving your next historical treasure.</p>
+        </div>
+        
+        <form class="request-form" id="acquisition-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="client-name">Full Name</label>
+              <input type="text" id="client-name" name="name" required placeholder="e.g., Lord Byron">
+            </div>
+            <div class="form-group">
+              <label for="client-email">Email Address</label>
+              <input type="email" id="client-email" name="email" required placeholder="e.g., byron@study.com">
+            </div>
+          </div>
+          
+          <div class="form-row">
+            <div class="form-group">
+              <label for="book-details">Book Title / Author of Interest</label>
+              <input type="text" id="book-details" name="details" required placeholder="e.g., First Folio by Shakespeare">
+            </div>
+            <div class="form-group">
+              <label for="request-type">Inquiry Focus</label>
+              <select id="request-type" name="type" required>
+                <option value="" disabled selected>Select service type...</option>
+                <option value="acquisition">Rare Acquisition Scout</option>
+                <option value="reservation">Reserve Featured Collection Item</option>
+                <option value="appraisal">Provenance Appraisal & Valuation</option>
+                <option value="club">Aurelia Literary Circle Membership</option>
+              </select>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="client-message">Inquiry Details & Collection Requirements</label>
+            <textarea id="client-message" name="message" rows="5" required placeholder="Describe any preferred binding details, condition requirements, or specific printing editions..."></textarea>
+          </div>
+          
+          <div class="text-center">
+            <button type="submit" class="btn btn-primary" id="btn-submit-inquiry">
+              <span class="btn-text">Send Private Inquiry</span>
+              <span class="btn-glow-effect"></span>
+              <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="logo">
+            <div class="logo-icon-wrapper">
+              <svg class="logo-icon-svg" viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+                <path d="M6 2h12a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm0 2v16h1v-16H6zm3 0v16h9V4H9zm2 0v7l2-1.5 2 1.5V4h-4z" />
+              </svg>
+            </div>
+            <div class="logo-text-group">
+              <span class="logo-title">The Shelf</span>
+              <span class="logo-subtitle">CURATED READS</span>
+            </div>
+          </a>
+          <p class="brand-pitch">A carefully curated bookstore for curious minds. We stock fiction, non-fiction, rare finds, and everything in between.</p>
+          <div class="footer-socials">
+            <a href="#" class="social-icon" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051C.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/>
+              </svg>
+            </a>
+            <a href="#" class="social-icon" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                <path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.323-1.325z"/>
+              </svg>
+            </a>
+            <a href="#" class="social-icon" aria-label="Pinterest">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                <path d="M12 0a12 12 0 0 0-4.37 23.17c-.07-.63-.13-1.6.03-2.3.14-.6.92-3.9 1.9-4.14.3-.2-.1-.7-.1-1 0-1.4.8-2.6 1.9-2.6 1 0 1.4.7 1.4 1.6 0 1-.6 2.4-.9 3.8-.3 1.1.5 2.1 1.6 2.1 2 0 3.5-2.1 3.5-5 0-2.6-1.9-4.4-4.5-4.4-3.1 0-5 2.3-5 5 0 .9.3 2 .8 2.5l-.3 1.1c-.2-.7-.5-1.9-.5-3.1 0-3.7 2.7-7.2 7.8-7.2 4.1 0 7.3 3 7.3 6.9 0 4.1-2.6 7.4-6.2 7.4-1.2 0-2.3-.6-2.7-1.4l-.7 2.9c-.3 1-1 2.3-1.5 3.1A12 12 0 1 0 12 0z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+        
+        <div class="footer-links-col">
+          <h4>EXPLORE</h4>
+          <div class="footer-links">
+            <a href="#gallery-section">New Arrivals</a>
+            <a href="#gallery-section">Bestsellers</a>
+            <a href="#gallery-section">Award Winners</a>
+            <a href="#gallery-section">Staff Picks</a>
+            <a href="#gallery-section">Book Bundles</a>
+          </div>
+        </div>
+        
+        <div class="footer-links-col">
+          <h4>GENRES</h4>
+          <div class="footer-links">
+            <a href="#gallery-section">Fantasy & Sci-Fi</a>
+            <a href="#gallery-section">Romance</a>
+            <a href="#gallery-section">Mystery & Thriller</a>
+            <a href="#gallery-section">Biography</a>
+            <a href="#gallery-section">Children's Books</a>
+          </div>
+        </div>
+        
+        <div class="footer-links-col">
+          <h4>COMPANY</h4>
+          <div class="footer-links">
+            <a href="#about-section">About Us</a>
+            <a href="#journal-section">Blog</a>
+            <a href="#careers">Careers</a>
+            <a href="#press">Press</a>
+            <a href="#request-section">Contact</a>
+          </div>
+        </div>
+        
+        <div class="footer-newsletter-col">
+          <h4>NEWSLETTER</h4>
+          <div class="footer-newsletter">
+            <p>Get weekly reading recommendations straight to your inbox.</p>
+            <form class="newsletter-form" id="newsletter-form">
+              <input type="email" required placeholder="Your email address" aria-label="Email for Newsletter">
+              <button type="submit" class="newsletter-btn" aria-label="Subscribe">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2025 The Shelf. All rights reserved.</p>
+        <div class="footer-socials">
+          <a href="#privacy">Privacy Policy</a>
+          <a href="#terms">Terms of Service</a>
+          <a href="#cookie-settings">Cookie Settings</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast-notification">
+    <span class="toast-icon">✦</span>
+    <span class="toast-message">Inquiry sent successfully.</span>
+  </div>
+  <script src="./home1.js"></script>
 </body>
 </html>

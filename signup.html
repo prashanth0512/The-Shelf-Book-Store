@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Sign in to your account at The Shelf – Curated Reads bookstore.">
-  <title>Sign In | The Shelf — Curated Reads</title>
+  <meta name="description" content="Create a member account at The Shelf – Curated Reads bookstore.">
+  <title>Sign Up | The Shelf — Curated Reads</title>
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,8 +14,9 @@
   <!-- FontAwesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   
-  <!-- Custom CSS -->
+  <!-- Custom CSS (Reusing login.css rules with signup modifications) -->
   <link rel="stylesheet" href="./login.css">
+  <link rel="stylesheet" href="./signup.css">
 </head>
 <body>
 
@@ -42,7 +43,7 @@
     <!-- LEFT SIDE: BOOKSTORE VISUAL HERO -->
     <section class="auth-visual">
       <div class="visual-img-wrapper">
-        <img src="./cozy_bookstore_hero.png" alt="Luxurious Bookstore Interior" class="visual-img">
+        <img src="./rare_books_showcase.png" alt="Luxurious Bookstore Interior" class="visual-img">
         <div class="visual-overlay"></div>
         <div class="visual-glow-overlay"></div>
       </div>
@@ -51,19 +52,19 @@
       <div class="floating-quote-card">
         <i class="fas fa-quote-left quote-icon"></i>
         <blockquote class="quote-text">
-          "A room without books is like a body without a soul. We gather curated editions to nurture your intellectual sanctuary."
+          "Some books leave us free and some books make us free. Start building your personal reading legacy today."
         </blockquote>
-        <cite class="quote-author">— Marcus Tullius Cicero</cite>
+        <cite class="quote-author">— Ralph Waldo Emerson</cite>
       </div>
 
       <!-- Small Stats Badge -->
       <div class="floating-stats-badge">
         <div class="badge-icon-wrapper">
-          <i class="fas fa-bookmark"></i>
+          <i class="fas fa-users"></i>
         </div>
         <div class="badge-content">
-          <span class="badge-number">12,000+</span>
-          <span class="badge-label">Curated Titles</span>
+          <span class="badge-number">5,000+</span>
+          <span class="badge-label">Active Readers</span>
         </div>
       </div>
     </section>
@@ -93,55 +94,85 @@
         <!-- Header text -->
         <div class="form-header">
           <span class="premium-badge">
-            <i class="fas fa-key"></i> Welcome Back
+            <i class="fas fa-feather"></i> Join Our Community
           </span>
-          <h1 class="form-title">Sign In To Continue Your Reading Journey</h1>
+          <h1 class="form-title">Create Your Reader Account</h1>
           <p class="form-description">
-            Access your curated virtual shelf, customized recommendations, and member portal.
+            Register to catalog your collection, save reviews, and unlock curated catalog archives.
           </p>
         </div>
 
-        <!-- Login Form -->
-        <form class="auth-form" id="loginForm" novalidate>
+        <!-- Registration Form -->
+        <form class="auth-form" id="signupForm" novalidate>
           
+          <!-- Full Name Input -->
+          <div class="input-group">
+            <label for="signupName" class="input-label">Full Name</label>
+            <div class="input-field-wrapper">
+              <i class="fas fa-user input-icon"></i>
+              <input type="text" id="signupName" class="form-input" required placeholder="e.g. Amelia Thorne" autocomplete="name">
+            </div>
+            <span class="validation-message" id="nameError">Full name is required (minimum 3 characters)</span>
+          </div>
+
           <!-- Email Input -->
           <div class="input-group">
-            <label for="loginEmail" class="input-label">Email Address</label>
+            <label for="signupEmail" class="input-label">Email Address</label>
             <div class="input-field-wrapper">
               <i class="fas fa-envelope input-icon"></i>
-              <input type="email" id="loginEmail" class="form-input" required placeholder="e.g. reader@theshelf.com" autocomplete="email">
+              <input type="email" id="signupEmail" class="form-input" required placeholder="e.g. amelia@thornewriting.com" autocomplete="email">
             </div>
             <span class="validation-message" id="emailError">Please enter a valid email address</span>
           </div>
 
+          <!-- Phone Number Input -->
+          <div class="input-group">
+            <label for="signupPhone" class="input-label">Phone Number</label>
+            <div class="input-field-wrapper">
+              <i class="fas fa-phone input-icon"></i>
+              <input type="tel" id="signupPhone" class="form-input" required placeholder="e.g. +1 (555) 019-2834" autocomplete="tel">
+            </div>
+            <span class="validation-message" id="phoneError">Please enter a valid phone number</span>
+          </div>
+
           <!-- Password Input -->
           <div class="input-group">
-            <div class="label-row">
-              <label for="loginPassword" class="input-label">Password</label>
-              <a href="#" class="forgot-link" onclick="window.triggerToast('Password recovery system simulated.')">Forgot Password?</a>
-            </div>
+            <label for="signupPassword" class="input-label">Password</label>
             <div class="input-field-wrapper">
               <i class="fas fa-lock input-icon"></i>
-              <input type="password" id="loginPassword" class="form-input" required placeholder="••••••••••••" autocomplete="current-password">
+              <input type="password" id="signupPassword" class="form-input" required placeholder="••••••••••••" autocomplete="new-password">
               <button type="button" class="password-toggle-btn" id="passwordToggleBtn" aria-label="Toggle password visibility">
                 <i class="fas fa-eye" id="passwordEyeIcon"></i>
               </button>
             </div>
-            <span class="validation-message" id="passwordError">Password must be at least 8 characters long</span>
+            <!-- Password Strength Indicator -->
+            <div class="strength-indicator-wrapper">
+              <div class="strength-bars">
+                <div class="strength-bar" id="strength-bar-1"></div>
+                <div class="strength-bar" id="strength-bar-2"></div>
+                <div class="strength-bar" id="strength-bar-3"></div>
+              </div>
+              <span class="strength-label" id="strength-label">Password strength</span>
+            </div>
+            <span class="validation-message" id="passwordError">Password must be at least 8 characters</span>
           </div>
 
-          <!-- Keep Signed In -->
-          <div class="checkbox-group">
-            <label class="checkbox-container">
-              <input type="checkbox" id="rememberMe" checked>
-              <span class="checkbox-checkmark"></span>
-              <span class="checkbox-label">Remember my shelf on this device</span>
-            </label>
+          <!-- Confirm Password Input -->
+          <div class="input-group">
+            <label for="signupConfirmPassword" class="input-label">Confirm Password</label>
+            <div class="input-field-wrapper">
+              <i class="fas fa-lock input-icon"></i>
+              <input type="password" id="signupConfirmPassword" class="form-input" required placeholder="••••••••••••" autocomplete="new-password">
+              <button type="button" class="password-toggle-btn" id="confirmToggleBtn" aria-label="Toggle password visibility">
+                <i class="fas fa-eye" id="confirmEyeIcon"></i>
+              </button>
+            </div>
+            <span class="validation-message" id="confirmPasswordError">Passwords do not match</span>
           </div>
 
           <!-- Submit Button -->
           <button type="submit" class="btn btn-primary btn-submit" id="submitBtn">
-            <span class="btn-text">Sign In</span>
+            <span class="btn-text">Create Account</span>
           </button>
 
           <!-- Social Authentications -->
@@ -150,13 +181,13 @@
           </div>
 
           <div class="social-actions-row">
-            <button type="button" class="social-btn google-btn" onclick="window.triggerToast('Google authentication simulated.')">
+            <button type="button" class="social-btn google-btn" onclick="window.triggerToast('Google registration simulated.')">
               <svg class="social-icon" viewBox="0 0 24 24" width="18" height="18">
                 <path fill="#EA4335" d="M12.24 10.285V14.4h6.887c-.648 2.41-2.519 4.2-5.137 4.2-3.414 0-6.183-2.77-6.183-6.185 0-3.414 2.769-6.183 6.183-6.183 1.547 0 2.956.57 4.053 1.503l3.056-3.057C19.123 2.164 15.938 1 12.24 1 6.033 1 1 6.033 1 12.24s5.033 11.24 11.24 11.24c5.898 0 10.971-4.257 10.971-11.24 0-.765-.084-1.35-.237-1.955H12.24z"/>
               </svg>
               <span>Google</span>
             </button>
-            <button type="button" class="social-btn apple-btn" onclick="window.triggerToast('Apple authentication simulated.')">
+            <button type="button" class="social-btn apple-btn" onclick="window.triggerToast('Apple registration simulated.')">
               <svg class="social-icon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
                 <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 4.17c.66-.81 1.11-1.93.99-3.06-1 .04-2.22.67-2.94 1.52-.64.74-1.2 1.88-1.05 3 .11 0 2.34-.14 3-1.46z"/>
               </svg>
@@ -166,8 +197,8 @@
 
           <!-- Bottom Redirect -->
           <div class="auth-card-footer">
-            <span class="footer-text">Don't have an account?</span>
-            <a href="./signup.html" class="footer-link">Sign Up</a>
+            <span class="footer-text">Already have an account?</span>
+            <a href="./login.html" class="footer-link">Log In</a>
           </div>
 
         </form>
@@ -183,6 +214,6 @@
   </div>
 
   <!-- Scripts -->
-  <script src="./login.js"></script>
+  <script src="./signup.js"></script>
 </body>
 </html>

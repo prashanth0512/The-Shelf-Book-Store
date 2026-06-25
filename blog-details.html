@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Read our deep-dive literary analysis, curated book recommendations, and bookstore columns.">
+  <title>Article Details | The Shelf Bookstore</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icon Library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="./blog-details.css">
+</head>
+<body>
+
+  <!-- Premium Header (Identical structure to other pages) -->
+  <header class="navbar" id="main-header">
+    <a href="./index.html" class="logo">
+      <div class="logo-icon">
+        <svg width="44" height="44" viewBox="0 0 64 64" fill="none">
+          <rect x="10" y="8" width="8" height="48" rx="2" fill="#4A2C2A"/>
+          <path d="M18 10C18 8.9 18.9 8 20 8H52C53.1 8 54 8.9 54 10V52C54 53.1 53.1 54 52 54H20C18.9 54 18 53.1 18 52V10Z" fill="#C89B3C"/>
+          <path d="M26 20H46" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>
+          <path d="M26 28H46" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>
+          <path d="M26 36H38" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>
+          <path d="M44 8V22L40 18L36 22V8H44Z" fill="#4A2C2A"/>
+        </svg>
+      </div>
+      <div class="logo-text">
+        <span class="logo-name">The Shelf</span>
+        <span class="logo-tagline">Curated Reads</span>
+      </div>
+    </a>
+
+    <!-- Navigation Links -->
+    <nav class="nav-links" id="navLinks">
+      <ul>
+        <li class="dropdown">
+          <a href="./index.html">
+            Home
+            <i class="fas fa-chevron-down"></i>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="./home2.html">Home 2</a></li>
+          </ul>
+        </li>
+        <li><a href="./about.html">About</a></li>
+        <li><a href="./services.html">Services</a></li>
+        <li><a href="./blogs.html">Blog</a></li>
+        <li><a href="./contact.html">Contact</a></li>
+        <li><a href="./dashboard.html">Dashboard</a></li>
+      </ul>
+      
+      <!-- Mobile Drawer Controls -->
+      <div class="mobile-controls">
+        <button class="mobile-ctrl-btn" id="rtlBtnMobile" aria-label="Toggle RTL Mode">
+          <i class="fas fa-right-left"></i>
+          <span>RTL Toggle</span>
+        </button>
+        <button class="mobile-ctrl-btn" id="themeBtnMobile" aria-label="Toggle Theme">
+          <i class="fas fa-moon" id="themeBtnMobileIcon"></i>
+          <span>Theme Toggle</span>
+        </button>
+        <a href="./login.html" class="mobile-login-btn">
+          <i class="fas fa-user"></i>
+          Login
+        </a>
+      </div>
+    </nav>
+
+    <!-- Desktop Controls -->
+    <div class="nav-right">
+      <button class="icon-btn" id="rtlBtn" aria-label="Toggle RTL Mode">
+        <i class="fas fa-right-left"></i>
+      </button>
+      <button class="icon-btn" id="themeBtn" aria-label="Toggle Theme">
+        <i class="fas fa-moon" id="themeBtnIcon"></i>
+      </button>
+      <a href="./login.html" class="login-btn">
+        <i class="fas fa-user"></i>
+        Login
+      </a>
+      <div class="menu-toggle" id="menuToggle" aria-label="Toggle Mobile Menu">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </header>
+
+  <!-- Ambient Glow Backgrounds -->
+  <div class="ambient-background">
+    <div class="ambient-glow ambient-glow-1"></div>
+    <div class="ambient-glow ambient-glow-2"></div>
+    <div class="ambient-grid"></div>
+  </div>
+
+  <!-- SECTION 1: HERO BANNER (DYNAMIC CONTENT) -->
+  <main class="hero-container" id="hero-section">
+    <div class="hero-inner">
+      <!-- Left side: Large Dynamic Book Image -->
+      <section class="hero-visual">
+        <div class="book-hero-image-wrapper">
+          <img src="" alt="" class="book-hero-image" id="details-hero-img">
+          <div class="image-glow-overlay"></div>
+        </div>
+      </section>
+
+      <!-- Right side: Dynamic Meta, Title, Description, buttons -->
+      <section class="hero-content">
+        <div class="badge-wrapper animate-fade-up" style="animation-delay: 0.2s;">
+          <span class="premium-badge" id="details-badge">
+            <!-- Loaded by JS -->
+          </span>
+        </div>
+        
+        <h1 class="main-heading animate-fade-up" style="animation-delay: 0.4s;" id="details-title">
+          <!-- Loaded by JS -->
+        </h1>
+
+        <div class="article-meta-row animate-fade-up" style="animation-delay: 0.5s;">
+          <span class="meta-item" id="details-author">
+            <i class="fas fa-user-pen"></i> <!-- Loaded by JS -->
+          </span>
+          <span class="meta-separator">|</span>
+          <span class="meta-item" id="details-date">
+            <i class="far fa-calendar"></i> <!-- Loaded by JS -->
+          </span>
+          <span class="meta-separator">|</span>
+          <span class="meta-item" id="details-read-time">
+            <i class="far fa-clock"></i> <!-- Loaded by JS -->
+          </span>
+        </div>
+        
+        <div class="cta-group animate-fade-up" style="animation-delay: 0.7s;">
+          <a href="#article-body" class="btn btn-primary" id="btn-read-now">
+            <span class="btn-text">Read Article</span>
+            <span class="btn-glow-effect"></span>
+          </a>
+          <a href="./blogs.html" class="btn btn-secondary">
+            <span class="btn-text">Back to Journal</span>
+          </a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- SECTION 2: ARTICLE CONTENT (DYNAMIC CONTENT) -->
+  <section class="article-body-section" id="article-body">
+    <div class="container">
+      <div class="article-layout">
+        <!-- Main Rich Text Body -->
+        <article class="article-main-content fade-in-on-scroll" id="details-content">
+          <!-- Loaded dynamically by JS -->
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: ARTICLE GALLERY (DYNAMIC CONTENT) -->
+  <section class="gallery-section" id="article-gallery">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="gold-subtitle">VISUAL HIGHLIGHTS</span>
+        <h2 class="section-title">Gallery Curations</h2>
+        <p class="section-desc">Hand-picked visual representations and bookstore environments related to this topic.</p>
+      </div>
+
+      <div class="details-gallery-grid" id="details-gallery">
+        <!-- Loaded dynamically by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4: KEY TAKEAWAYS (DYNAMIC CONTENT) -->
+  <section class="takeaways-section" id="article-takeaways">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="gold-subtitle">KEY INSIGHTS</span>
+        <h2 class="section-title">Core Takeaways</h2>
+        <p class="section-desc">A summary of the main points, recommendations, and methodologies discussed in this analysis.</p>
+      </div>
+
+      <div class="takeaways-grid" id="details-takeaways">
+        <!-- Loaded dynamically by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 5: RELATED ARTICLES (DYNAMIC CONTENT) -->
+  <section class="related-section" id="article-related">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="gold-subtitle">RELATED LITERATURE</span>
+        <h2 class="section-title">Further Reading</h2>
+        <p class="section-desc">Continue your intellectual exploration with these hand-selected columns from our journal.</p>
+      </div>
+
+      <div class="blog-grid" id="details-related">
+        <!-- Loaded dynamically by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 6: NEWSLETTER CTA -->
+  <section class="newsletter-section" id="newsletter">
+    <div class="container">
+      <div class="newsletter-box fade-in-on-scroll">
+        <span class="gold-subtitle">SUBSCRIBE TO THE JOURNAL</span>
+        <h2 class="newsletter-heading">Never Miss an Insight</h2>
+        <p class="newsletter-sub">Our subscribers receive early notifications of rare antiquarian arrivals and exclusive essays from visiting authors.</p>
+        <form class="newsletter-form-main" id="newsletter-form-main">
+          <div class="form-group-main">
+            <input type="email" required placeholder="Enter your email address" aria-label="Subscribe Email">
+            <button type="submit" class="btn btn-primary">
+              <span class="btn-text">Subscribe</span>
+              <span class="btn-glow-effect"></span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Premium Footer (Identical structure to other pages) -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="logo">
+            <div class="logo-icon-wrapper">
+              <svg class="logo-icon-svg" viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+                <path d="M6 2h12a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm0 2v16h1v-16H6zm3 0v16h9V4H9zm2 0v7l2-1.5 2 1.5V4h-4z" />
+              </svg>
+            </div>
+            <div class="logo-text-group">
+              <span class="logo-title">The Shelf</span>
+              <span class="logo-subtitle">CURATED READS</span>
+            </div>
+          </a>
+          <p class="brand-pitch">A carefully curated bookstore for curious minds. We stock fiction, non-fiction, rare finds, and everything in between.</p>
+          <div class="footer-socials">
+            <a href="#" class="social-icon" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051C.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/>
+              </svg>
+            </a>
+            <a href="#" class="social-icon" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                <path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.323-1.325z"/>
+              </svg>
+            </a>
+            <a href="#" class="social-icon" aria-label="Pinterest">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                <path d="M12 0a12 12 0 0 0-4.37 23.17c-.07-.63-.13-1.6.03-2.3.14-.6.92-3.9 1.9-4.14.3-.2-.1-.7-.1-1 0-1.4.8-2.6 1.9-2.6 1 0 1.4.7 1.4 1.6 0 1-.6 2.4-.9 3.8-.3 1.1.5 2.1 1.6 2.1 2 0 3.5-2.1 3.5-5 0-2.6-1.9-4.4-4.5-4.4-3.1 0-5 2.3-5 5 0 .9.3 2 .8 2.5l-.3 1.1c-.2-.7-.5-1.9-.5-3.1 0-3.7 2.7-7.2 7.8-7.2 4.1 0 7.3 3 7.3 6.9 0 4.1-2.6 7.4-6.2 7.4-1.2 0-2.3-.6-2.7-1.4l-.7 2.9c-.3 1-1 2.3-1.5 3.1A12 12 0 1 0 12 0z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+        
+        <div class="footer-links-col">
+          <h4>EXPLORE</h4>
+          <div class="footer-links">
+            <a href="./services.html">New Arrivals</a>
+            <a href="./services.html">Bestsellers</a>
+            <a href="./services.html">Award Winners</a>
+            <a href="./services.html">Staff Picks</a>
+            <a href="./services.html">Book Bundles</a>
+          </div>
+        </div>
+        
+        <div class="footer-links-col">
+          <h4>GENRES</h4>
+          <div class="footer-links">
+            <a href="./services.html">Fantasy &amp; Sci-Fi</a>
+            <a href="./services.html">Romance</a>
+            <a href="./services.html">Mystery &amp; Thriller</a>
+            <a href="./services.html">Biography</a>
+            <a href="./services.html">Children's Books</a>
+          </div>
+        </div>
+        
+        <div class="footer-links-col">
+          <h4>COMPANY</h4>
+          <div class="footer-links">
+            <a href="./about.html">About Us</a>
+            <a href="./blogs.html">Blog</a>
+            <a href="#careers">Careers</a>
+            <a href="#press">Press</a>
+            <a href="./contact.html">Contact</a>
+          </div>
+        </div>
+        
+        <div class="footer-newsletter-col">
+          <h4>NEWSLETTER</h4>
+          <div class="footer-newsletter">
+            <p>Get weekly reading recommendations straight to your inbox.</p>
+            <form class="newsletter-form" id="newsletter-form">
+              <input type="email" required placeholder="Your email address" aria-label="Email for Newsletter">
+              <button type="submit" class="newsletter-btn" aria-label="Subscribe">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2026 The Shelf. All rights reserved.</p>
+        <div class="footer-socials">
+          <a href="#privacy">Privacy Policy</a>
+          <a href="#terms">Terms of Service</a>
+          <a href="#cookie-settings">Cookie Settings</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notifications -->
+  <div class="toast" id="toast-notification">
+    <span class="toast-icon">✦</span>
+    <span class="toast-message">Submission successful.</span>
+  </div>
+
+  <!-- Javascript Router -->
+  <script src="./blog-details.js"></script>
+</body>
+</html>
