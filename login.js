@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 
-  const emailRegex =  ;
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
   const validateEmail = () => {
     if (!emailInput || !emailGroup) return false;

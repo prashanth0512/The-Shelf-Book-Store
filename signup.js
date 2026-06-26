@@ -69,8 +69,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let score = 0;
     if (password.length >= 8) score++;
-    if ( .test(password)) score++;
-    if ( .test(password) ||  .test(password)) score++;
+    if (/[0-9]/.test(password)) score++;
+    if (/[A-Z]/.test(password) || /[^A-Za-z0-9]/.test(password)) score++;
 
     if (password.length < 6) {
 
@@ -105,9 +105,9 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 
-  const emailRegex =  ;
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-  const phoneRegex =  ;
+  const phoneRegex = /^[0-9+\s-]{7,}$/;
 
   const validateName = () => {
     if (!nameInput || !nameGroup) return false;

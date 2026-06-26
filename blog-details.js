@@ -497,5 +497,6 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   injectContent();
+  window.dispatchEvent(new Event('scroll'));
 
 });

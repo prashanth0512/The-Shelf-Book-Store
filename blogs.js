@@ -1,9 +1,53 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+  // Initialize theme: default to light mode unless dark mode is saved
+  const savedTheme = localStorage.getItem('bookstore-theme') || 'light';
+  if (savedTheme === 'light') {
+    document.body.classList.add('light-mode');
+  } else {
+    document.body.classList.remove('light-mode');
+  }
 
-  const revealElements = document.querySelectorAll('.fade-in-on-scroll');
+  // Update theme icons initially based on the active theme
+  const isLightInit = document.body.classList.contains('light-mode');
+  ['themeBtnIcon', 'themeBtnMobileIcon'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) {
+      el.className = isLightInit ? 'fas fa-sun' : 'fas fa-moon';
+    }
+  });
+
+
+  // Global toast function defined on window
+  let toastTimeout;
+  window.showToast = window.triggerToast = function(message) {
+    const toast = document.getElementById('toast-notification');
+    if (toast) {
+      const msgEl = toast.querySelector('.toast-message');
+      if (msgEl) {
+        msgEl.textContent = message;
+      }
+      toast.classList.add('show');
+      clearTimeout(toastTimeout);
+      toastTimeout = setTimeout(() => {
+        toast.classList.remove('show');
+      }, 3000);
+    }
+  };
+
   const revealOnScroll = () => {
-    const triggerBottom = (window.innerHeight         LIGHT MODE) ────────────────────────
+    const revealElements = document.querySelectorAll('.fade-in-on-scroll');
+    const triggerBottom = window.innerHeight * 0.85;
+    revealElements.forEach(el => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < triggerBottom) {
+        el.classList.add('visible');
+      }
+    });
+  };
+  window.addEventListener('scroll', revealOnScroll);
+  revealOnScroll();
+
   function applyThemeToggle() {
     document.body.classList.toggle('light-mode');
     const isLight = document.body.classList.contains('light-mode');

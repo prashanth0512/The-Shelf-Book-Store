@@ -432,6 +432,7 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   injectContent();
+  window.dispatchEvent(new Event('scroll'));
 
 
   const faqTriggers = document.querySelectorAll('.faq-trigger');

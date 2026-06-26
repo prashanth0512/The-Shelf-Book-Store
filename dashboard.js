@@ -170,6 +170,7 @@ document.addEventListener('DOMContentLoaded', () => {
   populateOrdersList();
   populateCustomersList();
   populateInventory();
+  triggerCounters();
 
 
   const menuItems = document.querySelectorAll('.menu-item');
@@ -389,7 +390,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const updateCounter = (currentTime) => {
         const elapsedTime = currentTime - startTime;
-        const progress = Math.min(elapsedTime      CLOSE DRAWER ────────────────────────────────
+        const progress = Math.min(elapsedTime / duration, 1);
+        const currentVal = Math.floor(progress * target);
+
+        el.textContent = currentVal.toLocaleString();
+
+        if (progress < 1) {
+          requestAnimationFrame(updateCounter);
+        } else {
+          el.textContent = target.toLocaleString();
+        }
+      };
+      requestAnimationFrame(updateCounter);
+    });
+  }
+
   const hamburgerBtn = document.getElementById('hamburgerBtn');
   const sidebarClose = document.getElementById('sidebarClose');
 

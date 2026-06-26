@@ -2109,11 +2109,13 @@ body.light-mode .navbar .menu-toggle {
 }
 
 .footer-links-col h4, .footer-newsletter-col h4 {
-  font-family: var(--font-heading);
+  font-family: var(--font-body);
   color: var(--color-footer-heading);
-  font-size: 1.1rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
   margin-bottom: 1.75rem;
-  font-weight: 600;
+  text-transform: uppercase;
 }
 
 .footer-links {

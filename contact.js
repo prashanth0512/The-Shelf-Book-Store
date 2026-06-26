@@ -136,7 +136,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const email = document.getElementById('field-email').value.trim();
     const inquiry = document.getElementById('field-inquiry').value;
     const message = document.getElementById('field-message').value.trim();
-    const emailRgx =  ;
+    const emailRgx = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     clearAllErrors();
 
@@ -169,7 +169,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (id === 'field-name' && (!val || val.length < 2)) {
         setError(id, errorIds[i], 'Please enter your full name (at least 2 characters).');
       } else if (id === 'field-email') {
-        const rgx =  ;
+        const rgx = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!val || !rgx.test(val)) setError(id, errorIds[i], 'Please enter a valid email address.');
         else clearError(id, errorIds[i]);
       } else if (id === 'field-inquiry' && !val) {
